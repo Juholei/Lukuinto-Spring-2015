@@ -1,0 +1,31 @@
+# GRUNT #
+dist/
+.tmp/
+
+# BOWER #
+bower_components
+
+# NPM #
+node_modules
+pids
+*.pid
+*.seed
+.grunt
+
+# LOGS #
+logs
+*.log
+
+# OS X
+.DS_Store
+
+# Linux #
+*~
+.directory
+
+# Windows #
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
