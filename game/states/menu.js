@@ -19,11 +19,17 @@ Menu.prototype = {
 
     this.sprite.angle = -20;
     this.game.add.tween(this.sprite).to({angle: 20}, 1000, Phaser.Easing.Linear.NONE, true, 0, 1000, true);
+    this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.EXACT_FIT;
+    this.game.input.onDown.add(this.fullscreen, this);
   },
   update: function() {
     if(this.game.input.activePointer.justPressed()) {
       this.game.state.start('play');
     }
+  },
+  fullscreen: function() {
+    this.game.scale.startFullScreen();
+    console.log("Called");
   }
 };
 

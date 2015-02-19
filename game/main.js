@@ -2,7 +2,7 @@
 
 //global variables
 window.onload = function () {
-  var game = new Phaser.Game(800, 600, Phaser.AUTO, 'lukuinto-spring-2015');
+  var game = new Phaser.Game(1024, 768, Phaser.AUTO, 'lukuinto-spring-2015');
 
   // Game States
   game.state.add('boot', require('./states/boot'));
