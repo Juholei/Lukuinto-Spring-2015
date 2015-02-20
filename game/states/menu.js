@@ -7,14 +7,18 @@ Menu.prototype = {
   },
   create: function() {
     this.game.stage.backgroundColor = '#ffffff';
+    this.backgroundsprite = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background-box');
+    this.backgroundsprite.scale.setTo(2, 2);
+    this.backgroundsprite.anchor.x = 0.5;
+    this.backgroundsprite.anchor.y = 0.5;
     this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
-    this.button = this.game.add.button(this.game.world.centerX,this.game.world.centerY, 'button', this.actionClick, this);
-    this.button.events.onInputDown.add(this.toggleFullscreen, this);
+    this.fullScreenButton = this.game.add.button(30, 30, 'answer-buttons', this.actionClick, this, 2, 0);
+    this.fullScreenButton.scale.setTo(0.5, 0.5);
+    this.fullScreenButton.events.onInputDown.add(this.toggleFullscreen, this);
+    this.startButton = this.game.add.button(this.game.world.centerX, this.game.world.centerY, 'button', this.actionOnClick, this);
   },
   update: function() {
-    if(this.game.input.activePointer.justPressed()) {
-      this.game.state.start('play');
-    }
+    this.backgroundsprite.angle += 1;
   },
   toggleFullscreen: function() {
     if(this.game.scale.isFullScreen) {
@@ -24,10 +28,8 @@ Menu.prototype = {
       this.game.scale.startFullScreen();
     }
   },
-  actionClick: function() {
-    console.log("actionClick");
-    var style = { font: '65px Arial', fill: 'white', align: 'center'};
-    this.titleText = this.game.add.text(this.game.world.centerX,100, 'Painoit nappia!', style);
+  actionOnClick: function() {
+    this.game.state.start('play');
   }
 };
 
