@@ -1,5 +1,6 @@
 
 'use strict';
+var Point = require('../prefabs/point');
 function Menu() {}
 
 Menu.prototype = {
@@ -16,6 +17,8 @@ Menu.prototype = {
     this.fullScreenButton.scale.setTo(0.5, 0.5);
     this.fullScreenButton.events.onInputDown.add(this.toggleFullscreen, this);
     this.startButton = this.game.add.button(this.game.world.centerX, this.game.world.centerY, 'button', this.actionOnClick, this);
+    this.sprite = new Point(this.game, this.game.width/2, this.game.height/2);
+    this.game.add.existing(this.sprite);
   },
   update: function() {
     this.backgroundsprite.angle += 1;

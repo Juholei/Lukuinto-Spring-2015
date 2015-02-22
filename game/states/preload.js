@@ -16,6 +16,7 @@ Preload.prototype = {
     this.load.image('button', 'assets/diamond.png');
     this.load.image('background-box', 'assets/valintojen_tausta.png');
     this.load.spritesheet('answer-buttons', 'assets/valinta_spritesheet.png', 332, 121);
+    this.load.image('point', 'assets/point.png');
   },
   create: function() {
     this.asset.cropEnabled = false;
