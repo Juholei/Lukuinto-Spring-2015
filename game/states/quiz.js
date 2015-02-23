@@ -15,7 +15,7 @@ Quiz.prototype = {
     this.answerButtons = this.game.add.group();
 
     for (var i = 0; i < 4; i++) {
-      var button = this.game.add.button(this.game.world.centerX - 400, this.game.world.centerY - 130 * i, 'answer-buttons', this.actionOnClick, this, 2 + i, 0 + i);
+      var button = this.game.add.button(this.game.world.centerX - 400, 0 + 130 * i, 'answer-buttons', this.actionOnClick, this, i * 2, i * 2 + 1);
       this.answerButtons.add(button);
     }
   },
