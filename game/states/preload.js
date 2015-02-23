@@ -15,6 +15,7 @@ Preload.prototype = {
     this.load.image('button', 'assets/diamond.png');
     this.load.image('background-box', 'assets/valintojen_tausta.png');
     this.load.image('map', 'assets/karttatausta.png');
+    this.load.image('quiz-background-1', 'assets/taustakuva_kauppatori.png');
     this.load.spritesheet('answer-buttons', 'assets/valinta_spritesheet.png', 332, 121);
     this.load.spritesheet('point', 'assets/karttapiste.png', 98, 98);
   },
