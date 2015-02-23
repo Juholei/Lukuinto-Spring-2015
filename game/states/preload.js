@@ -1,5 +1,5 @@
-
 'use strict';
+
 function Preload() {
   this.asset = null;
   this.ready = false;
@@ -12,7 +12,6 @@ Preload.prototype = {
 
     this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
     this.load.setPreloadSprite(this.asset);
-    this.load.image('yeoman', 'assets/yeoman-logo.png');
     this.load.image('button', 'assets/diamond.png');
     this.load.image('background-box', 'assets/valintojen_tausta.png');
     this.load.spritesheet('answer-buttons', 'assets/valinta_spritesheet.png', 332, 121);

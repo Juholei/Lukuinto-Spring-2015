@@ -1,5 +1,7 @@
 'use strict';
-function Quiz() {}
+
+function Quiz() {
+}
 Quiz.prototype = {
   preload: function() {
     // Override this method to add some load operations. 
@@ -8,8 +10,14 @@ Quiz.prototype = {
   create: function() {
     // This method is called after the game engine successfully switches states. 
     // Feel free to add any setup code here (do not load anything here, override preload() instead).
-    this.startButton = this.game.add.button(this.game.world.centerX, this.game.world.centerY, 'button', this.actionOnClick, this);
+    this.titleText = this.game.add.text(this.game.world.centerX, 200, 'Vastaa tehtävään:',  { font: '32px Arial', fill: '#000', align: 'center'});
+    this.titleText.anchor.setTo(0.5, 0.5);
+    this.answerButtons = this.game.add.group();
 
+    for (var i = 0; i < 4; i++) {
+      var button = this.game.add.button(this.game.world.centerX - 400, this.game.world.centerY - 130 * i, 'answer-buttons', this.actionOnClick, this, 2 + i, 0 + i);
+      this.answerButtons.add(button);
+    }
   },
   update: function() {
     // state update code

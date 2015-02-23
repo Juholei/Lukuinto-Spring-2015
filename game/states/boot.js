@@ -10,6 +10,7 @@ Boot.prototype = {
   },
   create: function() {
     this.game.input.maxPointers = 1;
+    this.game.stage.backgroundColor = '#777';
     this.game.state.start('preload');
   }
 };

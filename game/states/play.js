@@ -1,4 +1,3 @@
-
 'use strict';
 var Point = require('../prefabs/point');
 

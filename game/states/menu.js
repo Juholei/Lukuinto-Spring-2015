@@ -8,11 +8,10 @@ Menu.prototype = {
   },
   create: function() {
     //Just testing some features
-    this.game.stage.backgroundColor = '#ffffff';
-    this.backgroundsprite = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background-box');
-    this.backgroundsprite.scale.setTo(2, 2);
-    this.backgroundsprite.anchor.x = 0.5;
-    this.backgroundsprite.anchor.y = 0.5;
+    // this.backgroundsprite = this.game.add.sprite(this.game.world.centerX, this.game.world.centerY, 'background-box');
+    // this.backgroundsprite.scale.setTo(2, 2);
+    // this.backgroundsprite.anchor.x = 0.5;
+    // this.backgroundsprite.anchor.y = 0.5;
 
     //Actually usable code
     this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -21,12 +20,9 @@ Menu.prototype = {
     this.fullScreenButton.events.onInputDown.add(this.toggleFullscreen, this);
 
     this.startButton = this.game.add.button(this.game.world.centerX, this.game.world.centerY, 'button', this.actionOnClick, this);
-
-    this.sprite = new Point(this.game, this.game.width/2, this.game.height/2);
-    this.game.add.existing(this.sprite);
   },
   update: function() {
-    this.backgroundsprite.angle += 1;
+    // this.backgroundsprite.angle += 1;
   },
   toggleFullscreen: function() {
     if(this.game.scale.isFullScreen) {
