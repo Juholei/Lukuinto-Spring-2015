@@ -1,4 +1,5 @@
 'use strict';
+var ToggleButton = require('../prefabs/togglebutton');
 
 function Quiz() {
 }
@@ -23,25 +24,25 @@ Quiz.prototype = {
 
     this.answerButtons = this.game.add.group();
 
-    var buttonA = this.game.add.button(this.game.world.centerX - 215, this.game.world.centerY + 170, 'answer-buttons', this.actionOnClick, this, 1 , 0);
+    var buttonA = new ToggleButton(this, this.game.world.centerX - 215, this.game.world.centerY + 170, 'answer-buttons', this, 1 , 0);
     buttonA.scale.setTo(0.64, 0.64);
     this.answerButtons.add(buttonA);
 
-    var buttonB = this.game.add.button(this.game.world.centerX + 215, this.game.world.centerY + 170, 'answer-buttons', this.actionOnClick, this, 3 , 2);
+    var buttonB = new ToggleButton(this, this.game.world.centerX + 215, this.game.world.centerY + 170, 'answer-buttons', this, 3 , 2);
     buttonB.anchor.setTo(1, 0);
     buttonB.scale.setTo(0.64, 0.64);
     this.answerButtons.add(buttonB);
 
-    var buttonC = this.game.add.button(this.game.world.centerX - 215, this.game.world.centerY + 260, 'answer-buttons', this.actionOnClick, this, 5 , 4);
+    var buttonC = new ToggleButton(this, this.game.world.centerX - 215, this.game.world.centerY + 260, 'answer-buttons', this, 5 , 4);
     buttonC.scale.setTo(0.64, 0.64);
     this.answerButtons.add(buttonC);
 
-    var buttonD = this.game.add.button(this.game.world.centerX + 215, this.game.world.centerY + 260, 'answer-buttons', this.actionOnClick, this, 7 , 6);
+    var buttonD = new ToggleButton(this, this.game.world.centerX + 215, this.game.world.centerY + 260, 'answer-buttons', this, 7 , 6);
     buttonD.anchor.setTo(1, 0);
     buttonD.scale.setTo(0.64, 0.64);
     this.answerButtons.add(buttonD);
 
-    var confirmButton = this.game.add.button(this.game.world.centerX + 250, this.game.world.height, 'quiz-confirm', this.actionOnClick);
+    var confirmButton = this.game.add.button(this.game.world.centerX + 250, this.game.world.height, 'quiz-confirm', this.confirmOnClick);
     confirmButton.scale.setTo(0.35, 0.35);
     confirmButton.anchor.setTo(0.5, 1);
 
@@ -59,7 +60,7 @@ Quiz.prototype = {
     // This method will be called when the state is shut down 
     // (i.e. you switch to another state from this one).
   },
-  actionOnClick: function() {
+  confirmOnClick: function() {
     console.log('Changing state to play');
     this.game.state.start('play');
   }

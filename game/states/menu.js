@@ -17,14 +17,14 @@ Menu.prototype = {
   },
   update: function() {
   },
-  toggleFullscreen: function() {
+  toggleFullscreen: function(button) {
     if(this.game.scale.isFullScreen) {
       this.game.scale.stopFullScreen();
-      this.fullScreenButton.frame = 0;
+      button.frame = 0;
     }
     else {
       this.game.scale.startFullScreen();
-      this.fullScreenButton.frame = 1;
+      button.frame = 1;
     }
   },
   actionOnClick: function() {
