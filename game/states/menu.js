@@ -29,8 +29,6 @@ Menu.prototype = {
   },
   actionOnClick: function() {
     this.game.state.start('play');
-  },
-  toggleButtonTexture: function() {
   }
 };
 
