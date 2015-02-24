@@ -26,6 +26,7 @@ Preload.prototype = {
     this.load.image('quiz-background-1', 'assets/quiz/taustakuva_kauppatori.png');
     this.load.image('background-box', 'assets/quiz/valintojen_tausta.png');
     this.load.spritesheet('answer-buttons', 'assets/quiz/valinta_spritesheet.png', 332, 121);
+    this.load.image('quiz-confirm', 'assets/quiz/vahvista.png');
   },
   create: function() {
     this.asset.cropEnabled = false;

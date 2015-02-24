@@ -40,6 +40,11 @@ Quiz.prototype = {
     buttonD.anchor.setTo(1, 0);
     buttonD.scale.setTo(0.64, 0.64);
     this.answerButtons.add(buttonD);
+
+    var confirmButton = this.game.add.button(this.game.world.centerX + 250, this.game.world.height, 'quiz-confirm', this.actionOnClick);
+    confirmButton.scale.setTo(0.35, 0.35);
+    confirmButton.anchor.setTo(0.5, 1);
+
   },
   update: function() {
     // state update code
