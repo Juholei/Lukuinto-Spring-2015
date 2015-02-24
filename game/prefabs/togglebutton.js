@@ -1,46 +1,42 @@
 'use strict';
 
-var ToggleButton = function(game, x, y, callbackContext, group, overFrame, outFrame, downFrame, upFrame) {
-  Phaser.Button.call(this, game, x, y, 'answer-buttons', this.clickListener, callbackContext, 1, 0, downFrame, upFrame);
+var ToggleButton = function(game, x, y, callbackContext, group, label, answer) {
+  Phaser.Button.call(this, game, x, y, 'answer-button', this.clickListener, callbackContext, 1, 0, 1, 0);
   this.group = group;
   this.group.add(this)
   this.toggled = false;
 
-  // initialize your prefab here
-  
+  var labelText = game.add.text(50, this.height / 2, label, { font: '32px Arial', fill: 'white', align: 'center'});
+  this.addChild(labelText);
+
+  labelText.anchor.setTo(0.5, 0.5);
+  console.log(label + "x: " + (this.position.x) + " y: " + (this.position.y) + " width: " + this.width + " height: " + this.height);
 };
 
 ToggleButton.prototype = Object.create(Phaser.Button.prototype);
 ToggleButton.prototype.constructor = ToggleButton;
 
 ToggleButton.prototype.update = function() {
-  
-  // write your prefab's specific update code here
-  
 };
 
 ToggleButton.prototype.clickListener = function(button) {
   var previousState = button.toggled;
-  console.log('Button pressed');
   button.group.forEach(function(item) {
     item.toggle(false);
-    console.log(item.frame);
   }, this);
 
   if(previousState === false) {
     button.toggle(true);
   }
-  console.log(button.frame);
 };
 
 ToggleButton.prototype.toggle = function (toggled) {
     this.toggled = toggled;
-    console.log('Toggled to ' + toggled);
     if(this.toggled) {
-        this.frame = 1;
+        this.setFrames(1,1, 1, 1);
     }
     else {
-        this.frame = 0;
+        this.setFrames(1, 0, 1, 0);
     }
 };
 
