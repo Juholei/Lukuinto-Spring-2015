@@ -12,8 +12,9 @@ Preload.prototype = {
 
     this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
     this.load.setPreloadSprite(this.asset);
-    this.load.image('button', 'assets/diamond.png');
-    this.load.spritesheet('fullscreenButton', 'assets/ruutukoko.png', 284, 284);
+    this.load.image('menu-background', 'assets/menu/aloitus.png');
+    this.load.spritesheet('start-button', 'assets/menu/aloita.png', 220, 96);
+    this.load.spritesheet('fullscreenButton', 'assets/menu/ruutukoko.png', 284, 284);
     this.load.image('background-box', 'assets/valintojen_tausta.png');
     this.load.image('map', 'assets/karttatausta.png');
     this.load.image('quiz-background-1', 'assets/taustakuva_kauppatori.png');
