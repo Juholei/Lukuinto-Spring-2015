@@ -1,5 +1,6 @@
 'use strict';
 var Point = require('../prefabs/point');
+var Avatar = require('../prefabs/avatar');
 
 function Play() {}
 Play.prototype = {
@@ -15,9 +16,8 @@ Play.prototype = {
     endPoint.anchor.setTo(0.5, 0.5);
     endPoint.scale.setTo(0.5, 0.5);
 
-    var avatar = this.game.add.sprite(246, 143, 'avatar');
-    avatar.anchor.setTo(0.5, 1);
-    avatar.scale.setTo(0.25, 0.25);
+    this.avatar = new Avatar(this.game, 246, 143);
+    this.game.add.existing(this.avatar);
 
     var point1 = new Point(this.game, 515, 616);
     var point2 = new Point(this.game, 553, 483);
