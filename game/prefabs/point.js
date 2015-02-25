@@ -16,7 +16,7 @@ Point.prototype.update = function() {
 
 Point.prototype.clickListener = function() {
     console.log("Changing state to quiz");
-    this.game.state.start('quiz');
+    this.game.state.start('quiz', false);
   }
 
 module.exports = Point;

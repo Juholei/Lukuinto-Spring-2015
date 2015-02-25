@@ -21,6 +21,7 @@ Preload.prototype = {
     //Play state assets
     this.load.image('map', 'assets/play/karttatausta.png');
     this.load.spritesheet('point', 'assets/play/karttapiste.png', 98, 98);
+    this.load.spritesheet('start-end', 'assets/play/lahto_maali.png', 190, 246);
 
     //Quiz state assets
     this.load.image('quiz-background-1', 'assets/quiz/taustakuva_kauppatori.png');
