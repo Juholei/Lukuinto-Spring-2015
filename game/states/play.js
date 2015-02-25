@@ -19,10 +19,10 @@ Play.prototype = {
     this.avatar = new Avatar(this.game, 246, 143);
     this.game.add.existing(this.avatar);
 
-    var point1 = new Point(this.game, 515, 616);
-    var point2 = new Point(this.game, 553, 483);
-    var point3 = new Point(this.game, 451, 407);
-    var point4 = new Point(this.game, 446, 101);
+    var point1 = new Point(this.game, 446, 101);
+    var point2 = new Point(this.game, 451, 407);
+    var point3 = new Point(this.game, 553, 483);
+    var point4 = new Point(this.game, 515, 616);
 
     this.pointGroup.add(startPoint);
     this.pointGroup.add(endPoint);

@@ -10,9 +10,11 @@ Avatar.prototype = Object.create(Phaser.Sprite.prototype);
 Avatar.prototype.constructor = Avatar;
 
 Avatar.prototype.update = function() {
-  
-  // write your prefab's specific update code here
-  
 };
+
+Avatar.prototype.moveTo = function(point) {
+  this.x = point.x;
+  this.y = point.y;
+}
 
 module.exports = Avatar;
