@@ -10,7 +10,6 @@ var ToggleButton = function(game, x, y, callbackContext, group, label, answer) {
   this.addChild(labelText);
 
   labelText.anchor.setTo(0.5, 0.5);
-  console.log(label + "x: " + (this.position.x) + " y: " + (this.position.y) + " width: " + this.width + " height: " + this.height);
 };
 
 ToggleButton.prototype = Object.create(Phaser.Button.prototype);
