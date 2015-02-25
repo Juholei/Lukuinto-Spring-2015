@@ -4,7 +4,7 @@ Game created in Lukuinto Student Project in Spring 2015. HTML5 game that aims to
 
 # Building the project
 
-Nodejs and npm are needed. Command 'npm install' should install further dependencies for building the project based on what is added as requirements in 'package.json'.
+Nodejs and npm are needed. Command 'npm install' should install further dependencies for building the project based on what is added as requirements in 'package.json'. After that install globally bower and grunt with commands 'npm install -g bower' and 'npm install -g grunt-cli'. If sudo is needed then add 'sudo' to beginning of the command ;-)
 
 After npm has installed all the requirements for building the project, use Bower to install the actual dependencies of the project with command "bower install". This installs the dependencies declared in 'bower.json'.
 
