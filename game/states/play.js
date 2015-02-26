@@ -31,9 +31,11 @@ Play.prototype = {
     this.avatar = new Avatar(this.game);
     this.avatar.moveTo(startPoint);
     this.game.add.existing(this.avatar);
-
-    for( var point in data.points) {
-      this.pointGroup(new Point(this.game, point.x, point.y));
+    console.log(data);
+    console.log(data.points);
+    for(var i = 0; i < data.points.length; i++) {
+      var point = data.points[i];
+      this.pointGroup.add(new Point(this.game, point.x, point.y));
     }
   }
 };
