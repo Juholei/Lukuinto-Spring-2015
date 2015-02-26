@@ -15,6 +15,6 @@ Avatar.prototype.update = function() {
 Avatar.prototype.moveTo = function(point) {
   this.x = point.x;
   this.y = point.y;
-}
+};
 
 module.exports = Avatar;
