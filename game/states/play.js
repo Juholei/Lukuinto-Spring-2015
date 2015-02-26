@@ -28,8 +28,7 @@ Play.prototype = {
     endPoint.scale.setTo(0.5, 0.5);
     this.pointGroup.add(endPoint);
 
-    this.avatar = new Avatar(this.game);
-    this.avatar.moveTo(startPoint);
+    this.avatar = new Avatar(this.game, 246, 143);
     this.game.add.existing(this.avatar);
     console.log(data);
     console.log(data.points);
