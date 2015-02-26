@@ -1,5 +1,6 @@
 'use strict';
 var Point = require('../prefabs/point');
+var GameData = require('../prefabs/gamedata');
 
 function Menu() {}
 
@@ -14,6 +15,7 @@ Menu.prototype = {
     this.fullScreenButton.events.onInputDown.add(this.toggleFullscreen, this);
 
     this.startButton = this.game.add.button(402, 614, 'start-button', this.actionOnClick, this, 1, 0);
+    this.game.data = new GameData();
   },
   update: function() {
   },

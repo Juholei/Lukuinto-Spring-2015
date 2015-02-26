@@ -3,7 +3,7 @@
 var ToggleButton = function(game, x, y, callbackContext, group, label, answer) {
   Phaser.Button.call(this, game, x, y, 'answer-button', this.clickListener, callbackContext, 1, 0, 1, 0);
   this.group = group;
-  this.group.add(this)
+  this.group.add(this);
   this.toggled = false;
 
   var labelText = game.add.text(50, this.height / 2, label, { font: '32px Arial', fill: 'white', align: 'center'});
