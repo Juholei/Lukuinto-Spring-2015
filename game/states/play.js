@@ -7,12 +7,13 @@ Play.prototype = {
   create: function() {
     this.backgroundMap = this.game.add.sprite(0, 0, 'map');
     this.createBoardFromGameData();
+    this.avatar.moveTo(this.game, this.pointGroup.getAt(2));
   },
   update: function() {
   },
   render: function() {
     // this.game.debug.inputInfo(32, 32);
-    // this.game.debug.pointer( this.game.input.activePointer );
+    // this.game.debug.pointer(this.game.input.activePointer);
   },
   createBoardFromGameData: function() {
     this.pointGroup = this.game.add.group();
@@ -30,8 +31,7 @@ Play.prototype = {
 
     this.avatar = new Avatar(this.game, 246, 143);
     this.game.add.existing(this.avatar);
-    console.log(data);
-    console.log(data.points);
+
     for(var i = 0; i < data.points.length; i++) {
       var point = data.points[i];
       this.pointGroup.add(new Point(this.game, point.x, point.y));

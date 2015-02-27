@@ -1,5 +1,4 @@
 'use strict';
-var Point = require('../prefabs/point');
 var GameData = require('../prefabs/gamedata');
 
 function Menu() {}
