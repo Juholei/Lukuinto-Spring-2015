@@ -4,7 +4,7 @@ function GameData() {
 }
 GameData.prototype = {
   "startPoint": {
-    "x": 246, 
+    "x": 246,
     "y": 118
   },
   "endPoint": {
