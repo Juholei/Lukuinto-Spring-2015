@@ -7,7 +7,7 @@ var Avatar = function(game, x, y, frame) {
   this.scale.setTo(0.25, 0.25);
   this.game.physics.arcade.enable(this);
   this.destination = null;
-  this.movementFinishedCallback = function() {
+  this.movementFinishedCallback = function defaultCallback() {
     console.log('Stopped moving and no custom callback set.');
   };
 };
@@ -18,6 +18,7 @@ Avatar.prototype.constructor = Avatar;
 Avatar.prototype.update = function() {
   if (this.destination !== null) {
     if (Phaser.Point.distance(this, this.destination) < 1) {
+      this.destination.setState('current');
       this.destination = null;
       this.body.velocity.setTo(0, 0);
       this.movementFinishedCallback();

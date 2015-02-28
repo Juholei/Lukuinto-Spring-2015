@@ -32,8 +32,8 @@ Play.prototype = {
     this.game.add.existing(this.avatar);
 
     for (var i = 0; i < data.points.length; i++) {
-      var point = data.points[i];
-      this.pointGroup.add(new Point(this.game, point.x, point.y, this));
+      var pointData = data.points[i];
+      this.pointGroup.add(new Point(this.game, pointData, this));
     }
   }
 };
