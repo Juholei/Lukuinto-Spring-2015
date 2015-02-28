@@ -19,11 +19,10 @@ Menu.prototype = {
   update: function() {
   },
   toggleFullscreen: function(button) {
-    if(this.game.scale.isFullScreen) {
+    if (this.game.scale.isFullScreen) {
       this.game.scale.stopFullScreen();
       button.frame = 0;
-    }
-    else {
+    } else {
       this.game.scale.startFullScreen();
       button.frame = 1;
     }

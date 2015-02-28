@@ -6,7 +6,7 @@ var ToggleButton = function(game, x, y, callbackContext, group, label) {
   this.group.add(this);
   this.toggled = false;
 
-  var labelText = game.add.text(50, this.height / 2, label, { font: '32px Arial', fill: 'white', align: 'center'});
+  var labelText = game.add.text(50, this.height / 2, label, {font: '32px Arial', fill: 'white', align: 'center'});
   this.addChild(labelText);
 
   labelText.anchor.setTo(0.5, 0.5);
@@ -29,14 +29,13 @@ ToggleButton.prototype.clickListener = function(button) {
   }
 };
 
-ToggleButton.prototype.toggle = function (toggled) {
-    this.toggled = toggled;
-    if (this.toggled) {
-        this.setFrames(1,1, 1, 1);
-    }
-    else {
-        this.setFrames(1, 0, 1, 0);
-    }
+ToggleButton.prototype.toggle = function(toggled) {
+  this.toggled = toggled;
+  if (this.toggled) {
+    this.setFrames(1, 1, 1, 1);
+  } else {
+    this.setFrames(1, 0, 1, 0);
+  }
 };
 
 module.exports = ToggleButton;

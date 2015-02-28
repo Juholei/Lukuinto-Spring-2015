@@ -17,11 +17,11 @@ Point.prototype.update = function() {
 //Callback context here is Play state
 //Parameter item is the clicked item i.e. object of this class
 Point.prototype.clickListener = function(item) {
-    this.avatar.moveTo(item, function() {
-      console.log('Changing state to quiz');
-      console.log(this);
-      this.game.state.start('quiz', false);
-    });
+  this.avatar.moveTo(item, function() {
+    console.log('Changing state to quiz');
+    console.log(this);
+    this.game.state.start('quiz', false);
+  });
 };
 
 module.exports = Point;
