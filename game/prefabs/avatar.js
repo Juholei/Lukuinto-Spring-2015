@@ -4,7 +4,7 @@ var Avatar = function(game, x, y, frame) {
   Phaser.Sprite.call(this, game, x, y, 'avatar', frame);
   this.game = game;
   this.anchor.setTo(0.5, 1);
-  // this.scale.setTo(0.25, 0.25);
+  this.scale.setTo(0.25, 0.25);
   this.game.physics.arcade.enable(this);
   this.destination = null;
   this.movementFinishedCallback = function() {
