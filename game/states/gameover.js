@@ -18,12 +18,12 @@ GameOver.prototype = {
       { font: '16px Arial', fill: '#000', align: 'center'});
     this.instructionText.anchor.setTo(0.5, 0.5);
     this.button = this.game.add.button(100, 100, 'button',
-      function(){
+      function() {
         this.game.state.start('menu');
       }, this);
   },
   update: function () {
-    if(this.game.input.activePointer.justPressed()) {
+    if (this.game.input.activePointer.justPressed()) {
       this.game.state.start('play');
     }
   }

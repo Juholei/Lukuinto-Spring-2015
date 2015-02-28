@@ -24,14 +24,14 @@ ToggleButton.prototype.clickListener = function(button) {
     item.toggle(false);
   }, this);
 
-  if(previousState === false) {
+  if (previousState === false) {
     button.toggle(true);
   }
 };
 
 ToggleButton.prototype.toggle = function (toggled) {
     this.toggled = toggled;
-    if(this.toggled) {
+    if (this.toggled) {
         this.setFrames(1,1, 1, 1);
     }
     else {
