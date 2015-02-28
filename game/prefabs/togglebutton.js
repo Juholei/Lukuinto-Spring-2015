@@ -1,6 +1,6 @@
 'use strict';
 
-var ToggleButton = function(game, x, y, callbackContext, group, label, answer) {
+var ToggleButton = function(game, x, y, callbackContext, group, label) {
   Phaser.Button.call(this, game, x, y, 'answer-button', this.clickListener, callbackContext, 1, 0, 1, 0);
   this.group = group;
   this.group.add(this);

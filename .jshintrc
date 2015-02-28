@@ -18,6 +18,9 @@
   "trailing": true,
   "smarttabs": true,
   "white": true,
+  "freeze": true,
+  "maxdepth": 3,
+  "maxstatements": 15,
   "globals": {
     "Phaser": false,
     "window": false
