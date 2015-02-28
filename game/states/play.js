@@ -34,7 +34,7 @@ Play.prototype = {
 
     for(var i = 0; i < data.points.length; i++) {
       var point = data.points[i];
-      this.pointGroup.add(new Point(this.game, point.x, point.y));
+      this.pointGroup.add(new Point(this.game, point.x, point.y, this));
     }
   }
 };
