@@ -7,29 +7,20 @@ var states = {
   NEXT: 'next'        //Next Point where you can go
 };
 
-var Point = function(game, pointData, callbackContext) {
+var Point = function(game, pointData, callback, callbackContext) {
   Phaser.Sprite.call(this, game, pointData.x, pointData.y, 'point');
   this.anchor.setTo(0.5, 0.5);
   this.scale.setTo(0.5, 0.5);
+  this.pointData = pointData;
   // this.inputEnabled = true;
   this.setState(pointData.state);
-  this.events.onInputDown.add(this.clickListener, callbackContext);
+  this.events.onInputDown.add(callback, callbackContext);
 };
 
 Point.prototype = Object.create(Phaser.Sprite.prototype);
 Point.prototype.constructor = Point;
 
 Point.prototype.update = function() {
-};
-
-//Callback context here is Play state
-//Parameter item is the clicked item i.e. object of this class
-//function whenStopped passed as callback changes the state to quiz.
-Point.prototype.clickListener = function(item) {
-  this.avatar.moveTo(item, function whenStopped() {
-    console.log('Changing state to quiz');
-    this.game.state.start('quiz', false);
-  });
 };
 
 Point.prototype.setState = function(state) {
@@ -45,7 +36,6 @@ Point.prototype.setState = function(state) {
     case states.UNVISITED:
       this.frame = 0;
       this.inputEnabled = false;
-      console.log('unvisited set ' + this.inputEnabled);
       break;
     case states.VISITED:
       this.frame = 1;

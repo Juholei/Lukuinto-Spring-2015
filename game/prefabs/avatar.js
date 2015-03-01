@@ -18,7 +18,6 @@ Avatar.prototype.constructor = Avatar;
 Avatar.prototype.update = function() {
   if (this.destination !== null) {
     if (Phaser.Point.distance(this, this.destination) < 1) {
-      this.destination.setState('current');
       this.destination = null;
       this.body.velocity.setTo(0, 0);
       this.movementFinishedCallback();

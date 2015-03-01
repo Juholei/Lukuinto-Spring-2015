@@ -6,6 +6,7 @@ function Play() {}
 Play.prototype = {
   create: function() {
     this.backgroundMap = this.game.add.sprite(0, 0, 'map');
+    this.pointGroup = this.game.add.group();
     this.createBoardFromGameData();
     this.putAvatarToCurrentPoint();
   },
@@ -16,7 +17,6 @@ Play.prototype = {
     // this.game.debug.pointer(this.game.input.activePointer);
   },
   createBoardFromGameData: function() {
-    this.pointGroup = this.game.add.group();
     var data = this.game.data;
 
     var startPoint = this.game.add.sprite(data.startPoint.x, data.startPoint.y, 'start-end', 0);
@@ -35,7 +35,7 @@ Play.prototype = {
 
     for (var i = 0; i < data.points.length; i++) {
       var pointData = data.points[i];
-      this.pointGroup.add(new Point(this.game, pointData, this));
+      this.pointGroup.add(new Point(this.game, pointData, this.clickListener, this));
     }
   },
   putAvatarToCurrentPoint: function() {
@@ -49,6 +49,18 @@ Play.prototype = {
       this.avatar.position.x = startPoint.x;
       this.avatar.position.y = startPoint.y + 25;
     }
+  },
+  //Callback context here is Play state
+  //Parameter item is the clicked item i.e. object of this class
+  //function passed as callback to Avatar changes the state to quiz after Avatar stops moving.
+  clickListener: function(item) {
+    this.avatar.moveTo(item, function setCurrentPointForQuiz() {
+      item.setState('current');
+      console.log(item);
+      item.pointData.state = 'current';
+      console.log('Changing state to quiz');
+      this.game.state.start('quiz', false);
+    });
   }
 };
 
