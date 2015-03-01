@@ -56,6 +56,7 @@ Quiz.prototype = {
     confirmButton.anchor.setTo(0.5, 1);
   },
   confirmOnClick: function() {
+    this.game.data.markPointAs('unvisited', 'next');
     console.log('Changing state to play');
     this.game.state.start('play');
   }

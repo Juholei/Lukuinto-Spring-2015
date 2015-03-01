@@ -12,7 +12,6 @@ var Point = function(game, pointData, callback, callbackContext) {
   this.anchor.setTo(0.5, 0.5);
   this.scale.setTo(0.5, 0.5);
   this.pointData = pointData;
-  // this.inputEnabled = true;
   this.setState(pointData.state);
   this.events.onInputDown.add(callback, callbackContext);
 };

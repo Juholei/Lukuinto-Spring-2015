@@ -54,9 +54,9 @@ Play.prototype = {
   //Parameter item is the clicked item i.e. object of this class
   //function passed as callback to Avatar changes the state to quiz after Avatar stops moving.
   clickListener: function(item) {
-    this.avatar.moveTo(item, function setCurrentPointForQuiz() {
+    this.avatar.moveTo(item, function switchCurrentPointForQuiz() {
+      this.game.data.markPointAs('current', 'visited');
       item.setState('current');
-      console.log(item);
       item.pointData.state = 'current';
       console.log('Changing state to quiz');
       this.game.state.start('quiz', false);

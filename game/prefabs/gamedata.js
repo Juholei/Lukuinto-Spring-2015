@@ -52,7 +52,15 @@ GameData.prototype = {
       "y": 694,
       "state": "unvisited"
     }
-  ]
+  ],
+  markPointAs: function(oldState, newState) {
+    for (var i = 0; i < this.points.length; i++) {
+      if (this.points[i].state === oldState) {
+        this.points[i].state = newState;
+        break;
+      }
+    }
+  }
 };
 
 module.exports = GameData;
