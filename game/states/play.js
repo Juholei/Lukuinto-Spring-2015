@@ -7,6 +7,7 @@ Play.prototype = {
   create: function() {
     this.backgroundMap = this.game.add.sprite(0, 0, 'map');
     this.createBoardFromGameData();
+    this.putAvatarToCurrentPoint();
   },
   update: function() {
   },
@@ -19,6 +20,7 @@ Play.prototype = {
     var data = this.game.data;
 
     var startPoint = this.game.add.sprite(data.startPoint.x, data.startPoint.y, 'start-end', 0);
+    startPoint.state = 'start';
     startPoint.anchor.setTo(0.5, 0.5);
     startPoint.scale.setTo(0.5, 0.5);
     this.pointGroup.add(startPoint);
@@ -34,6 +36,18 @@ Play.prototype = {
     for (var i = 0; i < data.points.length; i++) {
       var pointData = data.points[i];
       this.pointGroup.add(new Point(this.game, pointData, this));
+    }
+  },
+  putAvatarToCurrentPoint: function() {
+    var currentPoint = this.pointGroup.iterate('state', 'current', Phaser.Group.RETURN_CHILD);
+
+    if (currentPoint !== null) {
+      this.avatar.position.x = currentPoint.x;
+      this.avatar.position.y = currentPoint.y;
+    } else {
+      var startPoint = this.pointGroup.iterate('state', 'start', Phaser.Group.RETURN_CHILD);
+      this.avatar.position.x = startPoint.x;
+      this.avatar.position.y = startPoint.y + 25;
     }
   }
 };

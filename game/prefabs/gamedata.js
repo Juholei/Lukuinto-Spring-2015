@@ -15,17 +15,17 @@ GameData.prototype = {
     {
       "x": 341,
       "y": 120,
-      "state": "visited"
+      "state": "next"
     },
     {
       "x": 446,
       "y": 101,
-      "state": "current"
+      "state": "unvisited"
     },
     {
       "x": 474,
       "y": 195,
-      "state": "next"
+      "state": "unvisited"
     },
     {
       "x": 441,

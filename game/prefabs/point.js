@@ -11,8 +11,8 @@ var Point = function(game, pointData, callbackContext) {
   Phaser.Sprite.call(this, game, pointData.x, pointData.y, 'point');
   this.anchor.setTo(0.5, 0.5);
   this.scale.setTo(0.5, 0.5);
+  // this.inputEnabled = true;
   this.setState(pointData.state);
-  this.inputEnabled = true;
   this.events.onInputDown.add(this.clickListener, callbackContext);
 };
 
@@ -33,14 +33,19 @@ Point.prototype.clickListener = function(item) {
 };
 
 Point.prototype.setState = function(state) {
+  this.state = state;
   switch (state) {
     case states.CURRENT:
       this.frame = 2;
       break;
     case states.NEXT:
+      this.frame = 1;
+      this.inputEnabled = true;
       break;
     case states.UNVISITED:
       this.frame = 0;
+      this.inputEnabled = false;
+      console.log('unvisited set ' + this.inputEnabled);
       break;
     case states.VISITED:
       this.frame = 1;
