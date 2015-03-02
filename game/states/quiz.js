@@ -7,6 +7,8 @@ Quiz.prototype = {
   preload: function() {
   },
   create: function() {
+    this.currentTask = this.game.data.getCurrentTask();
+    console.log(this.currentTask);
     this.addBackgroundImage();
     this.addTitleText();
     this.addButtonBackground();
@@ -29,7 +31,7 @@ Quiz.prototype = {
   },
   addTitleText: function() {
     var textStyle = {font: '32px Arial', fill: '#000', align: 'center'};
-    this.titleText = this.game.add.text(this.game.world.centerX, 25, 'Vastaa tehtävään:',  textStyle);
+    this.titleText = this.game.add.text(this.game.world.centerX, 25, this.currentTask.question,  textStyle);
     this.titleText.anchor.setTo(0.5, 0.5);
   },
   addButtonBackground: function() {

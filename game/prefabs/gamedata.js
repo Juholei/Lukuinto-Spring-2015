@@ -1,4 +1,5 @@
 'use strict';
+var Point = require('../prefabs/point');
 
 function GameData() {}
 GameData.prototype = {
@@ -15,25 +16,27 @@ GameData.prototype = {
       'x': 341,
       'y': 120,
       'state': 'next',
-      'question': 'Tämä on kysymys?',
-      'answers': [
-        {
-          'text': 'Kyllä',
-          'correctAnswer': true
-        },
-        {
-          'text': 'Ei',
-          'correctAnswer': false
-        },
-        {
-          'text': 'Ehkä',
-          'correctAnswer': false
-        },
-        {
-          'text': 'Täh?',
-          'correctAnswer': false
-        }
-      ]
+      'task': {
+        'question': 'Tämä on kysymys?',
+        'answers': [
+          {
+            'text': 'Kyllä',
+            'correctAnswer': true
+          },
+          {
+            'text': 'Ei',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Ehkä',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Täh?',
+            'correctAnswer': false
+          }
+        ]
+      }
     },
     {
       'x': 446,
@@ -76,6 +79,13 @@ GameData.prototype = {
       if (this.points[i].state === oldState) {
         this.points[i].state = newState;
         break;
+      }
+    }
+  },
+  getCurrentTask: function() {
+    for (var i = 0; i < this.points.length; i++) {
+      if (this.points[i].state === Point.STATES.CURRENT) {
+        return this.points[i].task;
       }
     }
   }
