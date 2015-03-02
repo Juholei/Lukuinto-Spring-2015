@@ -34,10 +34,9 @@ Point.prototype.setState = function(state) {
       break;
     case Point.STATES.UNVISITED:
       this.frame = 0;
-      this.inputEnabled = false;
       break;
     case Point.STATES.VISITED:
-      this.frame = 1;
+      this.frame = 3;
       break;
     default:
       console.log('Unsupported state encountered: ' + state);
