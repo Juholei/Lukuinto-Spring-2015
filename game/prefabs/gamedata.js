@@ -17,7 +17,7 @@ GameData.prototype = {
       'y': 120,
       'state': 'next',
       'task': {
-        'question': 'Tämä on kysymys?',
+        'question': 'Testikysymys 1',
         'answers': [
           {
             'text': 'Kyllä',
@@ -41,37 +41,184 @@ GameData.prototype = {
     {
       'x': 446,
       'y': 101,
-      'state': 'unvisited'
+      'state': 'unvisited',
+      'task': {
+        'question': 'Testikysymys 2',
+        'answers': [
+          {
+            'text': 'Kyllä',
+            'correctAnswer': true
+          },
+          {
+            'text': 'Ei',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Ehkä',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Täh?',
+            'correctAnswer': false
+          }
+        ]
+      }
     },
     {
       'x': 474,
       'y': 195,
-      'state': 'unvisited'
+      'state': 'unvisited',
+      'task': {
+        'question': 'Testikysymys 3',
+        'answers': [
+          {
+            'text': 'Kyllä',
+            'correctAnswer': true
+          },
+          {
+            'text': 'Ei',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Ehkä',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Täh?',
+            'correctAnswer': false
+          }
+        ]
+      }
     },
     {
       'x': 441,
       'y': 292,
-      'state': 'unvisited'
+      'state': 'unvisited',
+      'task': {
+        'question': 'Testikysymys 4',
+        'answers': [
+          {
+            'text': 'Kyllä',
+            'correctAnswer': true
+          },
+          {
+            'text': 'Ei',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Ehkä',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Täh?',
+            'correctAnswer': false
+          }
+        ]
+      }
     },
     {
       'x': 451,
       'y': 407,
-      'state': 'unvisited'
+      'state': 'unvisited',
+      'task': {
+        'question': 'Testikysymys 5',
+        'answers': [
+          {
+            'text': 'Kyllä',
+            'correctAnswer': true
+          },
+          {
+            'text': 'Ei',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Ehkä',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Täh?',
+            'correctAnswer': false
+          }
+        ]
+      }
     },
     {
       'x': 553,
       'y': 483,
-      'state': 'unvisited'
+      'state': 'unvisited',
+      'task': {
+        'question': 'Testikysymys 6',
+        'answers': [
+          {
+            'text': 'Kyllä',
+            'correctAnswer': true
+          },
+          {
+            'text': 'Ei',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Ehkä',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Täh?',
+            'correctAnswer': false
+          }
+        ]
+      }
     },
     {
       'x': 515,
       'y': 616,
-      'state': 'unvisited'
+      'state': 'unvisited',
+      'task': {
+        'question': 'Testikysymys 7',
+        'answers': [
+          {
+            'text': 'Kyllä',
+            'correctAnswer': true
+          },
+          {
+            'text': 'Ei',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Ehkä',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Täh?',
+            'correctAnswer': false
+          }
+        ]
+      }
     },
     {
       'x': 653,
       'y': 694,
-      'state': 'unvisited'
+      'state': 'unvisited',
+      'task': {
+        'question': 'Testikysymys 8',
+        'answers': [
+          {
+            'text': 'Kyllä',
+            'correctAnswer': true
+          },
+          {
+            'text': 'Ei',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Ehkä',
+            'correctAnswer': false
+          },
+          {
+            'text': 'Täh?',
+            'correctAnswer': false
+          }
+        ]
+      }
     }
   ],
   markPointAs: function(oldState, newState) {
