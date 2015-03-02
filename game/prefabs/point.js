@@ -1,12 +1,5 @@
 'use strict';
 
-var states = {
-  UNVISITED: 'unvisited',  //Not visited yet, but not reachable yet
-  VISITED: 'visited',    //Already visited. Can't go back?
-  CURRENT: 'current',    //Current place
-  NEXT: 'next'        //Next Point where you can go
-};
-
 var Point = function(game, pointData, callback, callbackContext) {
   Phaser.Sprite.call(this, game, pointData.x, pointData.y, 'point');
   this.anchor.setTo(0.5, 0.5);
@@ -14,6 +7,13 @@ var Point = function(game, pointData, callback, callbackContext) {
   this.pointData = pointData;
   this.setState(pointData.state);
   this.events.onInputDown.add(callback, callbackContext);
+};
+
+Point.STATES = {
+  UNVISITED: 'unvisited',  //Not visited yet and not reachable
+  VISITED: 'visited',      //Already visited. Can't go back?
+  CURRENT: 'current',      //Current place
+  NEXT: 'next'             //Next Point where you can go
 };
 
 Point.prototype = Object.create(Phaser.Sprite.prototype);
@@ -25,19 +25,18 @@ Point.prototype.update = function() {
 Point.prototype.setState = function(state) {
   this.state = state;
   switch (state) {
-    case states.CURRENT:
+    case Point.STATES.CURRENT:
       this.frame = 2;
       break;
-    case states.NEXT:
+    case Point.STATES.NEXT:
       this.frame = 1;
       this.inputEnabled = true;
       break;
-    case states.UNVISITED:
+    case Point.STATES.UNVISITED:
       this.frame = 0;
-      this.inputEnabled = false;
       break;
-    case states.VISITED:
-      this.frame = 1;
+    case Point.STATES.VISITED:
+      this.frame = 3;
       break;
     default:
       console.log('Unsupported state encountered: ' + state);

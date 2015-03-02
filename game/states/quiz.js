@@ -1,5 +1,6 @@
 'use strict';
 var ToggleButton = require('../prefabs/togglebutton');
+var Point = require('../prefabs/point');
 
 function Quiz() {}
 Quiz.prototype = {
@@ -56,7 +57,7 @@ Quiz.prototype = {
     confirmButton.anchor.setTo(0.5, 1);
   },
   confirmOnClick: function() {
-    this.game.data.markPointAs('unvisited', 'next');
+    this.game.data.markPointAs(Point.STATES.UNVISITED, Point.STATES.NEXT);
     console.log('Changing state to play');
     this.game.state.start('play');
   }

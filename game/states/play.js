@@ -39,7 +39,7 @@ Play.prototype = {
     }
   },
   putAvatarToCurrentPoint: function() {
-    var currentPoint = this.pointGroup.iterate('state', 'current', Phaser.Group.RETURN_CHILD);
+    var currentPoint = this.pointGroup.iterate('state', Point.STATES.CURRENT, Phaser.Group.RETURN_CHILD);
 
     if (currentPoint !== null) {
       this.avatar.position.x = currentPoint.x;
@@ -55,7 +55,7 @@ Play.prototype = {
   //function passed as callback to Avatar changes the state to quiz after Avatar stops moving.
   clickListener: function(item) {
     this.avatar.moveTo(item, function switchCurrentPointForQuiz() {
-      this.game.data.markPointAs('current', 'visited');
+      this.game.data.markPointAs(Point.STATES.CURRENT, Point.STATES.VISITED);
       item.setState('current');
       item.pointData.state = 'current';
       console.log('Changing state to quiz');
