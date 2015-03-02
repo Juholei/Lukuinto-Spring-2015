@@ -55,8 +55,7 @@ Quiz.prototype = {
     var buttonD = new ToggleButton(this, centerX + 3, centerY + 260, this, this.answerButtons, 'D');
     buttonD.scale.setTo(0.64, 0.64);
 
-    var confirmButton = this.game.add.button(centerX + 250, this.game.world.height,
-     'quiz-confirm', this.confirmOnClick);
+    var confirmButton = this.game.add.button(centerX + 250, this.game.world.height, 'quiz-confirm', this.confirmOnClick);
     confirmButton.scale.setTo(0.35, 0.35);
     confirmButton.anchor.setTo(0.5, 1);
   },

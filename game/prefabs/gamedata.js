@@ -1,56 +1,74 @@
 'use strict';
 
-function GameData() {
-}
+function GameData() {}
 GameData.prototype = {
-  "startPoint": {
-    "x": 246,
-    "y": 118
+  'startPoint': {
+    'x': 246,
+    'y': 118
   },
-  "endPoint": {
-    "x": 797,
-    "y": 680
+  'endPoint': {
+    'x': 797,
+    'y': 680
   },
-  "points": [
+  'points': [
     {
-      "x": 341,
-      "y": 120,
-      "state": "next"
+      'x': 341,
+      'y': 120,
+      'state': 'next',
+      'question': 'Tämä on kysymys?',
+      'answers': [
+        {
+          'text': 'Kyllä',
+          'correctAnswer': true
+        },
+        {
+          'text': 'Ei',
+          'correctAnswer': false
+        },
+        {
+          'text': 'Ehkä',
+          'correctAnswer': false
+        },
+        {
+          'text': 'Täh?',
+          'correctAnswer': false
+        }
+      ]
     },
     {
-      "x": 446,
-      "y": 101,
-      "state": "unvisited"
+      'x': 446,
+      'y': 101,
+      'state': 'unvisited'
     },
     {
-      "x": 474,
-      "y": 195,
-      "state": "unvisited"
+      'x': 474,
+      'y': 195,
+      'state': 'unvisited'
     },
     {
-      "x": 441,
-      "y": 292,
-      "state": "unvisited"
+      'x': 441,
+      'y': 292,
+      'state': 'unvisited'
     },
     {
-      "x": 451,
-      "y": 407,
-      "state": "unvisited"
+      'x': 451,
+      'y': 407,
+      'state': 'unvisited'
     },
     {
-      "x": 553,
-      "y": 483,
-      "state": "unvisited"
+      'x': 553,
+      'y': 483,
+      'state': 'unvisited'
     },
     {
-      "x": 515,
-      "y": 616,
-      "state": "unvisited"
+      'x': 515,
+      'y': 616,
+      'state': 'unvisited'
     },
     {
-      "x": 653,
-      "y": 694,
-      "state": "unvisited"
+      'x': 653,
+      'y': 694,
+      'state': 'unvisited'
     }
   ],
   markPointAs: function(oldState, newState) {
