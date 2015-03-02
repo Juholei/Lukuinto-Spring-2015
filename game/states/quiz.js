@@ -40,19 +40,23 @@ Quiz.prototype = {
   addButtons: function() {
     this.answerButtons = this.game.add.group();
 
-    var buttonA = new ToggleButton(this, this.game.world.centerX - 215, this.game.world.centerY + 170, this, this.answerButtons, 'A');
+    var centerX = this.game.world.centerX;
+    var centerY = this.game.world.centerY;
+
+    var buttonA = new ToggleButton(this, centerX - 215, centerY + 170, this, this.answerButtons, 'A');
     buttonA.scale.setTo(0.64, 0.64);
 
-    var buttonB = new ToggleButton(this, this.game.world.centerX + 3, this.game.world.centerY + 170, this, this.answerButtons, 'B');
+    var buttonB = new ToggleButton(this, centerX + 3, centerY + 170, this, this.answerButtons, 'B');
     buttonB.scale.setTo(0.64, 0.64);
 
-    var buttonC = new ToggleButton(this, this.game.world.centerX - 215, this.game.world.centerY + 260, this, this.answerButtons, 'C');
+    var buttonC = new ToggleButton(this, centerX - 215, centerY + 260, this, this.answerButtons, 'C');
     buttonC.scale.setTo(0.64, 0.64);
 
-    var buttonD = new ToggleButton(this, this.game.world.centerX + 3, this.game.world.centerY + 260, this, this.answerButtons, 'D');
+    var buttonD = new ToggleButton(this, centerX + 3, centerY + 260, this, this.answerButtons, 'D');
     buttonD.scale.setTo(0.64, 0.64);
 
-    var confirmButton = this.game.add.button(this.game.world.centerX + 250, this.game.world.height, 'quiz-confirm', this.confirmOnClick);
+    var confirmButton = this.game.add.button(centerX + 250, this.game.world.height,
+     'quiz-confirm', this.confirmOnClick);
     confirmButton.scale.setTo(0.35, 0.35);
     confirmButton.anchor.setTo(0.5, 1);
   },
