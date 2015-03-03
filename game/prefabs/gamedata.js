@@ -32,7 +32,7 @@ GameData.prototype = {
             'correctAnswer': false
           },
           {
-            'text': 'Täh?',
+            'text': 'Testaan rivin pituutta ja rivitystä',
             'correctAnswer': false
           }
         ]

@@ -45,17 +45,10 @@ Quiz.prototype = {
     var centerX = this.game.world.centerX;
     var centerY = this.game.world.centerY;
 
-    var buttonA = new ToggleButton(this, centerX - 215, centerY + 170, this, this.answerButtons, 'A');
-    buttonA.scale.setTo(0.64, 0.64);
-
-    var buttonB = new ToggleButton(this, centerX + 3, centerY + 170, this, this.answerButtons, 'B');
-    buttonB.scale.setTo(0.64, 0.64);
-
-    var buttonC = new ToggleButton(this, centerX - 215, centerY + 260, this, this.answerButtons, 'C');
-    buttonC.scale.setTo(0.64, 0.64);
-
-    var buttonD = new ToggleButton(this, centerX + 3, centerY + 260, this, this.answerButtons, 'D');
-    buttonD.scale.setTo(0.64, 0.64);
+    var buttonA = new ToggleButton(this, centerX - 215, centerY + 170, this, this.answerButtons, 'A', this.currentTask.answers[0]);
+    var buttonB = new ToggleButton(this, centerX + 3, centerY + 170, this, this.answerButtons, 'B', this.currentTask.answers[1]);
+    var buttonC = new ToggleButton(this, centerX - 215, centerY + 260, this, this.answerButtons, 'C', this.currentTask.answers[2]);
+    var buttonD = new ToggleButton(this, centerX + 3, centerY + 260, this, this.answerButtons, 'D', this.currentTask.answers[3]);
 
     var confirmButton = this.game.add.button(centerX + 250, this.game.world.height, 'quiz-confirm', this.confirmOnClick);
     confirmButton.scale.setTo(0.35, 0.35);
