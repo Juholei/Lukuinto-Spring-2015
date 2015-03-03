@@ -7,6 +7,7 @@ Menu.prototype = {
   preload: function() {
   },
   create: function() {
+    window.scrollTo(10, 10);
     this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
     this.backgroundImage = this.game.add.sprite(0, 0, 'menu-background');
     this.fullScreenButton = this.game.add.button(30, 30, 'fullscreenButton');
