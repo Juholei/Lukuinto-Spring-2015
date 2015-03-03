@@ -8,7 +8,6 @@ Quiz.prototype = {
   },
   create: function() {
     this.currentTask = this.game.data.getCurrentTask();
-    console.log(this.currentTask);
     this.addBackgroundImage();
     this.addTitleText();
     this.addButtonBackground();
@@ -50,14 +49,21 @@ Quiz.prototype = {
     var buttonC = new ToggleButton(this, centerX - 215, centerY + 260, this, this.answerButtons, 'C', this.currentTask.answers[2]);
     var buttonD = new ToggleButton(this, centerX + 3, centerY + 260, this, this.answerButtons, 'D', this.currentTask.answers[3]);
 
-    var confirmButton = this.game.add.button(centerX + 250, this.game.world.height, 'quiz-confirm', this.confirmOnClick);
+    var confirmButton = this.game.add.button(centerX + 250, this.game.world.height, 'quiz-confirm', this.confirmOnClick, this);
     confirmButton.scale.setTo(0.35, 0.35);
     confirmButton.anchor.setTo(0.5, 1);
   },
   confirmOnClick: function() {
-    this.game.data.markPointAs(Point.STATES.UNVISITED, Point.STATES.NEXT);
-    console.log('Changing state to play');
-    this.game.state.start('play');
+    var selectedButton = this.answerButtons.iterate('toggled', true, Phaser.Group.RETURN_CHILD);
+    console.log('Selected answer: ' + selectedButton.answer.text + ' correct: ' + selectedButton.answer.correctAnswer);
+
+    if (selectedButton.answer.correctAnswer) {
+      this.game.data.markPointAs(Point.STATES.UNVISITED, Point.STATES.NEXT);
+      console.log('Answered correctly. Changing state to play');
+      this.game.state.start('play');
+    } else {
+      console.log('Answer was wrong.');
+    }
   }
 };
 module.exports = Quiz;
