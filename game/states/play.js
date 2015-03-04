@@ -25,18 +25,18 @@ Play.prototype = {
     startPoint.scale.setTo(0.5, 0.5);
     this.pointGroup.add(startPoint);
 
-    var endPoint = this.game.add.sprite(data.endPoint.x, data.endPoint.y, 'start-end', 1);
-    endPoint.anchor.setTo(0.5, 0.5);
-    endPoint.scale.setTo(0.5, 0.5);
-    this.pointGroup.add(endPoint);
-
-    this.avatar = new Avatar(this.game, 246, 143);
-    this.game.add.existing(this.avatar);
-
     for (var i = 0; i < data.points.length; i++) {
       var pointData = data.points[i];
       this.pointGroup.add(new Point(this.game, pointData, this.clickListener, this));
     }
+
+    this.avatar = new Avatar(this.game, 246, 143);
+
+    var endPoint = this.game.add.sprite(data.endPoint.x, data.endPoint.y, 'start-end', 1);
+    endPoint.state = 'end';
+    endPoint.anchor.setTo(0.5, 0.5);
+    endPoint.scale.setTo(0.5, 0.5);
+    this.pointGroup.add(endPoint);
   },
   putAvatarToCurrentPoint: function() {
     var currentPoint = this.pointGroup.iterate('state', Point.STATES.CURRENT, Phaser.Group.RETURN_CHILD);
