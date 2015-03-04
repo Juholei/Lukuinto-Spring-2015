@@ -34,6 +34,7 @@ Point.prototype.setState = function(state) {
       break;
     case Point.STATES.UNVISITED:
       this.frame = 0;
+      this.visible = false;
       break;
     case Point.STATES.VISITED:
       this.frame = 3;

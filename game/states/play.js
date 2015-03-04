@@ -1,6 +1,7 @@
 'use strict';
 var Point = require('../prefabs/point');
 var Avatar = require('../prefabs/avatar');
+var MajorPoint = require('../prefabs/majorpoint');
 
 function Play() {}
 Play.prototype = {
@@ -19,10 +20,7 @@ Play.prototype = {
   createBoardFromGameData: function() {
     var data = this.game.data;
 
-    var startPoint = this.game.add.sprite(data.startPoint.x, data.startPoint.y, 'start-end', 0);
-    startPoint.state = 'start';
-    startPoint.anchor.setTo(0.5, 0.5);
-    startPoint.scale.setTo(0.5, 0.5);
+    var startPoint = new MajorPoint(this.game, data.startPoint.x, data.startPoint.y, 'start');
     this.pointGroup.add(startPoint);
 
     for (var i = 0; i < data.points.length; i++) {
@@ -30,13 +28,10 @@ Play.prototype = {
       this.pointGroup.add(new Point(this.game, pointData, this.clickListener, this));
     }
 
-    this.avatar = new Avatar(this.game, 246, 143);
-
-    var endPoint = this.game.add.sprite(data.endPoint.x, data.endPoint.y, 'start-end', 1);
-    endPoint.state = 'end';
-    endPoint.anchor.setTo(0.5, 0.5);
-    endPoint.scale.setTo(0.5, 0.5);
+    var endPoint = new MajorPoint(this.game, data.endPoint.x, data.endPoint.y, 'end');
     this.pointGroup.add(endPoint);
+
+    this.avatar = new Avatar(this.game, 246, 143);
   },
   putAvatarToCurrentPoint: function() {
     var currentPoint = this.pointGroup.iterate('state', Point.STATES.CURRENT, Phaser.Group.RETURN_CHILD);
