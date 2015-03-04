@@ -21,19 +21,19 @@ GameData.prototype = {
         'answers': [
           {
             'text': 'Kyllä',
-            'correctAnswer': true
+            'isCorrect': true
           },
           {
             'text': 'Ei',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Ehkä',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Testaan rivin pituutta ja rivitystä',
-            'correctAnswer': false
+            'isCorrect': false
           }
         ]
       }
@@ -47,19 +47,19 @@ GameData.prototype = {
         'answers': [
           {
             'text': 'Kyllä',
-            'correctAnswer': true
+            'isCorrect': true
           },
           {
             'text': 'Ei',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Ehkä',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Täh?',
-            'correctAnswer': false
+            'isCorrect': false
           }
         ]
       }
@@ -73,19 +73,19 @@ GameData.prototype = {
         'answers': [
           {
             'text': 'Kyllä',
-            'correctAnswer': true
+            'isCorrect': true
           },
           {
             'text': 'Ei',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Ehkä',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Täh?',
-            'correctAnswer': false
+            'isCorrect': false
           }
         ]
       }
@@ -99,19 +99,19 @@ GameData.prototype = {
         'answers': [
           {
             'text': 'Kyllä',
-            'correctAnswer': true
+            'isCorrect': true
           },
           {
             'text': 'Ei',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Ehkä',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Täh?',
-            'correctAnswer': false
+            'isCorrect': false
           }
         ]
       }
@@ -125,19 +125,19 @@ GameData.prototype = {
         'answers': [
           {
             'text': 'Kyllä',
-            'correctAnswer': true
+            'isCorrect': true
           },
           {
             'text': 'Ei',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Ehkä',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Täh?',
-            'correctAnswer': false
+            'isCorrect': false
           }
         ]
       }
@@ -151,19 +151,19 @@ GameData.prototype = {
         'answers': [
           {
             'text': 'Kyllä',
-            'correctAnswer': true
+            'isCorrect': true
           },
           {
             'text': 'Ei',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Ehkä',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Täh?',
-            'correctAnswer': false
+            'isCorrect': false
           }
         ]
       }
@@ -177,19 +177,19 @@ GameData.prototype = {
         'answers': [
           {
             'text': 'Kyllä',
-            'correctAnswer': true
+            'isCorrect': true
           },
           {
             'text': 'Ei',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Ehkä',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Täh?',
-            'correctAnswer': false
+            'isCorrect': false
           }
         ]
       }
@@ -203,19 +203,19 @@ GameData.prototype = {
         'answers': [
           {
             'text': 'Kyllä',
-            'correctAnswer': true
+            'isCorrect': true
           },
           {
             'text': 'Ei',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Ehkä',
-            'correctAnswer': false
+            'isCorrect': false
           },
           {
             'text': 'Täh?',
-            'correctAnswer': false
+            'isCorrect': false
           }
         ]
       }
