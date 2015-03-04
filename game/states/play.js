@@ -44,6 +44,7 @@ Play.prototype = {
     if (currentPoint !== null) {
       this.avatar.position.x = currentPoint.x;
       this.avatar.position.y = currentPoint.y;
+      currentPoint.frame = 3;
     } else {
       var startPoint = this.pointGroup.iterate('state', 'start', Phaser.Group.RETURN_CHILD);
       this.avatar.position.x = startPoint.x;
