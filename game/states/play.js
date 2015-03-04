@@ -28,7 +28,7 @@ Play.prototype = {
       this.pointGroup.add(new Point(this.game, pointData, this.clickListener, this));
     }
 
-    var endPoint = new MajorPoint(this.game, data.endPoint.x, data.endPoint.y, 'end');
+    var endPoint = new MajorPoint(this.game, data.endPoint.x, data.endPoint.y, 'end', this.endPointClickListener, this);
     this.pointGroup.add(endPoint);
 
     this.avatar = new Avatar(this.game, 246, 143);
@@ -52,10 +52,16 @@ Play.prototype = {
   clickListener: function(item) {
     this.avatar.moveTo(item, function switchCurrentPointForQuiz() {
       this.game.data.markPointAs(Point.STATES.CURRENT, Point.STATES.VISITED);
-      item.setState('current');
-      item.pointData.state = 'current';
+      item.setState(Point.STATES.CURRENT);
+      item.pointData.state = Point.STATES.CURRENT;
       console.log('Changing state to quiz');
       this.game.state.start('quiz', false);
+    });
+  },
+  endPointClickListener: function(item) {
+    this.avatar.moveTo(item, function youWonned() {
+      console.log('You wonned!');
+      this.game.state.start('gameover');
     });
   }
 };

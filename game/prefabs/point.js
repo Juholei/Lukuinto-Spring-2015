@@ -19,8 +19,7 @@ Point.STATES = {
 Point.prototype = Object.create(Phaser.Sprite.prototype);
 Point.prototype.constructor = Point;
 
-Point.prototype.update = function() {
-};
+Point.prototype.update = function() {};
 
 Point.prototype.setState = function(state) {
   this.state = state;

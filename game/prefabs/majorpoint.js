@@ -1,6 +1,6 @@
 'use strict';
 
-var MajorPoint = function(game, x, y, state) {
+var MajorPoint = function(game, x, y, state, callback, callbackContext) {
   var frame = 0;
   if (state === 'start') {
     frame = 0;
@@ -11,15 +11,16 @@ var MajorPoint = function(game, x, y, state) {
   this.state = state;
   this.anchor.setTo(0.5, 0.5);
   this.scale.setTo(0.5, 0.5);
+  this.inputEnabled = true;
+  if (callback !== undefined) {
+    console.log(callback);
+    this.events.onInputDown.add(callback, callbackContext);
+  }
 };
 
 MajorPoint.prototype = Object.create(Phaser.Sprite.prototype);
 MajorPoint.prototype.constructor = MajorPoint;
 
-MajorPoint.prototype.update = function() {
-
-  // write your prefab's specific update code here
-
-};
+MajorPoint.prototype.update = function() {};
 
 module.exports = MajorPoint;
