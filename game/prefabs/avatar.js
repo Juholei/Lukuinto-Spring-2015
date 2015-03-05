@@ -3,9 +3,10 @@
 var Avatar = function(game, x, y, frame) {
   Phaser.Sprite.call(this, game, x, y, 'avatar', frame);
   this.game = game;
-  this.anchor.setTo(0.5, 1);
-  this.game.physics.arcade.enable(this);
   this.destination = null;
+  this.anchor.setTo(0.5, 1);
+  this.game.add.existing(this);
+  this.game.physics.arcade.enable(this);
   this.movementFinishedCallback = function defaultCallback() {
     console.log('Stopped moving and no custom callback set.');
   };

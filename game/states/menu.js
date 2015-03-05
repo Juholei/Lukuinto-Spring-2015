@@ -5,6 +5,7 @@ function Menu() {}
 
 Menu.prototype = {
   preload: function() {
+    this.load.json('gamedata', 'assets/gamedata.json', true);
   },
   create: function() {
     window.scrollTo(10, 10);
@@ -15,7 +16,9 @@ Menu.prototype = {
     this.fullScreenButton.events.onInputDown.add(this.toggleFullscreen, this);
 
     this.startButton = this.game.add.button(402, 614, 'start-button', this.actionOnClick, this, 1, 0);
-    this.game.data = new GameData();
+    this.game.data = new GameData(this.game.cache.getJSON('gamedata'));
+    console.log(this.game.cache.getJSON('gamedata'));
+
   },
   update: function() {
   },

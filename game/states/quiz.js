@@ -56,14 +56,19 @@ Quiz.prototype = {
   },
   confirmOnClick: function() {
     var selectedButton = this.answerButtons.iterate('toggled', true, Phaser.Group.RETURN_CHILD);
-    console.log('Selected answer: ' + selectedButton.answer.text + ' correct: ' + selectedButton.answer.correctAnswer);
 
-    if (selectedButton.answer.correctAnswer) {
-      this.game.data.markPointAs(Point.STATES.UNVISITED, Point.STATES.NEXT);
-      console.log('Answered correctly. Changing state to play');
-      this.game.state.start('play');
+    if (selectedButton !== null) {
+      console.log('Selected answer: ' + selectedButton.answer.text + ' correct: ' + selectedButton.answer.isCorrect);
+
+      if (selectedButton.answer.isCorrect) {
+        this.game.data.markPointAs(Point.STATES.UNVISITED, Point.STATES.NEXT);
+        console.log('Answered correctly. Changing state to play');
+        this.game.state.start('play');
+      } else {
+        console.log('Answer was wrong.');
+      }
     } else {
-      console.log('Answer was wrong.');
+      console.log('No answer selected.');
     }
   }
 };
