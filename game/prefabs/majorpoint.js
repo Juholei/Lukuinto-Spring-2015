@@ -13,8 +13,11 @@ var MajorPoint = function(game, x, y, state, callback, callbackContext) {
   this.scale.setTo(0.5, 0.5);
   this.inputEnabled = true;
   if (callback !== undefined) {
-    console.log(callback);
     this.events.onInputDown.add(callback, callbackContext);
+  }
+  if (state === 'end' && !game.data.isEndReachable()) {
+    this.visible = false;
+    this.inputEnabled = false;
   }
 };
 

@@ -235,6 +235,15 @@ GameData.prototype = {
         return this.points[i].task;
       }
     }
+  },
+  isEndReachable: function() {
+    for (var i = 0; i < this.points.length; i++) {
+      var unvisitedPointsExist = this.points[i].state === Point.STATES.UNVISITED || this.points[i].state === Point.STATES.NEXT;
+      if (unvisitedPointsExist) {
+        return false;
+      }
+    }
+    return true;
   }
 };
 
