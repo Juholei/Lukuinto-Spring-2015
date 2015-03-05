@@ -59,10 +59,9 @@ Play.prototype = {
     });
   },
   endPointClickListener: function(item) {
-    console.log(this.game.data.isEndReachable());
     if (this.game.data.isEndReachable()) {
       this.avatar.moveTo(item, function triggerEnding() {
-        console.log('You wonned!');
+        console.log('Game completed, changing state to gameover');
         this.game.state.start('gameover');
       });
     }
