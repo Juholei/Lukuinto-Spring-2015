@@ -1,0 +1,220 @@
+{
+  "startPoint": {
+    "x": 246,
+    "y": 118
+  },
+  "endPoint": {
+    "x": 797,
+    "y": 680
+  },
+  "points": [
+    {
+      "x": 341,
+      "y": 120,
+      "state": "next",
+      "task": {
+        "question": "Testikysymys 1",
+        "answers": [
+          {
+            "text": "Kyllä",
+            "isCorrect": true
+          },
+          {
+            "text": "Ei",
+            "isCorrect": false
+          },
+          {
+            "text": "Ehkä",
+            "isCorrect": false
+          },
+          {
+            "text": "Testaan rivin pituutta ja rivitystä",
+            "isCorrect": false
+          }
+        ]
+      }
+    },
+    {
+      "x": 446,
+      "y": 101,
+      "state": "unvisited",
+      "task": {
+        "question": "Testikysymys 2",
+        "answers": [
+          {
+            "text": "Kyllä",
+            "isCorrect": true
+          },
+          {
+            "text": "Ei",
+            "isCorrect": false
+          },
+          {
+            "text": "Ehkä",
+            "isCorrect": false
+          },
+          {
+            "text": "Täh?",
+            "isCorrect": false
+          }
+        ]
+      }
+    },
+    {
+      "x": 474,
+      "y": 195,
+      "state": "unvisited",
+      "task": {
+        "question": "Testikysymys 3",
+        "answers": [
+          {
+            "text": "Kyllä",
+            "isCorrect": true
+          },
+          {
+            "text": "Ei",
+            "isCorrect": false
+          },
+          {
+            "text": "Ehkä",
+            "isCorrect": false
+          },
+          {
+            "text": "Täh?",
+            "isCorrect": false
+          }
+        ]
+      }
+    },
+    {
+      "x": 441,
+      "y": 292,
+      "state": "unvisited",
+      "task": {
+        "question": "Testikysymys 4",
+        "answers": [
+          {
+            "text": "Kyllä",
+            "isCorrect": true
+          },
+          {
+            "text": "Ei",
+            "isCorrect": false
+          },
+          {
+            "text": "Ehkä",
+            "isCorrect": false
+          },
+          {
+            "text": "Täh?",
+            "isCorrect": false
+          }
+        ]
+      }
+    },
+    {
+      "x": 451,
+      "y": 407,
+      "state": "unvisited",
+      "task": {
+        "question": "Testikysymys 5",
+        "answers": [
+          {
+            "text": "Kyllä",
+            "isCorrect": true
+          },
+          {
+            "text": "Ei",
+            "isCorrect": false
+          },
+          {
+            "text": "Ehkä",
+            "isCorrect": false
+          },
+          {
+            "text": "Täh?",
+            "isCorrect": false
+          }
+        ]
+      }
+    },
+    {
+      "x": 553,
+      "y": 483,
+      "state": "unvisited",
+      "task": {
+        "question": "Testikysymys 6",
+        "answers": [
+          {
+            "text": "Kyllä",
+            "isCorrect": true
+          },
+          {
+            "text": "Ei",
+            "isCorrect": false
+          },
+          {
+            "text": "Ehkä",
+            "isCorrect": false
+          },
+          {
+            "text": "Täh?",
+            "isCorrect": false
+          }
+        ]
+      }
+    },
+    {
+      "x": 515,
+      "y": 616,
+      "state": "unvisited",
+      "task": {
+        "question": "Testikysymys 7",
+        "answers": [
+          {
+            "text": "Kyllä",
+            "isCorrect": true
+          },
+          {
+            "text": "Ei",
+            "isCorrect": false
+          },
+          {
+            "text": "Ehkä",
+            "isCorrect": false
+          },
+          {
+            "text": "Täh?",
+            "isCorrect": false
+          }
+        ]
+      }
+    },
+    {
+      "x": 653,
+      "y": 694,
+      "state": "unvisited",
+      "task": {
+        "question": "Testikysymys 8",
+        "answers": [
+          {
+            "text": "Kyllä",
+            "isCorrect": true
+          },
+          {
+            "text": "Ei",
+            "isCorrect": false
+          },
+          {
+            "text": "Ehkä",
+            "isCorrect": false
+          },
+          {
+            "text": "Täh?",
+            "isCorrect": false
+          }
+        ]
+      }
+    }
+  ]
+}
