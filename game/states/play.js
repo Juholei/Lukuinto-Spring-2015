@@ -43,7 +43,7 @@ Play.prototype = {
     } else {
       var startPoint = this.pointGroup.iterate('state', 'start', Phaser.Group.RETURN_CHILD);
       this.avatar.position.x = startPoint.x;
-      this.avatar.position.y = startPoint.y + 25;
+      this.avatar.position.y = startPoint.y;
     }
   },
   //Callback context here is Play state

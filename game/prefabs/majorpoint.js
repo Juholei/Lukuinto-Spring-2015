@@ -3,7 +3,7 @@
 var MajorPoint = function(game, x, y, state, callback, callbackContext) {
   Phaser.Sprite.call(this, game, x, y, 'start-end', 0);
   this.state = state;
-  this.anchor.setTo(0.5, 0.5);
+  this.anchor.setTo(0.5, 0.7);
   this.scale.setTo(0.5, 0.5);
 
   if (state === 'end') {
