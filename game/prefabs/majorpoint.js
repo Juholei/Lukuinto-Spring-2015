@@ -6,6 +6,8 @@ var MajorPoint = function(game, x, y, state, callback, callbackContext) {
   this.anchor.setTo(0.5, 0.7);
   this.scale.setTo(0.5, 0.5);
 
+  //If state is 'end' but end is not reachable, hides this object.
+  //If state is 'end' and end is reachable, enables input for this object.
   if (state === 'end') {
     this.frame = 1;
     if (!game.data.isEndReachable()) {
