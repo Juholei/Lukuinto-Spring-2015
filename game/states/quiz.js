@@ -7,7 +7,7 @@ Quiz.prototype = {
   preload: function() {
   },
   create: function() {
-    this.currentTask = this.game.data.getCurrentTask();
+    this.currentTask = this.game.data.getTaskForCurrentPoint();
     this.addBackgroundImage();
     this.addTitleText();
     this.addButtonBackground();

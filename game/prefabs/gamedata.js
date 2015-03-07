@@ -15,10 +15,12 @@ GameData.prototype = {
       }
     }
   },
-  getCurrentTask: function() {
+  getTaskForCurrentPoint: function() {
     for (var i = 0; i < this.points.length; i++) {
       if (this.points[i].state === Point.STATES.CURRENT) {
-        return this.points[i].task;
+        var randomTaskIndex = Math.floor(Math.random() * this.points[i].tasks.length);
+        console.log('Random index between 0 and ' + this.points[i].tasks.length + ' is ' + randomTaskIndex);
+        return this.points[i].tasks[randomTaskIndex];
       }
     }
   },

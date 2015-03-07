@@ -17,8 +17,6 @@ Menu.prototype = {
 
     this.startButton = this.game.add.button(402, 614, 'start-button', this.actionOnClick, this, 1, 0);
     this.game.data = new GameData(this.game.cache.getJSON('gamedata'));
-    console.log(this.game.cache.getJSON('gamedata'));
-
   },
   update: function() {
   },
