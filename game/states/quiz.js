@@ -10,7 +10,8 @@ Quiz.prototype = {
   create: function() {
     this.currentTask = this.game.data.getTaskForCurrentPoint();
     this.addBackgroundImage();
-    this.addTitleText();
+    this.addQuestionBackgroundImage();
+    this.addQuestionText();
     this.addButtonBackground();
     this.addButtons();
   },
@@ -29,17 +30,20 @@ Quiz.prototype = {
     if (backgroundImageKey === undefined) {
       backgroundImageKey = defaultBackgroundKey;
     }
-    this.backgroundScenery = this.game.add.sprite(this.game.world.centerX, 0, backgroundImageKey);
-    this.backgroundScenery.scale.setTo(0.75, 0.75);
-    this.backgroundScenery.anchor.setTo(0.5, 0);
+    var backgroundScenery = this.game.add.sprite(this.game.world.centerX, 0, backgroundImageKey);
+    backgroundScenery.scale.setTo(0.75, 0.75);
+    backgroundScenery.anchor.setTo(0.5, 0);
   },
-  addTitleText: function() {
-    var textStyle = {font: '32px Arial', fill: '#000', align: 'center'};
-    this.titleText = this.game.add.text(this.game.world.centerX, 25, this.currentTask.question,  textStyle);
-    this.titleText.anchor.setTo(0.5, 0.5);
+  addQuestionBackgroundImage: function() {
+    var backgroundScenery = this.game.add.sprite(this.game.world.centerX, 360, 'question-background');
+    backgroundScenery.anchor.setTo(0.5, 0);
+  },
+  addQuestionText: function() {
+    var textStyle = {font: '16px Arial', fill: 'white', align: 'center', wordWrap: true, wordWrapWidth: 574};
+    var questionText = this.game.add.text(226, 3 + 360, this.currentTask.question,  textStyle);
   },
   addButtonBackground: function() {
-    this.buttonBackground = this.game.add.sprite(this.game.world.centerX, this.game.world.height, 'background-box');
+    this.buttonBackground = this.game.add.sprite(this.game.world.centerX, this.game.world.height, 'answer-background');
     this.buttonBackground.scale.setTo(0.64, 0.64);
     this.buttonBackground.anchor.setTo(0.5, 1);
   },
