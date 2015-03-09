@@ -31,7 +31,7 @@ Quiz.prototype = {
       backgroundImageKey = defaultBackgroundKey;
     }
     var backgroundScenery = this.game.add.sprite(this.game.world.centerX, 0, backgroundImageKey);
-    backgroundScenery.scale.setTo(0.75, 0.75);
+    backgroundScenery.width = 576;
     backgroundScenery.anchor.setTo(0.5, 0);
   },
   addQuestionBackgroundImage: function() {
