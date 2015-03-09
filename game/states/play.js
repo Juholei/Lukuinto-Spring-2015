@@ -17,6 +17,8 @@ Play.prototype = {
     // this.game.debug.inputInfo(32, 32);
     // this.game.debug.pointer(this.game.input.activePointer);
   },
+  //Add all the game objects to the game.
+  //These include starting point, normal points, the player avatar and endpoint.
   createBoardFromGameData: function() {
     var data = this.game.data;
 
@@ -33,6 +35,8 @@ Play.prototype = {
 
     this.avatar = new Avatar(this.game, 246, 143);
   },
+  //Checks which Point has the state 'current' and puts avatar on it.
+  //If there is no Point with state 'current', puts avatar to starting point.
   putAvatarToCurrentPoint: function() {
     var currentPoint = this.pointGroup.iterate('state', Point.STATES.CURRENT, Phaser.Group.RETURN_CHILD);
 
@@ -46,9 +50,10 @@ Play.prototype = {
       this.avatar.position.y = startPoint.y;
     }
   },
+  //Click listener for Point objects.
   //Callback context here is Play state
-  //Parameter item is the clicked item i.e. object of this class
-  //function passed as callback to Avatar changes the state to quiz after Avatar stops moving.
+  //Parameter item is the clicked item i.e. object of Point class.
+  //function passed as callback to Avatar.moveTo changes the state to quiz after Avatar stops moving.
   clickListener: function(item) {
     this.avatar.moveTo(item, function switchCurrentPointForQuiz() {
       this.game.data.markPointAs(Point.STATES.CURRENT, Point.STATES.VISITED);
@@ -58,6 +63,8 @@ Play.prototype = {
       this.game.state.start('quiz', false);
     });
   },
+  //Click listener for the end point object. If the ending of the game is reachable, moves
+  //Avatar to the endpoint and passes a callback function that ends the game.
   endPointClickListener: function(item) {
     if (this.game.data.isEndReachable()) {
       this.avatar.moveTo(item, function triggerEnding() {

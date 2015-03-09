@@ -25,7 +25,11 @@ Preload.prototype = {
     this.load.image('avatar', 'assets/play/avatar_nainen.png');
 
     //Quiz state assets
-    this.load.image('quiz-background-1', 'assets/quiz/taustakuva_kauppatori.png');
+    this.load.image('taustakuva_kauppatori', 'assets/quiz/taustakuva_kauppatori.png');
+    this.load.image('taustakuva_kirkontorni', 'assets/quiz/taustakuva_kirkontorni.png');
+    this.load.image('taustakuva_pikisaari', 'assets/quiz/taustakuva_pikisaari.png');
+    this.load.image('taustakuva_rotuaari', 'assets/quiz/taustakuva_rotuaari.png');
+    this.load.image('taustakuva_yliopisto', 'assets/quiz/taustakuva_yliopisto.png');
     this.load.image('background-box', 'assets/quiz/valintojen_tausta.png');
     this.load.spritesheet('answer-button', 'assets/quiz/valintapainike.png', 332, 121);
     this.load.image('quiz-confirm', 'assets/quiz/vahvista.png');
