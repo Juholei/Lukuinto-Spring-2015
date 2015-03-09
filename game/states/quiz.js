@@ -1,6 +1,7 @@
 'use strict';
 var ToggleButton = require('../prefabs/togglebutton');
 var Point = require('../prefabs/point');
+var Announcement = require('../prefabs/announcement');
 var defaultBackgroundKey = 'taustakuva_kauppatori';
 
 function Quiz() {}
@@ -40,7 +41,8 @@ Quiz.prototype = {
   },
   addQuestionText: function() {
     var textStyle = {font: '16px Arial', fill: 'white', align: 'center', wordWrap: true, wordWrapWidth: 574};
-    var questionText = this.game.add.text(226, 3 + 360, this.currentTask.question,  textStyle);
+    var questionText = this.game.add.text(this.game.world.centerX, 433, this.currentTask.question,  textStyle);
+    questionText.anchor.setTo(0.5, 0.5);
   },
   addButtonBackground: function() {
     this.buttonBackground = this.game.add.sprite(this.game.world.centerX, this.game.world.height, 'answer-background');
@@ -68,17 +70,25 @@ Quiz.prototype = {
 
     if (selectedButton !== null) {
       console.log('Selected answer: ' + selectedButton.answer.text + ' correct: ' + selectedButton.answer.isCorrect);
-
+      var announcement;
       if (selectedButton.answer.isCorrect) {
-        this.game.data.markPointAs(Point.STATES.UNVISITED, Point.STATES.NEXT);
-        console.log('Answered correctly. Changing state to play');
-        this.game.state.start('play');
+        announcement = new Announcement(this.game, this.correctAnswerGiven, this);
       } else {
-        console.log('Answer was wrong.');
+        announcement = new Announcement(this.game, this.wrongAnswerGiven, this);
       }
+      this.game.add.existing(announcement);
     } else {
       console.log('No answer selected.');
     }
+  },
+  correctAnswerGiven: function() {
+    this.game.data.markPointAs(Point.STATES.UNVISITED, Point.STATES.NEXT);
+    console.log('Answered correctly. Changing state to play');
+    this.game.state.start('play');
+  },
+  wrongAnswerGiven: function() {
+    console.log('Answer was wrong.');
+    this.game.state.restart();
   }
 };
 module.exports = Quiz;
