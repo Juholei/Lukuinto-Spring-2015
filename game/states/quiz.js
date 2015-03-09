@@ -1,6 +1,7 @@
 'use strict';
 var ToggleButton = require('../prefabs/togglebutton');
 var Point = require('../prefabs/point');
+var defaultBackgroundKey = 'taustakuva_kauppatori';
 
 function Quiz() {}
 Quiz.prototype = {
@@ -24,7 +25,11 @@ Quiz.prototype = {
   shutdown: function() {
   },
   addBackgroundImage: function() {
-    this.backgroundScenery = this.game.add.sprite(this.game.world.centerX, 0, 'quiz-background-1');
+    var backgroundImageKey = this.game.data.getBackgroundForCurrentPoint();
+    if (backgroundImageKey === undefined) {
+      backgroundImageKey = defaultBackgroundKey;
+    }
+    this.backgroundScenery = this.game.add.sprite(this.game.world.centerX, 0, backgroundImageKey);
     this.backgroundScenery.scale.setTo(0.75, 0.75);
     this.backgroundScenery.anchor.setTo(0.5, 0);
   },

@@ -11,6 +11,7 @@
     {
       "x": 341,
       "y": 120,
+      "image": "taustakuva_yliopisto",
       "state": "next",
       "tasks": [
         {
@@ -81,6 +82,7 @@
     {
       "x": 446,
       "y": 101,
+      "image": "taustakuva_kirkontorni",
       "state": "unvisited",
       "tasks": [
         {
@@ -130,6 +132,7 @@
     {
       "x": 474,
       "y": 195,
+      "image": "taustakuva_pikisaari",
       "state": "unvisited",
       "tasks": [
         {
@@ -179,6 +182,7 @@
     {
       "x": 441,
       "y": 292,
+      "image": "taustakuva_rotuaari",
       "state": "unvisited",
       "tasks": [
         {
@@ -228,6 +232,7 @@
     {
       "x": 451,
       "y": 407,
+      "image": "taustakuva_kauppatori",
       "state": "unvisited",
       "tasks": [
         {

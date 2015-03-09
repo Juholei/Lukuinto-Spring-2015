@@ -24,6 +24,13 @@ GameData.prototype = {
       }
     }
   },
+  getBackgroundForCurrentPoint: function() {
+    for (var i = 0; i < this.points.length; i++) {
+      if (this.points[i].state === Point.STATES.CURRENT) {
+        return this.points[i].image;
+      }
+    }
+  },
   isEndReachable: function() {
     for (var i = 0; i < this.points.length; i++) {
       var unvisitedPointsExist = this.points[i].state === Point.STATES.UNVISITED || this.points[i].state === Point.STATES.NEXT;
