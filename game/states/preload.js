@@ -30,9 +30,14 @@ Preload.prototype = {
     this.load.image('taustakuva_pikisaari', 'assets/quiz/taustakuva_pikisaari.png');
     this.load.image('taustakuva_rotuaari', 'assets/quiz/taustakuva_rotuaari.png');
     this.load.image('taustakuva_yliopisto', 'assets/quiz/taustakuva_yliopisto.png');
-    this.load.image('background-box', 'assets/quiz/valintojen_tausta.png');
+    this.load.image('etappi_2', 'assets/quiz/etappi_2.png');
+
+    this.load.image('question-background', 'assets/quiz/kuvaus_teksti.png');
+    this.load.image('answer-background', 'assets/quiz/valintojen_tausta.png');
     this.load.spritesheet('answer-button', 'assets/quiz/valintapainike.png', 332, 121);
     this.load.image('quiz-confirm', 'assets/quiz/vahvista.png');
+    this.load.spritesheet('button', 'assets/quiz/painike.png', 220, 96);
+    this.load.image('announcement', 'assets/quiz/huomio_tausta.png');
   },
   create: function() {
     this.asset.cropEnabled = false;
