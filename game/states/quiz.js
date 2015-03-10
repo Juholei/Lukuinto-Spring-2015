@@ -73,7 +73,7 @@ Quiz.prototype = {
       if (selectedButton.answer.isCorrect) {
         this.announcement = new Announcement(this.game, this.correctAnswerGiven, this, 'Vastasit oikein! Jee!');
       } else {
-        this.announcement = new Announcement(this.game, this.wrongAnswerGiven, this, 'Väärä vastaus :((');
+        this.announcement = new Announcement(this.game, this.wrongAnswerGiven, this, 'Hups!\nNyt meni pieleen.');
       }
       this.game.add.existing(this.announcement);
     } else {

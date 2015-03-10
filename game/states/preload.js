@@ -37,6 +37,7 @@ Preload.prototype = {
     this.load.spritesheet('answer-button', 'assets/quiz/valintapainike.png', 332, 121);
     this.load.image('quiz-confirm', 'assets/quiz/vahvista.png');
     this.load.spritesheet('button', 'assets/quiz/painike.png', 220, 96);
+    this.load.image('announcement', 'assets/quiz/huomio_tausta.png');
   },
   create: function() {
     this.asset.cropEnabled = false;
