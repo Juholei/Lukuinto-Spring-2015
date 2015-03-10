@@ -70,13 +70,12 @@ Quiz.prototype = {
 
     if (selectedButton !== null) {
       console.log('Selected answer: ' + selectedButton.answer.text + ' correct: ' + selectedButton.answer.isCorrect);
-      var announcement;
       if (selectedButton.answer.isCorrect) {
-        announcement = new Announcement(this.game, this.correctAnswerGiven, this);
+        this.announcement = new Announcement(this.game, this.correctAnswerGiven, this, 'Vastasit oikein! Jee!');
       } else {
-        announcement = new Announcement(this.game, this.wrongAnswerGiven, this);
+        this.announcement = new Announcement(this.game, this.wrongAnswerGiven, this, 'Väärä vastaus :((');
       }
-      this.game.add.existing(announcement);
+      this.game.add.existing(this.announcement);
     } else {
       console.log('No answer selected.');
     }
@@ -87,8 +86,9 @@ Quiz.prototype = {
     this.game.state.start('play');
   },
   wrongAnswerGiven: function() {
-    console.log('Answer was wrong.');
-    this.game.state.restart();
+    console.log('Answer was wrong. Restarting quiz state.');
+    this.announcement.destroy(true);
+    this.game.state.restart(false);
   }
 };
 module.exports = Quiz;
