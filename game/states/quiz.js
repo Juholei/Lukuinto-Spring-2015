@@ -65,10 +65,12 @@ Quiz.prototype = {
     confirmButton.scale.setTo(0.35, 0.35);
     confirmButton.anchor.setTo(0.5, 1);
   },
-  confirmOnClick: function() {
+  confirmOnClick: function(button) {
     var selectedButton = this.answerButtons.iterate('toggled', true, Phaser.Group.RETURN_CHILD);
 
     if (selectedButton !== null) {
+      this.answerButtons.setAll('inputEnabled', false);
+      button.inputEnabled = false;
       console.log('Selected answer: ' + selectedButton.answer.text + ' correct: ' + selectedButton.answer.isCorrect);
       if (selectedButton.answer.isCorrect) {
         this.announcement = new Announcement(this.game, this.correctAnswerGiven, this, 'Vastasit oikein! Jee!');
