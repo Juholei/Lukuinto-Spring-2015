@@ -17,6 +17,7 @@ GameOver.prototype = {
     this.instructionText = this.game.add.text(this.game.world.centerX, 300, 'Click To Play Again',
       {font: '16px Arial', fill: '#000', align: 'center'});
     this.instructionText.anchor.setTo(0.5, 0.5);
+    console.log(this.game.data.wrongAnswers + ' wrong answers given');
   },
   update: function() {
     if (this.game.input.activePointer.justPressed()) {

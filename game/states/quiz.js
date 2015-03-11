@@ -93,6 +93,7 @@ Quiz.prototype = {
   },
   wrongAnswerGiven: function() {
     console.log('Answer was wrong. Restarting quiz state.');
+    this.game.data.wrongAnswers++;
     this.announcement.destroy();
     this.game.state.restart(false);
   }
