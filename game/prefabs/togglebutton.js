@@ -1,7 +1,7 @@
 'use strict';
 
 var ToggleButton = function(game, x, y, callbackContext, group, label, answer) {
-  Phaser.Button.call(this, game, x, y, 'answer-button', this.clickListener, callbackContext, 1, 0, 1, 0);
+  Phaser.Button.call(this, game, x, y, 'answer-button', this.clickListener, callbackContext, 1, 0);
   this.group = group;
   this.answer = answer;
   this.group.add(this);
@@ -31,9 +31,10 @@ ToggleButton.prototype.clickListener = function(button) {
 ToggleButton.prototype.toggle = function(toggled) {
   this.toggled = toggled;
   if (this.toggled) {
-    this.setFrames(1, 1, 1, 1);
+    this.setFrames(1, 1);
   } else {
-    this.setFrames(1, 0, 1, 0);
+    this.setFrames(1, 0);
+    this.frame = 0;
   }
 };
 
