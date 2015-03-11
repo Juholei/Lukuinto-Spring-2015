@@ -37,8 +37,8 @@ Quiz.prototype = {
     backgroundScenery.anchor.setTo(0.5, 0);
   },
   addQuestionBackgroundImage: function() {
-    var backgroundScenery = this.game.add.sprite(this.game.world.centerX, 360, 'question-background');
-    backgroundScenery.anchor.setTo(0.5, 0);
+    var backgroundBox = this.game.add.sprite(this.game.world.centerX, 360, 'question-background');
+    backgroundBox.anchor.setTo(0.5, 0);
   },
   addQuestionText: function() {
     var textStyle = {font: '16px Arial', fill: 'white', align: 'center', wordWrap: true, wordWrapWidth: 574};

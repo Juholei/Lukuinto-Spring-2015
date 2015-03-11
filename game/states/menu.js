@@ -9,24 +9,21 @@ Menu.prototype = {
   },
   create: function() {
     window.scrollTo(10, 10);
-    this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
-    this.backgroundImage = this.game.add.sprite(0, 0, 'menu-background');
+    this.game.data = new GameData(this.game.cache.getJSON('gamedata'));
+    this.game.add.sprite(0, 0, 'menu-background');
+    this.game.add.button(402, 614, 'start-button', this.actionOnClick, this, 1, 0);
 
     if (this.game.device.fullscreen) {
+      this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
       var fullScreenButton = this.game.add.button(30, 30, 'fullscreenButton');
       fullScreenButton.scale.setTo(0.25, 0.25);
       fullScreenButton.events.onInputDown.add(this.toggleFullscreen, this);
     }
 
-    this.startButton = this.game.add.button(402, 614, 'start-button', this.actionOnClick, this, 1, 0);
-    this.game.data = new GameData(this.game.cache.getJSON('gamedata'));
-
     var avatar1 = this.game.add.button(5, 100, 'avatar_1', this.selectAvatar, this);
     var avatar2 = this.game.add.button(5, 150, 'avatar_2', this.selectAvatar, this);
-
     avatar2.width = avatar1.width;
     avatar2.height = avatar1.height;
-
   },
   update: function() {
   },
