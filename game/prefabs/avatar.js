@@ -1,7 +1,7 @@
 'use strict';
 
 var Avatar = function(game, x, y, frame) {
-  Phaser.Sprite.call(this, game, x, y, 'avatar', frame);
+  Phaser.Sprite.call(this, game, x, y, game.data.selectedAvatarKey, frame);
   this.game = game;
   this.destination = null;
   this.anchor.setTo(0.5, 1);

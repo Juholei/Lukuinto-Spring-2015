@@ -20,6 +20,13 @@ Menu.prototype = {
 
     this.startButton = this.game.add.button(402, 614, 'start-button', this.actionOnClick, this, 1, 0);
     this.game.data = new GameData(this.game.cache.getJSON('gamedata'));
+
+    var avatar1 = this.game.add.button(5, 100, 'avatar_1', this.selectAvatar, this);
+    var avatar2 = this.game.add.button(5, 150, 'avatar_2', this.selectAvatar, this);
+
+    avatar2.width = avatar1.width;
+    avatar2.height = avatar1.height;
+
   },
   update: function() {
   },
@@ -34,6 +41,9 @@ Menu.prototype = {
   },
   actionOnClick: function() {
     this.game.state.start('play');
+  },
+  selectAvatar: function(item) {
+    this.game.data.selectedAvatarKey = item.key;
   }
 };
 

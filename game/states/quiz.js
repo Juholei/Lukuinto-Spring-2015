@@ -2,6 +2,7 @@
 var ToggleButton = require('../prefabs/togglebutton');
 var Point = require('../prefabs/point');
 var Announcement = require('../prefabs/announcement');
+
 var defaultBackgroundKey = 'taustakuva_kauppatori';
 
 function Quiz() {}
@@ -71,16 +72,19 @@ Quiz.prototype = {
     if (selectedButton !== null) {
       this.answerButtons.setAll('inputEnabled', false);
       button.inputEnabled = false;
-      console.log('Selected answer: ' + selectedButton.answer.text + ' correct: ' + selectedButton.answer.isCorrect);
-      if (selectedButton.answer.isCorrect) {
-        this.announcement = new Announcement(this.game, this.correctAnswerGiven, this, 'Vastasit oikein! Jee!');
-      } else {
-        this.announcement = new Announcement(this.game, this.wrongAnswerGiven, this, 'Hups!\nNyt meni pieleen.');
-      }
-      this.game.add.existing(this.announcement);
+      this.handleAnswer(selectedButton.answer);
     } else {
       console.log('No answer selected.');
     }
+  },
+  handleAnswer: function(answer) {
+    console.log('Selected answer: ' + answer.text + ' correct: ' + answer.isCorrect);
+    if (answer.isCorrect) {
+      this.announcement = new Announcement(this.game, this.correctAnswerGiven, this, 'Vastasit oikein! Jee!');
+    } else {
+      this.announcement = new Announcement(this.game, this.wrongAnswerGiven, this, 'Hups!\nNyt meni pieleen.');
+    }
+    this.game.add.existing(this.announcement);
   },
   correctAnswerGiven: function() {
     this.game.data.markPointAs(Point.STATES.UNVISITED, Point.STATES.NEXT);
@@ -89,7 +93,8 @@ Quiz.prototype = {
   },
   wrongAnswerGiven: function() {
     console.log('Answer was wrong. Restarting quiz state.');
-    this.announcement.destroy(true);
+    this.game.data.wrongAnswers++;
+    this.announcement.destroy();
     this.game.state.restart(false);
   }
 };
