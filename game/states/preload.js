@@ -39,6 +39,12 @@ Preload.prototype = {
     this.load.image('quiz-confirm', 'assets/quiz/vahvista.png');
     this.load.spritesheet('button', 'assets/quiz/painike.png', 220, 96);
     this.load.image('announcement', 'assets/quiz/huomio_tausta.png');
+
+    this.load.image('etappi_5_ilves', 'assets/quiz/etappi_5_ilves.png');
+    this.load.image('etappi_5_kaksoset', 'assets/quiz/etappi_5_kaksoset.png');
+    this.load.image('etappi_5_leijona', 'assets/quiz/etappi_5_leijona.png');
+    this.load.image('etappi_5_otava', 'assets/quiz/etappi_5_otava.png');
+
   },
   create: function() {
     this.asset.cropEnabled = false;

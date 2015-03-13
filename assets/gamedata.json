@@ -11,10 +11,10 @@
     {
       "x": 341,
       "y": 120,
-      "image": "etappi_2",
       "state": "next",
       "tasks": [
         {
+          "image": "etappi_5_ilves",
           "question": "Siirryin tutkailemaan ruispeltoa ilmasta käsin. Tämähän on hauskaa! Tuo outo kuvio muistuttaa minua jostakin. Aivan! Sen täytyy olla Oulun yliopiston logo, mutta miten ihmeessä Oulun yliopisto tähän liittyy? Ehkä on parasta vierailla paikan päällä vähän tutkimassa asiaa. Ruis näyttää muuten kasvaneen jo hyvinkin korkeaksi. Milloinhan toukoruis tyypillisesti kerätään?",
           "answers": [
             {
@@ -36,6 +36,51 @@
           ]
         },
         {
+          "image": "etappi_5_kaksoset",
+          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque eros nec dictum finibus. Vestibulum in mauris ac elit suscipit vestibulum at id metus. Aliquam vitae felis vel purus rhoncus dictum non nec urna. Sed in mauris at neque aliquam eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In a nisl vitae odio aliquam tincidunt et in felis. Nunc sit amet leo eros.",
+          "answers": [
+            {
+              "text": "Kyllä",
+              "isCorrect": true
+            },
+            {
+              "text": "Ei",
+              "isCorrect": false
+            },
+            {
+              "text": "Ehkä",
+              "isCorrect": false
+            },
+            {
+              "text": "Testaan rivin pituutta ja rivitystä",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "image": "etappi_5_leijona",
+          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque eros nec dictum finibus. Vestibulum in mauris ac elit suscipit vestibulum at id metus. Aliquam vitae felis vel purus rhoncus dictum non nec urna. Sed in mauris at neque aliquam eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In a nisl vitae odio aliquam tincidunt et in felis. Nunc sit amet leo eros.",
+          "answers": [
+            {
+              "text": "Kyllä",
+              "isCorrect": true
+            },
+            {
+              "text": "Ei",
+              "isCorrect": false
+            },
+            {
+              "text": "Ehkä",
+              "isCorrect": false
+            },
+            {
+              "text": "Testaan rivin pituutta ja rivitystä",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "image": "etappi_5_otava",
           "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque eros nec dictum finibus. Vestibulum in mauris ac elit suscipit vestibulum at id metus. Aliquam vitae felis vel purus rhoncus dictum non nec urna. Sed in mauris at neque aliquam eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In a nisl vitae odio aliquam tincidunt et in felis. Nunc sit amet leo eros.",
           "answers": [
             {
