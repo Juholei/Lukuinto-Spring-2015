@@ -41,6 +41,9 @@ GameData.prototype = {
       }
     }
     return true;
+  },
+  saveToLocalStorage: function() {
+    window.localStorage.setItem('lukuinto-2015', JSON.stringify(this));
   }
 };
 
