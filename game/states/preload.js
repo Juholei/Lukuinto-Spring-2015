@@ -21,8 +21,8 @@ Preload.prototype = {
     this.load.image('map', 'assets/play/karttatausta.png');
     this.load.spritesheet('point', 'assets/play/karttapiste.png', 98, 98);
     this.load.spritesheet('start-end', 'assets/play/lahto_maali.png', 190, 246);
-    this.load.spritesheet('avatar_1', 'assets/play/avatar_nainen.png', 51, 82);
-    this.load.spritesheet('avatar_2', 'assets/play/avatar_poika.png', 51, 82);
+    this.load.spritesheet('avatar_1', 'assets/play/avatar_nainen.png', 41, 71, 2, 0, 10);
+    this.load.spritesheet('avatar_2', 'assets/play/avatar_poika.png', 41, 71, 2, 0, 10);
 
     //Quiz state assets
     this.load.image('taustakuva_kauppatori', 'assets/quiz/taustakuva_kauppatori.png');

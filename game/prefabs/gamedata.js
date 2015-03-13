@@ -16,7 +16,6 @@ GameData.prototype = {
         break;
       }
     }
-    this.saveToLocalStorage();
   },
   getTaskForCurrentPoint: function() {
     for (var i = 0; i < this.points.length; i++) {

@@ -26,6 +26,7 @@ Menu.prototype = {
 
     this.avatarSelectionButtons = this.game.add.group();
     var avatarButton1 = this.game.add.button(481, 545, 'avatar_1', this.selectAvatar, this);
+    avatarButton1.frame = 1;
     avatarButton1.anchor.setTo(0.5, 0.5);
     this.avatarSelectionButtons.add(avatarButton1);
     var avatarButton2 = this.game.add.button(545, 545, 'avatar_2', this.selectAvatar, this);
