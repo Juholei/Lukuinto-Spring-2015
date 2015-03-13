@@ -84,9 +84,9 @@ Quiz.prototype = {
   handleAnswer: function(answer) {
     console.log('Selected answer: ' + answer.text + ' correct: ' + answer.isCorrect);
     if (answer.isCorrect) {
-      this.announcement = new Announcement(this.game, this.correctAnswerGiven, this, 'Vastasit oikein! Jee!');
+      this.announcement = new Announcement(this.game, this.correctAnswerGiven, this, true);
     } else {
-      this.announcement = new Announcement(this.game, this.wrongAnswerGiven, this, 'Hups!\nNyt meni pieleen.');
+      this.announcement = new Announcement(this.game, this.wrongAnswerGiven, this, false);
     }
     this.game.add.existing(this.announcement);
   },

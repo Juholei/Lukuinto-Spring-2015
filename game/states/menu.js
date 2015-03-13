@@ -20,10 +20,9 @@ Menu.prototype = {
       fullScreenButton.events.onInputDown.add(this.toggleFullscreen, this);
     }
 
-    var avatar1 = this.game.add.button(5, 100, 'avatar_1', this.selectAvatar, this);
-    var avatar2 = this.game.add.button(5, 150, 'avatar_2', this.selectAvatar, this);
-    avatar2.width = avatar1.width;
-    avatar2.height = avatar1.height;
+    this.game.add.button(5, 100, 'avatar_1', this.selectAvatar, this);
+    this.game.add.button(5, 150, 'avatar_2', this.selectAvatar, this);
+
   },
   update: function() {
   },

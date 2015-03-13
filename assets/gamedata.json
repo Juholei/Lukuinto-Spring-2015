@@ -15,22 +15,22 @@
       "tasks": [
         {
           "image": "etappi_5_ilves",
-          "question": "Siirryin tutkailemaan ruispeltoa ilmasta käsin. Tämähän on hauskaa! Tuo outo kuvio muistuttaa minua jostakin. Aivan! Sen täytyy olla Oulun yliopiston logo, mutta miten ihmeessä Oulun yliopisto tähän liittyy? Ehkä on parasta vierailla paikan päällä vähän tutkimassa asiaa. Ruis näyttää muuten kasvaneen jo hyvinkin korkeaksi. Milloinhan toukoruis tyypillisesti kerätään?",
+          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque eros nec dictum finibus. Vestibulum in mauris ac elit suscipit vestibulum at id metus. Aliquam vitae felis vel purus rhoncus dictum non nec urna. Sed in mauris at neque aliquam eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In a nisl vitae odio aliquam tincidunt et in felis. Nunc sit amet leo eros.",
           "answers": [
             {
-              "text": "Toukokuussa",
-              "isCorrect": false
-            },
-            {
-              "text": "Kesällä",
-              "isCorrect": false
-            },
-            {
-              "text": "Syksyllä",
+              "text": "Kyllä",
               "isCorrect": true
             },
             {
-              "text": "Elokuussa",
+              "text": "Ei",
+              "isCorrect": false
+            },
+            {
+              "text": "Ehkä",
+              "isCorrect": false
+            },
+            {
+              "text": "Testaan rivin pituutta ja rivitystä",
               "isCorrect": false
             }
           ]
@@ -106,26 +106,26 @@
     {
       "x": 446,
       "y": 101,
-      "image": "taustakuva_kirkontorni",
+      "image": "etappi_2",
       "state": "unvisited",
       "tasks": [
         {
-          "question": "Testikysymys 2",
+          "question": "Siirryin tutkailemaan ruispeltoa ilmasta käsin. Tämähän on hauskaa! Tuo outo kuvio muistuttaa minua jostakin. Aivan! Sen täytyy olla Oulun yliopiston logo, mutta miten ihmeessä Oulun yliopisto tähän liittyy? Ehkä on parasta vierailla paikan päällä vähän tutkimassa asiaa. Ruis näyttää muuten kasvaneen jo hyvinkin korkeaksi. Milloinhan toukoruis tyypillisesti kerätään?",
           "answers": [
             {
-              "text": "Kyllä",
+              "text": "Toukokuussa",
+              "isCorrect": false
+            },
+            {
+              "text": "Kesällä",
+              "isCorrect": false
+            },
+            {
+              "text": "Syksyllä",
               "isCorrect": true
             },
             {
-              "text": "Ei",
-              "isCorrect": false
-            },
-            {
-              "text": "Ehkä",
-              "isCorrect": false
-            },
-            {
-              "text": "Täh?",
+              "text": "Elokuussa",
               "isCorrect": false
             }
           ]
@@ -156,7 +156,7 @@
     {
       "x": 474,
       "y": 195,
-      "image": "taustakuva_pikisaari",
+      "image": "etappi_1",
       "state": "unvisited",
       "tasks": [
         {
@@ -207,7 +207,7 @@
     {
       "x": 441,
       "y": 292,
-      "image": "taustakuva_rotuaari",
+      "image": "etappi_3",
       "state": "unvisited",
       "tasks": [
         {
@@ -257,7 +257,7 @@
     {
       "x": 451,
       "y": 407,
-      "image": "taustakuva_kauppatori",
+      "image": "etappi_4",
       "state": "unvisited",
       "tasks": [
         {
@@ -307,6 +307,7 @@
     {
       "x": 553,
       "y": 483,
+      "image": "etappi_6",
       "state": "unvisited",
       "tasks": [
         {
@@ -356,6 +357,7 @@
     {
       "x": 515,
       "y": 616,
+      "image": "etappi_7",
       "state": "unvisited",
       "tasks": [
         {

@@ -1,14 +1,17 @@
 'use strict';
 
-var Announcement = function(game, callback, callbackContext, announcementText) {
+var positiveAnnouncementText = 'Vastasit oikein! Jee!';
+var negativeAnnouncementText = 'Hups!\nNyt meni pieleen.';
+
+var Announcement = function(game, callback, callbackContext, isPositiveAnnouncement) {
   Phaser.Sprite.call(this, game, game.world.centerX, game.world.centerY);
   this.game = game;
   this.anchor.setTo(0.5, 0.5);
   this.textStyle = {font: '32px Arial', fill: 'white', align: 'center', wordWrap: true, wordWrapWidth: 280};
 
   this.addOverlay();
-  this.addBackgroundBox();
-  this.addTitleText(announcementText);
+  this.addBackgroundBox(isPositiveAnnouncement);
+  this.addTitleText(isPositiveAnnouncement);
   this.addOkButton(0, 108, callback, callbackContext);
 };
 
@@ -28,14 +31,23 @@ Announcement.prototype.addOverlay = function() {
   this.addChild(overlay);
 };
 
-Announcement.prototype.addBackgroundBox = function() {
-  var background = this.game.add.sprite(0, 0, 'announcement');
+Announcement.prototype.addBackgroundBox = function(isPositiveAnnouncement) {
+  var backgroundKey = 'announcement-negative';
+  if (isPositiveAnnouncement) {
+    backgroundKey = 'announcement-positive';
+  }
+  var background = this.game.add.sprite(0, 0, backgroundKey);
   background.anchor.setTo(0.5, 0.5);
   this.addChild(background);
 };
 
-Announcement.prototype.addTitleText = function(announcementText) {
-  var text = this.game.add.text(0, 20, announcementText, this.textStyle);
+Announcement.prototype.addTitleText = function(isPositiveAnnouncement) {
+  var text;
+  if (isPositiveAnnouncement) {
+    text = this.game.add.text(0, 20, positiveAnnouncementText, this.textStyle);
+  } else {
+    text = this.game.add.text(0, 20, negativeAnnouncementText, this.textStyle);
+  }
   text.anchor.setTo(0.5, 0.5);
   this.addChild(text);
 };
