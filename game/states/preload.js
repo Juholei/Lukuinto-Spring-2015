@@ -48,7 +48,6 @@ Preload.prototype = {
     this.load.image('etappi_7', 'assets/quiz/etappi_7.png');
 
     this.load.image('game_over_background', 'assets/menu/loppu.png');
-
   },
   create: function() {
     this.asset.cropEnabled = false;

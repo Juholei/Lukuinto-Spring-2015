@@ -9,7 +9,12 @@ Menu.prototype = {
   },
   create: function() {
     window.scrollTo(10, 10);
-    this.game.data = new GameData(this.game.cache.getJSON('gamedata'));
+    var loadedGameState = window.localStorage.getItem('lukuinto-2015');
+    if (loadedGameState !== null) {
+      this.game.data = new GameData(JSON.parse(loadedGameState));
+    } else {
+      this.game.data = new GameData(this.game.cache.getJSON('gamedata'));
+    }
     this.game.add.sprite(0, 0, 'menu-background');
     this.game.add.button(402, 614, 'start-button', this.actionOnClick, this, 1, 0);
 
