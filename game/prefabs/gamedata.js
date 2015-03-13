@@ -16,6 +16,7 @@ GameData.prototype = {
         break;
       }
     }
+    this.saveToLocalStorage();
   },
   getTaskForCurrentPoint: function() {
     for (var i = 0; i < this.points.length; i++) {
@@ -41,6 +42,9 @@ GameData.prototype = {
       }
     }
     return true;
+  },
+  saveToLocalStorage: function() {
+    window.localStorage.setItem('lukuinto-2015', JSON.stringify(this));
   }
 };
 

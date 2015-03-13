@@ -9,7 +9,6 @@ Preload.prototype = {
   preload: function() {
     this.asset = this.add.sprite(512, 384, 'preloader');
     this.asset.anchor.setTo(0.5, 0.5);
-
     this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
     this.load.setPreloadSprite(this.asset);
 
@@ -51,6 +50,7 @@ Preload.prototype = {
   },
   create: function() {
     this.asset.cropEnabled = false;
+    window.scrollTo(10, 10);
   },
   update: function() {
     if (!!this.ready) {

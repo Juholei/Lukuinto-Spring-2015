@@ -8,7 +8,6 @@ Menu.prototype = {
     this.load.json('gamedata', 'assets/gamedata.json', true);
   },
   create: function() {
-    window.scrollTo(10, 10);
     var loadedGameState = window.localStorage.getItem('lukuinto-2015');
     if (loadedGameState !== null) {
       this.game.data = new GameData(JSON.parse(loadedGameState));

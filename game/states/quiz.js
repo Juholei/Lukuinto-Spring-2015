@@ -93,7 +93,6 @@ Quiz.prototype = {
   correctAnswerGiven: function() {
     this.game.data.markPointAs(Point.STATES.UNVISITED, Point.STATES.NEXT);
     console.log('Answered correctly. Changing state to play');
-    window.localStorage.setItem('lukuinto-2015', JSON.stringify(this.game.data));
     this.game.state.start('play');
   },
   wrongAnswerGiven: function() {
