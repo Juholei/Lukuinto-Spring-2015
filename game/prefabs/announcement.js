@@ -1,4 +1,5 @@
 'use strict';
+var LabeledButton = require('../prefabs/labeledbutton');
 
 var positiveAnnouncementText = 'Vastasit oikein! Jee!';
 var negativeAnnouncementText = 'Hups!\nNyt meni pieleen.';
@@ -53,13 +54,8 @@ Announcement.prototype.addTitleText = function(isPositiveAnnouncement) {
 };
 
 Announcement.prototype.addOkButton = function(x, y, callback, callbackContext) {
-  var button = this.game.add.button(x, y, 'button', callback, callbackContext, 1, 0);
-  button.anchor.setTo(0.5, 0.5);
+  var button = new LabeledButton(this.game, x, y, 'OK', callback, callbackContext);
   this.addChild(button);
-
-  var buttonText = this.game.add.text(0, 0, 'OK', this.textStyle);
-  buttonText.anchor.setTo(0.5, 0.5);
-  button.addChild(buttonText);
 };
 
 module.exports = Announcement;
