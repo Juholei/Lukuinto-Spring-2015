@@ -5,8 +5,14 @@ function GameData(object) {
   this.startPoint = object.startPoint;
   this.endPoint = object.endPoint;
   this.points = object.points;
-  this.wrongAnswers = 0;
-  this.selectedAvatarKey = 'avatar_1';
+
+  if (object.wrongAnswers !== undefined && object.selectedAvatarKey !== undefined) {
+    this.wrongAnswers = object.wrongAnswers;
+    this.selectedAvatarKey = object.selectedAvatarKey;
+  } else {
+    this.wrongAnswers = 0;
+    this.selectedAvatarKey = 'avatar_1';
+  }
 }
 GameData.prototype = {
   markPointAs: function(oldState, newState) {
