@@ -1,5 +1,6 @@
 'use strict';
 var GameData = require('../prefabs/gamedata');
+var LabeledButton = require('../prefabs/labeledbutton');
 
 function Menu() {}
 
@@ -8,14 +9,14 @@ Menu.prototype = {
     this.load.json('gamedata', 'assets/gamedata.json', true);
   },
   create: function() {
+    this.game.add.sprite(0, 0, 'menu-background');
+    this.game.add.button(402, 627, 'start-button', this.startGame, this, 1, 0);
+
     var loadedGameState = window.localStorage.getItem('lukuinto-2015');
     if (loadedGameState !== null) {
-      this.game.data = new GameData(JSON.parse(loadedGameState));
-    } else {
-      this.game.data = new GameData(this.game.cache.getJSON('gamedata'));
+      var continueButton = new LabeledButton(this.game, 730, 675 , 'Jatka peliä', this.continueGame, this);
+      this.game.add.existing(continueButton);
     }
-    this.game.add.sprite(0, 0, 'menu-background');
-    this.game.add.button(402, 627, 'start-button', this.actionOnClick, this, 1, 0);
 
     if (this.game.device.fullscreen) {
       this.game.scale.fullScreenScaleMode = Phaser.ScaleManager.SHOW_ALL;
@@ -44,13 +45,26 @@ Menu.prototype = {
       button.frame = 1;
     }
   },
-  actionOnClick: function() {
+  startGame: function() {
+    this.game.data = new GameData(this.game.cache.getJSON('gamedata'));
+    this.setAvatarSelectionToGameData();
+    this.game.state.start('play');
+  },
+  continueGame: function() {
+    var loadedGameState = window.localStorage.getItem('lukuinto-2015');
+    this.game.data = new GameData(JSON.parse(loadedGameState));
+    this.setAvatarSelectionToGameData();
     this.game.state.start('play');
   },
   selectAvatar: function(item) {
-    this.game.data.selectedAvatarKey = item.key;
+    this.selectedAvatarKey = item.key;
     this.avatarSelectionButtons.setAll('frame', 0);
     item.frame = 1;
+  },
+  setAvatarSelectionToGameData: function() {
+    if (this.selectedAvatarKey !== undefined) {
+      this.game.data.selectedAvatarKey = this.selectedAvatarKey;
+    }
   }
 };
 
