@@ -59,7 +59,6 @@ Play.prototype = {
       this.game.data.markPointAs(Point.STATES.CURRENT, Point.STATES.VISITED);
       item.setState(Point.STATES.CURRENT);
       item.pointData.state = Point.STATES.CURRENT;
-      console.log(item.pointData.state);
       console.log('Changing state to quiz');
       this.game.state.start('quiz', false);
     });
