@@ -9,108 +9,42 @@
   },
   "points": [
     {
-      "x": 341,
-      "y": 120,
+      "x": 453,
+      "y": 435,
       "state": "next",
       "tasks": [
         {
-          "image": "etappi_5_ilves",
-          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque eros nec dictum finibus. Vestibulum in mauris ac elit suscipit vestibulum at id metus. Aliquam vitae felis vel purus rhoncus dictum non nec urna. Sed in mauris at neque aliquam eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In a nisl vitae odio aliquam tincidunt et in felis. Nunc sit amet leo eros.",
+          "image": "etappi_1",
+          "question": "Isäsi tulee herättämään sinua ja kertomaan, että perheenne ruispellolle on ilmestynyt valtavan suuri peltokuvio, jonka laajuutta ei maasta käsin oikein kykene arvioimaan. Unenpöpperössä mietit, että varmasti ufot asialla, onkohan täällä käynyt joku sieppari ruispellossa? Kun heräilet enemmän, naurahdat ajatuksellesi ufoista, ja mietit, että varmasti tälle löytyy joku looginen selitys. Isäsi sanoo ryhtyvänsä heti puimaan viljat muilta pelloilta, ettei niillekin käy kehnosti, ja pyytää sinua selvittelemään peltokuvion arvoitusta. Käytyäsi pellon laidalla ihmettelemässä, päätät, että jollain keinolla pitäisi päästä tutkimaan kuviota yläilmoista. Valitsetko: ",
           "answers": [
             {
-              "text": "Kyllä",
+              "text": "vuokraan helikopterin kuljettajalla hintaan 2000 euroa",
               "isCorrect": true
             },
             {
-              "text": "Ei",
-              "isCorrect": false
-            },
-            {
-              "text": "Ehkä",
-              "isCorrect": false
-            },
-            {
-              "text": "Testaan rivin pituutta ja rivitystä",
-              "isCorrect": false
-            }
-          ]
-        },
-        {
-          "image": "etappi_5_kaksoset",
-          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque eros nec dictum finibus. Vestibulum in mauris ac elit suscipit vestibulum at id metus. Aliquam vitae felis vel purus rhoncus dictum non nec urna. Sed in mauris at neque aliquam eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In a nisl vitae odio aliquam tincidunt et in felis. Nunc sit amet leo eros.",
-          "answers": [
-            {
-              "text": "Kyllä",
+              "text": "vuokraan kuumailmapallon tunniksi hintaan 1000 euroa",
               "isCorrect": true
             },
             {
-              "text": "Ei",
-              "isCorrect": false
-            },
-            {
-              "text": "Ehkä",
-              "isCorrect": false
-            },
-            {
-              "text": "Testaan rivin pituutta ja rivitystä",
-              "isCorrect": false
-            }
-          ]
-        },
-        {
-          "image": "etappi_5_leijona",
-          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque eros nec dictum finibus. Vestibulum in mauris ac elit suscipit vestibulum at id metus. Aliquam vitae felis vel purus rhoncus dictum non nec urna. Sed in mauris at neque aliquam eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In a nisl vitae odio aliquam tincidunt et in felis. Nunc sit amet leo eros.",
-          "answers": [
-            {
-              "text": "Kyllä",
+              "text": "kysyn isoveljen kauko-ohjattavaa pienoishelikopteria videokameralla",
               "isCorrect": true
             },
             {
-              "text": "Ei",
-              "isCorrect": false
-            },
-            {
-              "text": "Ehkä",
-              "isCorrect": false
-            },
-            {
-              "text": "Testaan rivin pituutta ja rivitystä",
-              "isCorrect": false
-            }
-          ]
-        },
-        {
-          "image": "etappi_5_otava",
-          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque eros nec dictum finibus. Vestibulum in mauris ac elit suscipit vestibulum at id metus. Aliquam vitae felis vel purus rhoncus dictum non nec urna. Sed in mauris at neque aliquam eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In a nisl vitae odio aliquam tincidunt et in felis. Nunc sit amet leo eros.",
-          "answers": [
-            {
-              "text": "Kyllä",
+              "text": " kiipeän läheiseen lintutorniin ja yritän sieltä kiikaroida peltoa",
               "isCorrect": true
-            },
-            {
-              "text": "Ei",
-              "isCorrect": false
-            },
-            {
-              "text": "Ehkä",
-              "isCorrect": false
-            },
-            {
-              "text": "Testaan rivin pituutta ja rivitystä",
-              "isCorrect": false
             }
           ]
         }
       ]
     },
     {
-      "x": 446,
-      "y": 101,
+      "x": 404,
+      "y": 455,
       "image": "etappi_2",
       "state": "unvisited",
       "tasks": [
         {
-          "question": "Siirryin tutkailemaan ruispeltoa ilmasta käsin. Tämähän on hauskaa! Tuo outo kuvio muistuttaa minua jostakin. Aivan! Sen täytyy olla Oulun yliopiston logo, mutta miten ihmeessä Oulun yliopisto tähän liittyy? Ehkä on parasta vierailla paikan päällä vähän tutkimassa asiaa. Ruis näyttää muuten kasvaneen jo hyvinkin korkeaksi. Milloinhan toukoruis tyypillisesti kerätään?",
+          "question": "Pääsin tutkailemaan ruispeltoa ilmasta käsin. Tämähän on hauskaa! Tuo outo kuvio muistuttaa minua jostakin... Ruis näyttää muuten kasvaneen jo hyvinkin korkeaksi. Milloinhan toukoruis tyypillisesti kerätään?",
           "answers": [
             {
               "text": "Toukokuussa",
@@ -131,123 +65,159 @@
           ]
         },
         {
-          "question": "Testataan kysymysten arpomista",
+          "question": "Pääsin tutkailemaan ruispeltoa ilmasta käsin. Tämähän on hauskaa! Tuo kuvio näyttää jotenkin tutulta, mutta mikäköhän logo se on?",
           "answers": [
             {
-              "text": "Toimii!",
+              "text": "Suomen avaruustutkimusseuran",
+              "isCorrect": false
+            },
+            {
+              "text": "Oulun tähtitieteellisen seuran",
+              "isCorrect": false
+            },
+            {
+              "text": "Maanviljelijöiden keskusjärjestön",
+              "isCorrect": false
+            },
+            {
+              "text": "Oulun yliopiston",
               "isCorrect": true
-            },
-            {
-              "text": "Ei toimi!",
-              "isCorrect": false
-            },
-            {
-              "text": "OHO",
-              "isCorrect": false
-            },
-            {
-              "text": ":D",
-              "isCorrect": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "x": 474,
-      "y": 195,
-      "image": "etappi_1",
-      "state": "unvisited",
-      "tasks": [
-        {
-          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque eros nec dictum finibus. Vestibulum in mauris ac elit suscipit vestibulum at id metus. Aliquam vitae felis vel purus rhoncus dictum non nec urna. Sed in mauris at neque aliquam eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In a nisl vitae odio aliquam tincidunt et in felis. Nunc sit amet leo eros.",
-
-          "answers": [
-            {
-              "text": "Kyllä",
-              "isCorrect": true
-            },
-            {
-              "text": "Ei",
-              "isCorrect": false
-            },
-            {
-              "text": "Ehkä",
-              "isCorrect": false
-            },
-            {
-              "text": "Täh?",
-              "isCorrect": false
             }
           ]
         },
         {
-          "question": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce pellentesque eros nec dictum finibus. Vestibulum in mauris ac elit suscipit vestibulum at id metus. Aliquam vitae felis vel purus rhoncus dictum non nec urna. Sed in mauris at neque aliquam eleifend. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In a nisl vitae odio aliquam tincidunt et in felis. Nunc sit amet leo eros.",
+          "question": "Pääsin tutkailemaan ruispeltoa ilmasta käsin. Tämähän on hauskaa! Tuosta kuviosta tulee mieleen Nazcan kuviot. Niistä kerrottiin muistaakseni kuudennen luokan historian kirjassa. Olikohan se niin, että Nazcan kuviot löytyivät",
           "answers": [
             {
-              "text": "Toimii!",
+              "text": "Perusta",
               "isCorrect": true
             },
             {
-              "text": "Ei toimi!",
+              "text": "Saharasta",
               "isCorrect": false
             },
             {
-              "text": "OHO",
+              "text": "Kalaharista",
               "isCorrect": false
             },
             {
-              "text": ":D",
+              "text": "Indonesiasta",
               "isCorrect": false
+            }
+          ]
+        },
+          {
+          "question": "Pääsin tutkailemaan ruispeltoa ilmasta käsin. Tämähän on hauskaa! Tuosta kuviosta tulee mieleen Nazcan kuviot. Niistä kerrottiin muistaakseni kuudennen luokan historian kirjassa. Ne kuviot taisivat olla tosi pitkiä, pisin taisi olla",
+          "answers": [
+            {
+              "text": "40 metriä",
+              "isCorrect": false
+            },
+            {
+              "text": "400 metriä",
+              "isCorrect": false
+            },
+            {
+              "text": "10 tuhatta vuotta vanhoja",
+              "isCorrect": false
+            },
+            {
+              "text": "60 kilometriä",
+              "isCorrect": true
             }
           ]
         }
       ]
     },
     {
-      "x": 441,
-      "y": 292,
+      "x": 438,
+      "y": 131,
       "image": "etappi_3",
       "state": "unvisited",
       "tasks": [
         {
-          "question": "Testikysymys 4",
+          "question": "Siksihän pellosta löytynyt logo näytti niin tutulta, koska se oli Oulun yliopiston logo. Miksi ihmeessä sellainen on meidän pellossa? Jospa menisin käymään yliopistolla, onhan tämä niin mystinen juttu, että haluan selvittää tämän... Saavuin Oulun Yliopistoon ja minut valtasi suuri hämmennys. Tämä rakennushan on mahdottoman suuri, miten ihmeessä täältä pitäisi löytää oikea paikka. Tähtitieteen käytävällä tapaan ystävällisen näköisen professorin kollegoineen. ‘Mihinkäs sinä olet matkalla?’, he kyselevät. ‘Minun täytyisi löytää tietoa koskien outoja kuvioita meidän ruispellossa’. ‘Monestihan ihmiset luulevat, että tämmöisissä asioissa on kyse jostain yliluonnollisesta, mutta olemme kattavien tieteellisten tutkimusten ansiosta varmoja, että se ei ole mahdollista. Suosittelisin, että lähdet vierailulle Tietomaahan tutustumaan pysyvään avaruusnäyttelyyn, sieltä saattaisi löytyä vastaus myös tällaiseen erikoisempaan pulmaan. Satutko muuten tietämään, mihin tiedekuntaan tähtitiede Oulun Yliopistossa sijoittuu?'",
+
           "answers": [
             {
-              "text": "Kyllä",
+              "text": "Humanistisen",
+              "isCorrect": false
+            },
+            {
+              "text": "Fysiikan",
+              "isCorrect": false
+            },
+            {
+              "text": "Luonnontieteiden",
               "isCorrect": true
             },
             {
-              "text": "Ei",
-              "isCorrect": false
-            },
-            {
-              "text": "Ehkä",
-              "isCorrect": false
-            },
-            {
-              "text": "Täh?",
+              "text": "Tieto- ja Sähkötekniikan",
               "isCorrect": false
             }
           ]
         },
         {
-          "question": "Testataan kysymysten arpomista",
+          "question": "Siksihän pellosta löytynyt logo näytti niin tutulta, koska se oli Oulun yliopiston logo. Miksi ihmeessä sellainen on meidän pellossa? Jospa menisin käymään yliopistolla, onhan tämä niin mystinen juttu, että haluan selvittää tämän... Saavuin Oulun Yliopistoon ja minut valtasi suuri hämmennys. Tämä rakennushan on mahdottoman suuri, miten ihmeessä täältä pitäisi löytää oikea paikka. Tähtitieteen käytävällä tapaan ystävällisen näköisen professorin kollegoineen. ‘Mihinkäs sinä olet matkalla?’, he kyselevät. ‘Minun täytyisi löytää tietoa koskien outoja kuvioita meidän ruispellossa’. ‘Monestihan ihmiset luulevat, että tämmöisissä asioissa on kyse jostain yliluonnollisesta, mutta olemme kattavien tieteellisten tutkimusten ansiosta varmoja, että se ei ole mahdollista. Suosittelisin, että lähdet vierailulle Tietomaahan tutustumaan pysyvään avaruusnäyttelyyn, sieltä saattaisi löytyä vastaus myös tällaiseen erikoisempaan pulmaan. Satutko muuten tietämään, mitä kahta avaruuteen liittyvää alaa voi opiskella Oulun yliopistossa?'",
           "answers": [
             {
-              "text": "Toimii!",
+              "text": "Avaruusfysiikka ja tähtitiede",
               "isCorrect": true
             },
             {
-              "text": "Ei toimi!",
+              "text": "Linnunrata ja galaksit",
               "isCorrect": false
             },
             {
-              "text": "OHO",
+              "text": "Diagnostiikka ja radiografia",
               "isCorrect": false
             },
             {
-              "text": ":D",
+              "text": "Avaruusteknologia ja avaruuslogiikka",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Siksihän pellosta löytynyt logo näytti niin tutulta, koska se oli Oulun yliopiston logo. Miksi ihmeessä sellainen on meidän pellossa? Jospa menisin käymään yliopistolla, onhan tämä niin mystinen juttu, että haluan selvittää tämän... Saavuin Oulun Yliopistoon ja minut valtasi suuri hämmennys. Tämä rakennushan on mahdottoman suuri, miten ihmeessä täältä pitäisi löytää oikea paikka. Tähtitieteen käytävällä tapaan ystävällisen näköisen professorin kollegoineen. ‘Mihinkäs sinä olet matkalla?’, he kyselevät. ‘Minun täytyisi löytää tietoa koskien outoja kuvioita meidän ruispellossa’. ‘Monestihan ihmiset luulevat, että tämmöisissä asioissa on kyse jostain yliluonnollisesta, mutta olemme kattavien tieteellisten tutkimusten ansiosta varmoja, että se ei ole mahdollista. Suosittelisin, että lähdet vierailulle Tietomaahan tutustumaan pysyvään avaruusnäyttelyyn, sieltä saattaisi löytyä vastaus myös tällaiseen erikoisempaan pulmaan. Satutko muuten tietämään, mitä Oulun yliopiston tähtitieteen osastolla tutkitaan?'",
+
+          "answers": [
+            {
+              "text": "Ovatko kaikki auringot tähtiä",
+              "isCorrect": false
+            },
+            {
+              "text": "Korkeaenergistä astrofysiikkaa, planetaaristen renkaiden ja galaksien dynamiikkaa, sekä Marsin ja Venuksen geologiaa",
+              "isCorrect": true
+            },
+            {
+              "text": "Gaussin käyrien ja Nostradamuksen ennustusten vaikutusta korkeasuhdanteisiin, ja MArsin ja Venuksen dynamiikkaa astraalifysiikassa",
+              "isCorrect": false
+            },
+            {
+              "text": "Voisiko 'Linnunradan käsikirja liftareille' perustua tositapahtumiin",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "question": "Siksihän pellosta löytynyt logo näytti niin tutulta, koska se oli Oulun yliopiston logo. Miksi ihmeessä sellainen on meidän pellossa? Jospa menisin käymään yliopistolla, onhan tämä niin mystinen juttu, että haluan selvittää tämän... Saavuin Oulun Yliopistoon ja minut valtasi suuri hämmennys. Tämä rakennushan on mahdottoman suuri, miten ihmeessä täältä pitäisi löytää oikea paikka. Tähtitieteen käytävällä tapaan ystävällisen näköisen professorin kollegoineen. ‘Mihinkäs sinä olet matkalla?’, he kyselevät. ‘Minun täytyisi löytää tietoa koskien outoja kuvioita meidän ruispellossa’. ‘Monestihan ihmiset luulevat, että tämmöisissä asioissa on kyse jostain yliluonnollisesta, mutta olemme kattavien tieteellisten tutkimusten ansiosta varmoja, että se ei ole mahdollista. Suosittelisin, että lähdet vierailulle Tietomaahan tutustumaan pysyvään avaruusnäyttelyyn, sieltä saattaisi löytyä vastaus myös tällaiseen erikoisempaan pulmaan. Satutko muuten tietämään, mitä termi avaruussää tarkoittaa?'",
+
+          "answers": [
+            {
+              "text": "Että milloin on tarpeeksi hyvä sää astronauttien avaruuskävelylle",
+              "isCorrect": false
+            },
+            {
+              "text": "Tutkimusta, joka keskittyy kasvihuoneilmiön vaikutuksiin avaruudessa",
+              "isCorrect": false
+            },
+            {
+              "text": "Tutkimusta, joka keskittyy auringon aktiivisuuden aiheuttamiin ilmiöihin lyhyemmällä aikaskaalalla, kuin avaruusilmaston tutkimuksessa",
+              "isCorrect": true
+            },
+            {
+              "text": "Niinku päivän avaruussää ja -mää",
               "isCorrect": false
             }
           ]
@@ -255,49 +225,91 @@
       ]
     },
     {
-      "x": 451,
-      "y": 407,
+      "x": 522,
+      "y": 395,
       "image": "etappi_4",
       "state": "unvisited",
       "tasks": [
         {
-          "question": "Testikysymys 5",
+          "question": "Yliopiston tutkijoiden vinkistä päädyin Oulun Tietomaahan, joka on Suomen vanhin tiedekeskus. Vau! Tämä paikkahan on valtava. Voisinkin heti ensitöikseni mennä lasihissillä tornin näkötasanteelle. Vaikka ennen päivänlaskua ei voi nähdä tähtiä hyvin, löydän varmasti jotain vinkkiä, mitä kannattaa tutkia seuraavaksi. Kuinkahan monesta kohteesta Tietomaan teemanäyttelyt oikein koostuvat?",
           "answers": [
             {
-              "text": "Kyllä",
+              "text": "noin 50",
+              "isCorrect": false
+            },
+            {
+              "text": "noin 75",
+              "isCorrect": false
+            },
+            {
+              "text": "noin 100",
+              "isCorrect": false
+            },
+            {
+              "text": "yli 150",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "question": "Yliopiston tutkijoiden vinkistä päädyin Oulun Tietomaahan, joka on Suomen vanhin tiedekeskus. Vau! Tämä paikkahan on valtava. Voisinkin heti ensitöikseni mennä lasihissillä tornin näkötasanteelle. Vaikka ennen päivänlaskua ei voi nähdä tähtiä hyvin, löydän varmasti jotain vinkkiä, mitä kannattaa tutkia seuraavaksi. Tietomaan tähtitorni on todella vanha, muistaakseni se on rakennettu ",
+          "answers": [
+            {
+              "text": "1750-luvulla",
+              "isCorrect": false
+            },
+            {
+              "text": "1920-luvulla",
               "isCorrect": true
             },
             {
-              "text": "Ei",
+              "text": "vuonna 1834",
               "isCorrect": false
             },
             {
-              "text": "Ehkä",
-              "isCorrect": false
-            },
-            {
-              "text": "Täh?",
+              "text": "ennen ajanlaskumme alkua",
               "isCorrect": false
             }
           ]
         },
         {
-          "question": "Testataan kysymysten arpomista",
+          "question": "Yliopiston tutkijoiden vinkistä päädyin Oulun Tietomaahan, joka on Suomen vanhin tiedekeskus. Vau! Tämä paikkahan on valtava. Voisinkin heti ensitöikseni mennä lasihissillä tornin näkötasanteelle. Vaikka ennen päivänlaskua ei voi nähdä tähtiä hyvin, löydän varmasti jotain vinkkiä, mitä kannattaa tutkia seuraavaksi. Tietomaan avaruusnäyttelyssä voi muuten tutkia ",
           "answers": [
             {
-              "text": "Toimii!",
+              "text": "oikeita kuukiviä",
+              "isCorrect": false
+            },
+            {
+              "text": "oikeita mineraaleja Marsista",
+              "isCorrect": false
+            },
+            {
+              "text": "mustaa aukkoa",
+              "isCorrect": false
+            },
+            {
+              "text": "oikeita meteoriitteja",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "question": "Yliopiston tutkijoiden vinkistä päädyin Oulun Tietomaahan, joka on Suomen vanhin tiedekeskus. Vau! Tämä paikkahan on valtava. Voisinkin heti ensitöikseni mennä lasihissillä tornin näkötasanteelle. Vaikka ennen päivänlaskua ei voi nähdä tähtiä hyvin, löydän varmasti jotain vinkkiä, mitä kannattaa tutkia seuraavaksi. Tietomaan torni on muuten alunperin ollut ",
+          "answers": [
+            {
+              "text": "majakka",
+              "isCorrect": false
+            },
+            {
+              "text": "tähtitorni",
+              "isCorrect": false
+            },
+            {
+              "text": "vesitorni",
               "isCorrect": true
             },
             {
-              "text": "Ei toimi!",
-              "isCorrect": false
-            },
-            {
-              "text": "OHO",
-              "isCorrect": false
-            },
-            {
-              "text": ":D",
+              "text": "kivikautinen asuinpaikka",
               "isCorrect": false
             }
           ]
@@ -305,149 +317,216 @@
       ]
     },
     {
-      "x": 553,
-      "y": 483,
+      "x": 459,
+      "y": 384,
+      "image": "etappi_5_ilves",
+      "state": "unvisited",
+      "tasks": [
+        {
+          "question": "Tietomaan ystävällinen työntekijä ohjasi minut tänne Tähtitornin kahvilaan, koska heillä tuli sulkemisaika vastaan, mutta mitä ihmettä minun täältä pitäisi etsiä. Päädyin mietteissäni vilkaisemaan taivaalle ja siellä eteeni avautui upea näky. Tähdet näyttivät muodostavan erilaisia kuvioita. Mikähän kuvio on kyseessä?",
+          "answers": [
+            {
+              "text": "Ilves",
+              "isCorrect": true
+            },
+            {
+              "text": "Jousimies",
+              "isCorrect": false
+            },
+            {
+              "text": "Leijona",
+              "isCorrect": false
+            },
+            {
+              "text": "Orioni",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "image": "etappi_5_kaksoset",
+          "question": "Tietomaan ystävällinen työntekijä ohjasi minut tänne Tähtitornin kahvilaan, koska heillä tuli sulkemisaika vastaan, mutta mitä ihmettä minun täältä pitäisi etsiä. Päädyin mietteissäni vilkaisemaan taivaalle ja siellä eteeni avautui upea näky. Tähdet näyttivät muodostavan erilaisia kuvioita. Mikähän kuvio on kyseessä?",
+          "answers": [
+            {
+              "text": "Pohjantähti",
+              "isCorrect": false
+            },
+            {
+              "text": "Onioni",
+              "isCorrect": false
+            },
+            {
+              "text": "Kaksoset",
+              "isCorrect": true
+            },
+            {
+              "text": "Vaaka",
+              "isCorrect": false
+            }
+          ]
+        },
+        {
+          "image": "etappi_5_leijona",
+          "question": "Tietomaan ystävällinen työntekijä ohjasi minut tänne Tähtitornin kahvilaan, koska heillä tuli sulkemisaika vastaan, mutta mitä ihmettä minun täältä pitäisi etsiä. Päädyin mietteissäni vilkaisemaan taivaalle ja siellä eteeni avautui upea näky. Tähdet näyttivät muodostavan erilaisia kuvioita. Mikähän kuvio on kyseessä?",
+          "answers": [
+            {
+              "text": "Vaaka",
+              "isCorrect": false
+            },
+            {
+              "text": "Kaksoset",
+              "isCorrect": false
+            },
+            {
+              "text": "Orioni",
+              "isCorrect": false
+            },
+            {
+              "text": "Leijona",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "image": "etappi_5_otava",
+          "question": "Tietomaan ystävällinen työntekijä ohjasi minut tänne Tähtitornin kahvilaan, koska heillä tuli sulkemisaika vastaan, mutta mitä ihmettä minun täältä pitäisi etsiä. Päädyin mietteissäni vilkaisemaan taivaalle ja siellä eteeni avautui upea näky. Tähdet näyttivät muodostavan erilaisia kuvioita. Mikähän kuvio on kyseessä?",
+          "answers": [
+            {
+              "text": "Otava",
+              "isCorrect": true
+            },
+            {
+              "text": "Orioni",
+              "isCorrect": false
+            },
+            {
+              "text": "Kaksoset",
+              "isCorrect": false
+            },
+            {
+              "text": "Leijona",
+              "isCorrect": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "x": 504,
+      "y": 255,
       "image": "etappi_6",
       "state": "unvisited",
       "tasks": [
         {
-          "question": "Testikysymys 6",
+          "question": "Tähtitornin kahvilan työntekijä oli sattumalta Oulun Arktoksen jäsen, ja hän kertoi, että heillä on keskiviikkoisin kokous Puolivälinkankaan vesitornin huipulla sijaitsevalla tähtitornilla, ja se on avoin kaikille, joten voin lähteä mukaan… Perillä Puolivälinkankaalla olikin mukavasti porukkaa, ja pääsin keskustelemaan tähtiharrastajien kanssa tähtien tutkimisesta. Innostuin niin paljon katselemaan kaukoputkella, että unohdin aivan kertoa heille peltokuvioista. Kaiken lisäksi osa porukasta oli lähdössä Paavolan tähtitornille, koska sieltä näkee tähdet vielä paremmin, kun ei ole kaupungin valosaastetta. Olin heti innoissani lähtemässä mukaan. Ennen lähtöä Havaitsin kaukoputkella kaukaisuudessa asteroidin! Joitakin aiemmin planeettoina pidettyjä asteroideja on alettu kutsumaan kääpiöplaneetoiksi. Mikä seuraavista ei ole kääpiöplaneetta?",
           "answers": [
             {
-              "text": "Kyllä",
+              "text": "Ceres",
+              "isCorrect": false
+            },
+            {
+              "text": "Pluto",
+              "isCorrect": false
+            },
+            {
+              "text": "Makemake",
+              "isCorrect": false
+            },
+            {
+              "text": "Medeia",
+              "isCorrect": true
+            }
+          ]
+        },
+        {
+          "question": "Tähtitornin kahvilan työntekijä oli sattumalta Oulun Arktoksen jäsen, ja hän kertoi, että heillä on keskiviikkoisin kokous Puolivälinkankaan vesitornin huipulla sijaitsevalla tähtitornilla, ja se on avoin kaikille, joten voin lähteä mukaan… Perillä Puolivälinkankaalla olikin mukavasti porukkaa, ja pääsin keskustelemaan tähtiharrastajien kanssa tähtien tutkimisesta. Innostuin niin paljon katselemaan kaukoputkella, että unohdin aivan kertoa heille peltokuvioista. Kaiken lisäksi osa porukasta oli lähdössä Paavolan tähtitornille, koska sieltä näkee tähdet vielä paremmin, kun ei ole kaupungin valosaastetta. Olin heti innoissani lähtemässä mukaan. Ennen lähtöä havaitsin kaukoputkella jotain valkoista, jonka kyljessä lukee ilmeisestikin NASA. Mistäköhän sanoista se lyhenne tuleekaan?",
+          "answers": [
+            {
+              "text": "Nyt Avaruuteen Sillä Apollolla",
+              "isCorrect": false
+            },
+            {
+              "text": "National Aeronautics and Space Administration",
               "isCorrect": true
             },
             {
-              "text": "Ei",
+              "text": "North American Space Admission",
               "isCorrect": false
             },
             {
-              "text": "Ehkä",
-              "isCorrect": false
-            },
-            {
-              "text": "Täh?",
+              "text": "North Atlantic Space Airbase",
               "isCorrect": false
             }
           ]
         },
         {
-          "question": "Testataan kysymysten arpomista",
+          "question": "Tähtitornin kahvilan työntekijä oli sattumalta Oulun Arktoksen jäsen, ja hän kertoi, että heillä on keskiviikkoisin kokous Puolivälinkankaan vesitornin huipulla sijaitsevalla tähtitornilla, ja se on avoin kaikille, joten voin lähteä mukaan… Perillä Puolivälinkankaalla olikin mukavasti porukkaa, ja pääsin keskustelemaan tähtiharrastajien kanssa tähtien tutkimisesta. Innostuin niin paljon katselemaan kaukoputkella, että unohdin aivan kertoa heille peltokuvioista. Kaiken lisäksi osa porukasta oli lähdössä Paavolan tähtitornille, koska sieltä näkee tähdet vielä paremmin, kun ei ole kaupungin valosaastetta. Olin heti innoissani lähtemässä mukaan. Ennen lähtöä havaitsin kaukoputkellan superkuun! Muistelen lukeneeni joskus superkuun määritelmän. Olikohan se ",
           "answers": [
             {
-              "text": "Toimii!",
+              "text": "täysikuu, joka on elliptisellä kiertoradallaan Maata lähimmässä pisteessän",
               "isCorrect": true
             },
             {
-              "text": "Ei toimi!",
+              "text": "kuu, joka on pelastautunut mustasta aukosta",
               "isCorrect": false
             },
             {
-              "text": "OHO",
+              "text": "aika, jolloin kuuhullut ihmiset tulevat superhulluiksi!",
               "isCorrect": false
             },
             {
-              "text": ":D",
+              "text": "kuu, jonka koko kasvaa supersuureksi, kun universumin tomu kerääntyy sen pinnalle",
               "isCorrect": false
             }
           ]
-        }
+        },
+        {
+          "question": "Tähtitornin kahvilan työntekijä oli sattumalta Oulun Arktoksen jäsen, ja hän kertoi, että heillä on keskiviikkoisin kokous Puolivälinkankaan vesitornin huipulla sijaitsevalla tähtitornilla, ja se on avoin kaikille, joten voin lähteä mukaan… Perillä Puolivälinkankaalla olikin mukavasti porukkaa, ja pääsin keskustelemaan tähtiharrastajien kanssa tähtien tutkimisesta. Innostuin niin paljon katselemaan kaukoputkella, että unohdin aivan kertoa heille peltokuvioista. Kaiken lisäksi osa porukasta oli lähdössä Paavolan tähtitornille, koska sieltä näkee tähdet vielä paremmin, kun ei ole kaupungin valosaastetta. Olin heti innoissani lähtemässä mukaan. Ennen lähtöä havaitsin kaukoputkella jotain. Voisikos se olla musta aukko!? Ei varmaankaan, koska mustaa aukkoa ei voi havaita suoraan, vaan sen olemassaolon voi päätellä kolmesta seikasta. Mikä seuraavista vaihtoehdoista ei ole hyvä keino havaita mustaa aukkoa.",
+          "answers": [
+            {
+              "text": "Sen keskellä on spiraalimaisena kierteenä näkyvää emissiosumua",
+              "isCorrect": true
+            },
+            {
+              "text": "Valon taipuminen",
+              "isCorrect": false
+            },
+            {
+              "text": "Tähden kiertäminen ympäri pistettä, jossa ei näyttäisi olevan mitään",
+              "isCorrect": false
+            },
+            {
+              "text": "Kohde on voimakas röntgensäteilyn lähde",
+              "isCorrect": false
+            }
+          ]
+        }     
       ]
     },
     {
-      "x": 515,
-      "y": 616,
+      "x": 573,
+      "y": 713,
       "image": "etappi_7",
       "state": "unvisited",
       "tasks": [
         {
-          "question": "Testikysymys 7",
+          "question": "Saavumme Paavolan tähtitornille ja avaan painavan oven. “Isä, mitä sinä täällä teet?”. Paljastuu, että isä olikin koko peltokuviojuonen takana. Hän ei halunnut, että vietät koko kesälomaasi sisätiloissa, vaan että löytäisit mielekkään harrastuksen itsellesi. Haluaisitko ryhtyä harrastamaan tähtitiedettä, jos hankin sinulle oman kaukoputken?”, isä kysyy sinulta.",
           "answers": [
             {
-              "text": "Kyllä",
+              "text": "'Kyllä vain! Innostuin siitä.'",
               "isCorrect": true
             },
             {
-              "text": "Ei",
-              "isCorrect": false
+              "text": "'En. Luen mielummin kirjoja sisätiloissa.'",
+              "isCorrect": true
             },
             {
-              "text": "Ehkä",
-              "isCorrect": false
+              "text": "'Ehkä... Voin harkita sitä'",
+              "isCorrect": true
             },
             {
               "text": "Täh?",
-              "isCorrect": false
-            }
-          ]
-        },
-        {
-          "question": "Testataan kysymysten arpomista",
-          "answers": [
-            {
-              "text": "Toimii!",
               "isCorrect": true
-            },
-            {
-              "text": "Ei toimi!",
-              "isCorrect": false
-            },
-            {
-              "text": "OHO",
-              "isCorrect": false
-            },
-            {
-              "text": ":D",
-              "isCorrect": false
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "x": 653,
-      "y": 694,
-      "state": "unvisited",
-      "tasks": [
-        {
-          "question": "Testikysymys 8",
-          "answers": [
-            {
-              "text": "Kyllä",
-              "isCorrect": true
-            },
-            {
-              "text": "Ei",
-              "isCorrect": false
-            },
-            {
-              "text": "Ehkä",
-              "isCorrect": false
-            },
-            {
-              "text": "Täh?",
-              "isCorrect": false
-            }
-          ]
-        },
-        {
-          "question": "Testataan kysymysten arpomista",
-          "answers": [
-            {
-              "text": "Toimii!",
-              "isCorrect": true
-            },
-            {
-              "text": "Ei toimi!",
-              "isCorrect": false
-            },
-            {
-              "text": "OHO",
-              "isCorrect": false
-            },
-            {
-              "text": ":D",
-              "isCorrect": false
             }
           ]
         }
