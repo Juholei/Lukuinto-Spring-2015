@@ -24,15 +24,7 @@ Menu.prototype = {
       fullScreenButton.scale.setTo(0.25, 0.25);
       fullScreenButton.events.onInputDown.add(this.toggleFullscreen, this);
     }
-
-    this.avatarSelectionButtons = this.game.add.group();
-    var avatarButton1 = this.game.add.button(481, 545, 'avatar_1', this.selectAvatar, this);
-    avatarButton1.frame = 1;
-    avatarButton1.anchor.setTo(0.5, 0.5);
-    this.avatarSelectionButtons.add(avatarButton1);
-    var avatarButton2 = this.game.add.button(545, 545, 'avatar_2', this.selectAvatar, this);
-    avatarButton2.anchor.setTo(0.5, 0.5);
-    this.avatarSelectionButtons.add(avatarButton2);
+    this.addAvatarSelection();
   },
   update: function() {
   },
@@ -55,6 +47,19 @@ Menu.prototype = {
     this.game.data = new GameData(JSON.parse(loadedGameState));
     this.setAvatarSelectionToGameData();
     this.game.state.start('play');
+  },
+  addAvatarSelection: function() {
+    var textStyle = {font: '18px Arial', fill: 'white', strokeThickness: 5, align: 'center'};
+    var avatarSelectionText = this.game.add.text(this.game.world.centerX, 470, 'Valitse hahmo', textStyle);
+    avatarSelectionText.anchor.setTo(0.5, 0.5);
+    this.avatarSelectionButtons = this.game.add.group();
+    var avatarButton1 = this.game.add.button(481, 545, 'avatar_1', this.selectAvatar, this);
+    avatarButton1.frame = 1;
+    avatarButton1.anchor.setTo(0.5, 0.5);
+    this.avatarSelectionButtons.add(avatarButton1);
+    var avatarButton2 = this.game.add.button(545, 545, 'avatar_2', this.selectAvatar, this);
+    avatarButton2.anchor.setTo(0.5, 0.5);
+    this.avatarSelectionButtons.add(avatarButton2);
   },
   selectAvatar: function(item) {
     this.selectedAvatarKey = item.key;

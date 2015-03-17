@@ -22,7 +22,7 @@
               "isCorrect": true
             },
             {
-              "text": "vuokraan kuumailmapallon tunniksi hintaan 1000 euroa",
+              "text": "vuokraan kuuma-\nilmapallon tunniksi hintaan 1000 euroa",
               "isCorrect": true
             },
             {
@@ -68,7 +68,7 @@
           "question": "Pääsin tutkailemaan ruispeltoa ilmasta käsin. Tämähän on hauskaa! Tuo kuvio näyttää jotenkin tutulta, mutta mikäköhän logo se on?",
           "answers": [
             {
-              "text": "Suomen avaruustutkimusseuran",
+              "text": "Suomen avaruus-\ntutkimusseuran",
               "isCorrect": false
             },
             {
@@ -140,7 +140,7 @@
 
           "answers": [
             {
-              "text": "Humanistisen",
+              "text": "Humanistiseen",
               "isCorrect": false
             },
             {
@@ -148,7 +148,7 @@
               "isCorrect": false
             },
             {
-              "text": "Luonnontieteiden",
+              "text": "Luonnontieteelliseen",
               "isCorrect": true
             },
             {
@@ -209,7 +209,7 @@
               "isCorrect": false
             },
             {
-              "text": "Tutkimus kasvihuoneilmiön vaikutuksista avaruudessa",
+              "text": "Tutkimus kasvihuone-\nilmiön vaikutuksista avaruudessa",
               "isCorrect": false
             },
             {
@@ -500,7 +500,7 @@
               "isCorrect": false
             }
           ]
-        }     
+        }
       ]
     },
     {

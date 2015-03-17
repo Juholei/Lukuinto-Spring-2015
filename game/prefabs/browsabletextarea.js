@@ -9,8 +9,8 @@ var BrowsableTextArea = function(game, text) {
   this.splitTextToPages(this.textString);
   this.visibleTextIndex = 0;
   console.log('Pages: ' + this.splitText.length + ' ' + this.splitText);
-  var textStyle = {font: '14px Arial', fill: 'white', align: 'center', wordWrap: true, wordWrapWidth: 574};
-  this.currentVisibleText = game.add.text(0, 5, this.splitText[this.visibleTextIndex],  textStyle);
+  var textStyle = {font: '14px Arial', fill: 'white', align: 'left', wordWrap: true, wordWrapWidth: 574};
+  this.currentVisibleText = game.add.text(5, 5, this.splitText[this.visibleTextIndex],  textStyle);
   this.addChild(this.currentVisibleText);
 };
 
