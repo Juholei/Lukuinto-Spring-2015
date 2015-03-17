@@ -2,6 +2,7 @@
 var ToggleButton = require('../prefabs/togglebutton');
 var Point = require('../prefabs/point');
 var Announcement = require('../prefabs/announcement');
+var BrowsableTextArea = require('../prefabs/browsabletextarea');
 
 var defaultBackgroundKey = 'taustakuva_kauppatori';
 
@@ -12,8 +13,7 @@ Quiz.prototype = {
   create: function() {
     this.currentTask = this.game.data.getTaskForCurrentPoint();
     this.addBackgroundImage();
-    this.addQuestionBackgroundImage();
-    this.addQuestionText();
+    this.addQuestionTextArea();
     this.addButtonBackground();
     this.addButtons();
   },
@@ -40,14 +40,9 @@ Quiz.prototype = {
     backgroundScenery.width = 576;
     backgroundScenery.anchor.setTo(0.5, 0);
   },
-  addQuestionBackgroundImage: function() {
-    var backgroundBox = this.game.add.sprite(this.game.world.centerX, 360, 'question-background');
-    backgroundBox.anchor.setTo(0.5, 0);
-  },
-  addQuestionText: function() {
-    var textStyle = {font: '16px Arial', fill: 'white', align: 'center', wordWrap: true, wordWrapWidth: 574};
-    var questionText = this.game.add.text(this.game.world.centerX, 433, this.currentTask.question,  textStyle);
-    questionText.anchor.setTo(0.5, 0.5);
+  addQuestionTextArea: function() {
+    var questionArea = new BrowsableTextArea(this.game, this.currentTask.question);
+    this.game.add.existing(questionArea);
   },
   addButtonBackground: function() {
     this.buttonBackground = this.game.add.sprite(this.game.world.centerX, this.game.world.height, 'answer-background');
