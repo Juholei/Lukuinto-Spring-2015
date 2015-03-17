@@ -9,8 +9,8 @@
   },
   "points": [
     {
-      "x": 453,
-      "y": 435,
+      "x": 157,
+      "y": 107,
       "state": "next",
       "tasks": [
         {
@@ -38,8 +38,8 @@
       ]
     },
     {
-      "x": 404,
-      "y": 455,
+      "x": 271,
+      "y": 213,
       "image": "etappi_2",
       "state": "unvisited",
       "tasks": [
@@ -130,8 +130,8 @@
       ]
     },
     {
-      "x": 438,
-      "y": 131,
+      "x": 358,
+      "y": 294,
       "image": "etappi_3",
       "state": "unvisited",
       "tasks": [
@@ -225,8 +225,8 @@
       ]
     },
     {
-      "x": 522,
-      "y": 395,
+      "x": 410,
+      "y": 580,
       "image": "etappi_4",
       "state": "unvisited",
       "tasks": [
@@ -317,8 +317,8 @@
       ]
     },
     {
-      "x": 459,
-      "y": 384,
+      "x": 356,
+      "y": 563,
       "image": "etappi_5_ilves",
       "state": "unvisited",
       "tasks": [
@@ -412,8 +412,8 @@
       ]
     },
     {
-      "x": 504,
-      "y": 255,
+      "x": 420,
+      "y": 432,
       "image": "etappi_6",
       "state": "unvisited",
       "tasks": [
@@ -504,8 +504,8 @@
       ]
     },
     {
-      "x": 573,
-      "y": 713,
+      "x": 470,
+      "y": 745,
       "image": "etappi_7",
       "state": "unvisited",
       "tasks": [
