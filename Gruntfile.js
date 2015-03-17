@@ -12,16 +12,20 @@ var lrSnippet = require('connect-livereload')({port: LIVERELOAD_PORT});
 var mountFolder = function (connect, dir) {
   return connect.static(require('path').resolve(dir));
 };
- 
+
 module.exports = function (grunt) {
   // load all grunt tasks
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
- 
+
   grunt.initConfig({
     watch: {
       scripts: {
         files: [
+            'css/*',
+            'index.html',
+            'assets/*',
             'game/**/*.js',
+            'game/*.js',
             '!game/main.js'
         ],
         options: {
@@ -72,7 +76,7 @@ module.exports = function (grunt) {
       }
     }
   });
-  
+
   grunt.registerTask('build', ['buildBootstrapper', 'browserify','copy']);
   grunt.registerTask('serve', ['build', 'connect:livereload', 'open', 'watch']);
   grunt.registerTask('default', ['serve']);
