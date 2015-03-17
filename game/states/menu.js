@@ -49,7 +49,7 @@ Menu.prototype = {
     this.game.state.start('play');
   },
   addAvatarSelection: function() {
-    var textStyle = {font: '18px Arial', fill: 'white', strokeThickness: 5, align: 'center'};
+    var textStyle = {font: '18pt Arial', fill: 'white', strokeThickness: 5, align: 'center'};
     var avatarSelectionText = this.game.add.text(this.game.world.centerX, 470, 'Valitse hahmo', textStyle);
     avatarSelectionText.anchor.setTo(0.5, 0.5);
     this.avatarSelectionButtons = this.game.add.group();
