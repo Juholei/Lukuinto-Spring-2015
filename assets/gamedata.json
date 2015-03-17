@@ -26,11 +26,11 @@
               "isCorrect": true
             },
             {
-              "text": "kysyn isoveljen kauko-ohjattavaa pienoishelikopteria videokameralla",
+              "text": "lainaan isoveljen kauko-ohjattavaa pienoishelikopteria",
               "isCorrect": true
             },
             {
-              "text": " kiipeän läheiseen lintutorniin ja yritän sieltä kiikaroida peltoa",
+              "text": "kiipeän läheiseen lintutorniin kiikaroimaan",
               "isCorrect": true
             }
           ]
@@ -187,15 +187,15 @@
               "isCorrect": false
             },
             {
-              "text": "Korkeaenergistä astrofysiikkaa, planetaaristen renkaiden ja galaksien dynamiikkaa, sekä Marsin ja Venuksen geologiaa",
+              "text": "Planetaaristen renkaiden ja galaksien dynamiikkaa",
               "isCorrect": true
             },
             {
-              "text": "Gaussin käyrien ja Nostradamuksen ennustusten vaikutusta korkeasuhdanteisiin, ja MArsin ja Venuksen dynamiikkaa astraalifysiikassa",
+              "text": "Marsin ja Venuksen dynamiikkaa astraalifysiikassa",
               "isCorrect": false
             },
             {
-              "text": "Voisiko 'Linnunradan käsikirja liftareille' perustua tositapahtumiin",
+              "text": "'Linnunradan käsikirja liftareille' kirjaa faktatietona",
               "isCorrect": false
             }
           ]
@@ -205,15 +205,15 @@
 
           "answers": [
             {
-              "text": "Että milloin on tarpeeksi hyvä sää astronauttien avaruuskävelylle",
+              "text": "Sää, joka on otollinen astronauttien avaruuskävelylle",
               "isCorrect": false
             },
             {
-              "text": "Tutkimusta, joka keskittyy kasvihuoneilmiön vaikutuksiin avaruudessa",
+              "text": "Tutkimus kasvihuoneilmiön vaikutuksista avaruudessa",
               "isCorrect": false
             },
             {
-              "text": "Tutkimusta, joka keskittyy auringon aktiivisuuden aiheuttamiin ilmiöihin lyhyemmällä aikaskaalalla, kuin avaruusilmaston tutkimuksessa",
+              "text": "Tutkimus auringon aktiivisuuden aiheuttamista ilmiöistä",
               "isCorrect": true
             },
             {
@@ -463,7 +463,7 @@
           "question": "Tähtitornin kahvilan työntekijä oli sattumalta Oulun Arktoksen jäsen, ja hän kertoi, että heillä on keskiviikkoisin kokous Puolivälinkankaan vesitornin huipulla sijaitsevalla tähtitornilla, ja se on avoin kaikille, joten voin lähteä mukaan… Perillä Puolivälinkankaalla olikin mukavasti porukkaa, ja pääsin keskustelemaan tähtiharrastajien kanssa tähtien tutkimisesta. Innostuin niin paljon katselemaan kaukoputkella, että unohdin aivan kertoa heille peltokuvioista. Kaiken lisäksi osa porukasta oli lähdössä Paavolan tähtitornille, koska sieltä näkee tähdet vielä paremmin, kun ei ole kaupungin valosaastetta. Olin heti innoissani lähtemässä mukaan. Ennen lähtöä havaitsin kaukoputkellan superkuun! Muistelen lukeneeni joskus superkuun määritelmän. Olikohan se ",
           "answers": [
             {
-              "text": "täysikuu, joka on elliptisellä kiertoradallaan Maata lähimmässä pisteessän",
+              "text": "täysikuu ratansa maata lähimmässä pisteessä",
               "isCorrect": true
             },
             {
@@ -475,7 +475,7 @@
               "isCorrect": false
             },
             {
-              "text": "kuu, jonka koko kasvaa supersuureksi, kun universumin tomu kerääntyy sen pinnalle",
+              "text": "kuu, jonka universumin tomu kasvattaa supersuureksi",
               "isCorrect": false
             }
           ]
@@ -484,7 +484,7 @@
           "question": "Tähtitornin kahvilan työntekijä oli sattumalta Oulun Arktoksen jäsen, ja hän kertoi, että heillä on keskiviikkoisin kokous Puolivälinkankaan vesitornin huipulla sijaitsevalla tähtitornilla, ja se on avoin kaikille, joten voin lähteä mukaan… Perillä Puolivälinkankaalla olikin mukavasti porukkaa, ja pääsin keskustelemaan tähtiharrastajien kanssa tähtien tutkimisesta. Innostuin niin paljon katselemaan kaukoputkella, että unohdin aivan kertoa heille peltokuvioista. Kaiken lisäksi osa porukasta oli lähdössä Paavolan tähtitornille, koska sieltä näkee tähdet vielä paremmin, kun ei ole kaupungin valosaastetta. Olin heti innoissani lähtemässä mukaan. Ennen lähtöä havaitsin kaukoputkella jotain. Voisikos se olla musta aukko!? Ei varmaankaan, koska mustaa aukkoa ei voi havaita suoraan, vaan sen olemassaolon voi päätellä kolmesta seikasta. Mikä seuraavista vaihtoehdoista ei ole hyvä keino havaita mustaa aukkoa.",
           "answers": [
             {
-              "text": "Sen keskellä on spiraalimaisena kierteenä näkyvää emissiosumua",
+              "text": "Sen keskellä on spiraalina näkyvää emissiosumua",
               "isCorrect": true
             },
             {
@@ -492,7 +492,7 @@
               "isCorrect": false
             },
             {
-              "text": "Tähden kiertäminen ympäri pistettä, jossa ei näyttäisi olevan mitään",
+              "text": "Tähden kiertäminen ympäri olematonta pistettä",
               "isCorrect": false
             },
             {
