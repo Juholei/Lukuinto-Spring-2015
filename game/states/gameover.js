@@ -22,7 +22,7 @@ GameOver.prototype = {
   addCongratulatoryText: function() {
     var congratolutaryString = this.getCorrectCongratulatoryString();
     var textStyle = {
-      font: '18px Arial',
+      font: '24pt Arial',
       fill: 'white',
       strokeThickness: 5,
       align: 'center',
