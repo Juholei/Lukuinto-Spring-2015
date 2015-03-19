@@ -41,8 +41,8 @@ Quiz.prototype = {
     backgroundScenery.anchor.setTo(0.5, 0);
   },
   addQuestionTextArea: function() {
-    var questionArea = new BrowsableTextArea(this.game, this.currentTask.question);
-    this.game.add.existing(questionArea);
+    this.questionArea = new BrowsableTextArea(this.game, this.currentTask.question);
+    this.game.add.existing(this.questionArea);
   },
   addButtonBackground: function() {
     this.buttonBackground = this.game.add.sprite(this.game.world.centerX, this.game.world.height, 'answer-background');
@@ -70,6 +70,7 @@ Quiz.prototype = {
 
     if (selectedButton !== null) {
       this.answerButtons.setAll('inputEnabled', false);
+      this.questionArea.inputEnabled = false;
       button.inputEnabled = false;
       this.handleAnswer(selectedButton.answer);
     } else {
