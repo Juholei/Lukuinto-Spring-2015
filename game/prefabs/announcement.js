@@ -1,14 +1,14 @@
 'use strict';
 var LabeledButton = require('../prefabs/labeledbutton');
 
-var positiveAnnouncementText = 'Vastasit oikein! Jee!';
-var negativeAnnouncementText = 'Hups!\nNyt meni pieleen.';
+var positiveAnnouncementText = 'Vastasit oikein!\nJee!';
+var negativeAnnouncementText = 'Hups! Yritetäänpä toista kysymystä.';
 
 var Announcement = function(game, callback, callbackContext, isPositiveAnnouncement) {
   Phaser.Sprite.call(this, game, game.world.centerX, game.world.centerY);
   this.game = game;
   this.anchor.setTo(0.5, 0.5);
-  this.textStyle = {font: '32px Arial', fill: 'white', align: 'center', wordWrap: true, wordWrapWidth: 280};
+  this.textStyle = {font: '30px Arial', fill: 'white', align: 'center', wordWrap: true, wordWrapWidth: 280};
 
   this.addOverlay();
   this.addBackgroundBox(isPositiveAnnouncement);
