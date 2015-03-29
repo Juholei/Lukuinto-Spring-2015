@@ -33,6 +33,14 @@ module.exports = function (grunt) {
           livereload: LIVERELOAD_PORT
         },
         tasks: ['build']
+      },
+      server: {
+        files:  ['app.js'],
+        tasks:  ['express:dev'],
+        options: {
+          spawn: false,
+          livereload: LIVERELOAD_PORT
+        }
       }
     },
     connect: {
@@ -74,10 +82,32 @@ module.exports = function (grunt) {
         src: ['game/main.js'],
         dest: 'dist/js/game.js'
       }
+    },
+    express: {
+      options: {
+        // Override defaults here
+      },
+      dev: {
+        options: {
+          script: 'app.js'
+        }
+      },
+      prod: {
+        options: {
+          script: 'app.js',
+          node_env: 'production'
+        }
+      },
+      test: {
+        options: {
+          script: 'path/to/test/server.js'
+        }
+      }
     }
   });
 
-  grunt.registerTask('build', ['buildBootstrapper', 'browserify','copy']);
+  grunt.registerTask('server', ['express:dev', 'watch']);
+  grunt.registerTask('build', ['buildBootstrapper', 'browserify', 'copy']);
   grunt.registerTask('serve', ['build', 'connect:livereload', 'open', 'watch']);
   grunt.registerTask('default', ['serve']);
   grunt.registerTask('prod', ['build', 'copy']);
