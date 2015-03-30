@@ -49,8 +49,8 @@ app.use(function(req, res, next) {
 //     error: {}
 //   });
 // });
-
-var server = app.listen(3000, function() {
+var portNumber = process.env.PORT || 3000;
+var server = app.listen(portNumber, function() {
 
   var host = server.address().address;
   var port = server.address().port;
