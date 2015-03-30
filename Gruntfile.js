@@ -35,11 +35,11 @@ module.exports = function(grunt) {
         tasks: ['build']
       },
       server: {
-        files:  ['app.js'],
+        files:  ['server.js', 'server/*'],
         tasks:  ['express:dev', 'wait'],
         options: {
           spawn: false,
-          livereload: LIVERELOAD_PORT
+          livereload: true
         }
       }
     },
