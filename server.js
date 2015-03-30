@@ -5,7 +5,7 @@ var app = express();
 var env = app.get('env');
 
 if (env === 'development') {
-  app.use(require('connect-livereload')());
+  // app.use(require('connect-livereload')());
   app.use(express.static('dist/client/'));
 } else {
   app.use(express.static('client/'));
