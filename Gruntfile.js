@@ -78,7 +78,7 @@ module.exports = function(grunt) {
           {expand: true, src: ['client/css/**'], dest: 'dist/'},
           {expand: true, src: ['client/index.html'], dest: 'dist/'},
           {expand: true, src: ['server/**'], dest: 'dist/'},
-          {expand: true, src: ['app.js'], dest: 'dist/'}
+          {expand: true, src: ['server.js'], dest: 'dist/'}
         ]
       }
     },
@@ -94,12 +94,12 @@ module.exports = function(grunt) {
       },
       dev: {
         options: {
-          script: 'app.js'
+          script: 'server.js'
         }
       },
       prod: {
         options: {
-          script: 'app.js',
+          script: 'server.js',
           node_env: 'production'
         }
       },
