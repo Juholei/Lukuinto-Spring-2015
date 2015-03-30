@@ -2,7 +2,7 @@
 var express = require('express');
 var routes = require('./server/routes/index');
 var app = express();
-var env = app.get('env');
+var env = process.env.NODE_ENV || 'development';
 
 if (env === 'development') {
   app.use(express.static('dist/client/'));
