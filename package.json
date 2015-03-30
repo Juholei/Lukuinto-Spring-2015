@@ -2,7 +2,6 @@
   "name": "Lukuinto-Spring-2015",
   "private": true,
   "devDependencies": {
-    "bower": "^1.3.12",
     "browserify": "^8.1.3",
     "connect-livereload": "^0.5.3",
     "grunt": "^0.4.5",
@@ -22,9 +21,11 @@
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "express": "^4.12.3"
+    "express": "^4.12.3",
+    "bower": "^1.3.12"
   },
   "scripts": {
-    "start": "node dist/server.js"
+    "start": "node dist/server.js",
+    "postinstall": "bower install"
   }
 }
