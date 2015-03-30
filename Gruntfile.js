@@ -116,7 +116,7 @@ module.exports = function(grunt) {
   grunt.registerTask('serve', ['build', 'connect:livereload', 'open:client', 'watch:scripts']);
   grunt.registerTask('default', ['serve']);
   grunt.registerTask('prod', ['build', 'copy']);
-
+  grunt.registerTask('heroku', ['build']);
   // Used for delaying livereload until after server has restarted
   grunt.registerTask('wait', function() {
     grunt.log.ok('Waiting for server reload...');
