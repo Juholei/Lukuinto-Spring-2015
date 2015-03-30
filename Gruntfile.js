@@ -21,12 +21,12 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: [
-            'css/*',
-            'index.html',
+            'client/css/*',
+            'client/index.html',
             'assets/*',
-            'game/**/*.js',
-            'game/*.js',
-            '!game/main.js'
+            'client/**/*.js',
+            'client/*.js',
+            '!client/main.js'
         ],
         options: {
           spawn: false,
@@ -72,19 +72,19 @@ module.exports = function(grunt) {
       dist: {
         files: [
           // includes files within path and its sub-directories
-          {expand: true, src: ['assets/**'], dest: 'dist/client/'},
-          {expand: true, flatten: true, src: ['game/plugins/*.js'], dest: 'dist/client/js/plugins/'},
+          {expand: true, src: ['client/assets/**'], dest: 'dist/'},
+          {expand: true, flatten: true, src: ['client/plugins/*.js'], dest: 'dist/client/js/plugins/'},
           {expand: true, flatten: true, src: ['bower_components/**/build/*.js'], dest: 'dist/client/js/'},
-          {expand: true, src: ['css/**'], dest: 'dist/client/'},
-          {expand: true, src: ['index.html'], dest: 'dist/client/'},
-          {expand: true, src: ['server/**'], dest: 'dist/server/'},
+          {expand: true, src: ['client/css/**'], dest: 'dist/'},
+          {expand: true, src: ['client/index.html'], dest: 'dist/'},
+          {expand: true, src: ['server/**'], dest: 'dist/'},
           {expand: true, src: ['app.js'], dest: 'dist/'}
         ]
       }
     },
     browserify: {
       build: {
-        src: ['game/main.js'],
+        src: ['client/main.js'],
         dest: 'dist/client/js/game.js'
       }
     },
@@ -130,7 +130,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('buildBootstrapper', 'builds the bootstrapper file correctly', function() {
-    var stateFiles = grunt.file.expand('game/states/*.js');
+    var stateFiles = grunt.file.expand('client/states/*.js');
     var gameStates = [];
     var statePattern = new RegExp(/(\w+).js$/);
     stateFiles.forEach(function(file) {
@@ -144,6 +144,6 @@ module.exports = function(grunt) {
     console.log(config);
     var bootstrapper = grunt.file.read('templates/_main.js.tpl');
     bootstrapper = grunt.template.process(bootstrapper, {data: config});
-    grunt.file.write('game/main.js', bootstrapper);
+    grunt.file.write('client/main.js', bootstrapper);
   });
 };
