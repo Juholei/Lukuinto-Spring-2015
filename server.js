@@ -1,10 +1,10 @@
 'use strict';
+var fs = require('fs');
 var express = require('express');
 var routes = require('./server/routes/index');
 var pg = require('pg');
 var app = express();
 var env = process.env.NODE_ENV || 'development';
-
  // Setup view engine for server side templating
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
@@ -25,6 +25,19 @@ dbClient.connect(function(err, client) {
     console.log(err);
   }
   client.query('CREATE TABLE IF NOT EXISTS Files(id SERIAL PRIMARY KEY, filename VARCHAR(64) NOT NULL, filesize INT NOT NULL, data BYTEA NOT NULL, created TIMESTAMP DEFAULT current_timestamp NOT NULL)');
+  fs.readFile('client/assets/play/karttatausta.png', 'hex', function(err, imgData) {
+    imgData = '\\x' + imgData;
+
+    //remove the line below
+    var stats = fs.statSync('client/assets/play/karttatausta.png');
+    var fileSize = stats.size;
+    console.log(fileSize);
+    var query = 'INSERT INTO Files(filename, filesize, data) VALUES (\'karttatausta.png\', ' + fileSize + ', ' + imgData + ')';
+    console.log(query);
+    client.query('INSERT INTO Files(filename, filesize, data) VALUES ($1, $2, $3)', ['karttatausta.png',fileSize, imgData], function(err, writeResult) {
+          console.log('err', err, 'pg writeResult', writeResult);
+        });
+  });
 });
 
 // pg.connect(process.env.DATABASE_URL, function(err, client) {

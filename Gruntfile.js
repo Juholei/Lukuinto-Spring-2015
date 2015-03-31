@@ -35,7 +35,7 @@ module.exports = function(grunt) {
         tasks: ['build']
       },
       server: {
-        files:  ['server.js', 'server/*'],
+        files:  ['server.js', 'server/**/*.js'],
         tasks:  ['express:dev', 'wait'],
         options: {
           spawn: false,
