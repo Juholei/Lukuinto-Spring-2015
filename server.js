@@ -19,7 +19,7 @@ if (env === 'development') {
   app.use(express.static('client/'));
 }
 
-require('./server/routes/index')(app);
+require('./server/routes/routes')(app);
 
 //Creates database client and connect it to the database.
 //If our table doesn't exist then it is created.
