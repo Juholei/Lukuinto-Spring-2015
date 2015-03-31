@@ -1,7 +1,6 @@
 'use strict';
 var fs = require('fs');
 var express = require('express');
-var routes = require('./server/routes/index');
 var pg = require('pg');
 var busboy = require('connect-busboy');
 var app = express();
@@ -19,6 +18,8 @@ if (env === 'development') {
 } else {
   app.use(express.static('client/'));
 }
+
+require('./server/routes/index')(app);
 
 //Creates database client and connect it to the database.
 //If our table doesn't exist then it is created.
@@ -55,7 +56,7 @@ dbClient.connect(function(err, client) {
 // });
 
 app.use(express.static('client/'));
-app.use('/', routes);
+// app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
