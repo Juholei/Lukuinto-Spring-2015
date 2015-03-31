@@ -11,13 +11,14 @@ Preload.prototype = {
     this.asset.anchor.setTo(0.5, 0.5);
     this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
     this.load.setPreloadSprite(this.asset);
+
     //Menu state assets
     this.load.image('menu-background', 'assets/menu/aloitus.png');
     this.load.spritesheet('start-button', 'assets/menu/aloita.png', 220, 96);
     this.load.spritesheet('fullscreenButton', 'assets/menu/ruutukoko.png', 284, 284);
 
     //Play state assets
-    this.load.image('map', document.URL + 'files/1');
+    this.load.image('map', 'assets/play/karttatausta.png');
     this.load.spritesheet('point', 'assets/play/karttapiste.png', 98, 98);
     this.load.spritesheet('start-end', 'assets/play/lahto_maali.png', 190, 246);
     this.load.spritesheet('avatar_1', 'assets/play/avatar_nainen.png', 41, 71, 2, 0, 10);
