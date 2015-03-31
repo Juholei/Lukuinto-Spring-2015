@@ -17,14 +17,26 @@ if (env === 'development') {
   app.use(express.static('client/'));
 }
 
-pg.connect(process.env.DATABASE_URL, function(err, client) {
-  console.log(err);
-  var query = client.query('SELECT * FROM testi');
-
-  query.on('row', function(row) {
-    console.log(JSON.stringify(row));
-  });
+//Creates database client and connect it to the database.
+//If our table doesn't exist then it is created.
+var dbClient = new pg.Client(process.env.DATABASE_URL);
+dbClient.connect(function(err, client) {
+  if (err) {
+    console.log(err);
+  }
+  client.query('CREATE TABLE IF NOT EXISTS Files(id SERIAL PRIMARY KEY, filename VARCHAR(64) NOT NULL, filesize INT NOT NULL, data BYTEA NOT NULL, created TIMESTAMP DEFAULT current_timestamp NOT NULL)');
 });
+
+// pg.connect(process.env.DATABASE_URL, function(err, client) {
+//   if (err) {
+//     console.log(err);
+//   }
+  // var query = client.query('SELECT * FROM testi');
+
+  // query.on('row', function(row) {
+  //   console.log(JSON.stringify(row));
+  // });
+// });
 
 app.use(express.static('client/'));
 app.use('/', routes);
@@ -45,7 +57,7 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
+  app.use(function(err, req, res) {
     res.status(err.status || 500);
     res.render('error', {
       status: err.status,
@@ -57,7 +69,7 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
