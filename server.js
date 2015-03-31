@@ -1,5 +1,4 @@
 'use strict';
-var fs = require('fs');
 var express = require('express');
 var pg = require('pg');
 var busboy = require('connect-busboy');
@@ -7,9 +6,14 @@ var app = express();
 app.use(busboy());
 
 var env = process.env.NODE_ENV || 'development';
+
+//Static files for client
+app.use(express.static('client/'));
+
  // Setup view engine for server side templating
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
+
 // Setup path where all server templates will reside
 app.set('views', 'server/templates');
 
@@ -29,34 +33,7 @@ dbClient.connect(function(err, client) {
     console.log(err);
   }
   client.query('CREATE TABLE IF NOT EXISTS Files(id SERIAL PRIMARY KEY, filename VARCHAR(64) NOT NULL, filesize INT NOT NULL, data BYTEA NOT NULL, created TIMESTAMP DEFAULT current_timestamp NOT NULL)');
-  // fs.readFile('client/assets/play/karttatausta.png', 'hex', function(err, imgData) {
-  //   imgData = '\\x' + imgData;
-
-  //   //remove the line below
-  //   var stats = fs.statSync('client/assets/play/karttatausta.png');
-  //   var fileSize = stats.size;
-  //   console.log(fileSize);
-  //   var query = 'INSERT INTO Files(filename, filesize, data) VALUES (\'karttatausta.png\', ' + fileSize + ', ' + imgData + ')';
-  //   console.log(query);
-  //   client.query('INSERT INTO Files(filename, filesize, data) VALUES ($1, $2, $3)', ['karttatausta.png',fileSize, imgData], function(err, writeResult) {
-  //         console.log('err', err, 'pg writeResult', writeResult);
-  //       });
-  // });
 });
-
-// pg.connect(process.env.DATABASE_URL, function(err, client) {
-//   if (err) {
-//     console.log(err);
-//   }
-  // var query = client.query('SELECT * FROM testi');
-
-  // query.on('row', function(row) {
-  //   console.log(JSON.stringify(row));
-  // });
-// });
-
-app.use(express.static('client/'));
-// app.use('/', routes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -89,6 +66,7 @@ app.use(function(err, req, res) {
     error: {}
   });
 });
+
 var portNumber = process.env.PORT || 3000;
 var server = app.listen(portNumber, function() {
 
