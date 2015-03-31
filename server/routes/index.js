@@ -10,19 +10,26 @@ router.get('/', function(req, res, next) {
   res.sendFile('client/index.html', {root: path.normalize(__dirname + '/../..')});
 });
 
-router.get('/testikuva/', function(req, res, next) {
+router.get('/files/:id', function(req, res, next) {
+  var id = req.params.id;
   var dbClient = new pg.Client(process.env.DATABASE_URL);
-  dbClient.connect(function(err, client) {
+  dbClient.connect(function(err) {
     if (err) {
       console.log(err);
     }
   });
 
-  dbClient.query('select data from Files limit 1',
+  dbClient.query('select data from Files where id = ' + id,
     function(err, readResult) {
     console.log('err', err, 'pg readResult', readResult);
-    res.type('png');
-    res.send(readResult.rows[0].data);
+    if (readResult.rows.length > 0) {
+      res.type('png');
+      res.send(readResult.rows[0].data);
+    } else {
+      var error = new Error('Not Found');
+      error.status = 404;
+      next(error);
+    }
   });
 });
 module.exports = router;
