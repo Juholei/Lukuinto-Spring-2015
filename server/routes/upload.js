@@ -23,11 +23,12 @@ module.exports = function(app) {
       file.on('end', function() {
         string = '\\x' + string;
         console.log('File stream ended');
-        var query = 'INSERT INTO Files(filename, filesize, data) VALUES ($1, $2, $3)';
+        var query = 'INSERT INTO Files(filename, filesize, data) VALUES ($1, $2, $3) RETURNING id';
         dbClient.query(query, [filename, 22, string], function(err, writeResult) {
           console.log('err', err, 'pg writeResult', writeResult);
+          console.log(writeResult.rows[0].id);
+          res.json({'status': 'success', 'url':  'https://lukuseikkailu.herokuapp.com/files/' + writeResult.rows[0].id});
         });
-        res.json({'status': 'success'});
       });
     });
     console.log('Sending response');
