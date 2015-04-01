@@ -3,7 +3,7 @@ var express = require('express');
 var pg = require('pg');
 var busboy = require('connect-busboy');
 var app = express();
-app.use(busboy());
+app.use(busboy({immediate: true}));
 
 var env = process.env.NODE_ENV || 'development';
 

@@ -10,20 +10,25 @@ dbClient.connect(function(err) {
 
 module.exports = function(app) {
   app.post('/upload', function(req, res) {
-    req.busboy.on('file', function(fieldName, file, filename, encoding, mimetype) {
-      console.log('Uploading: ' + filename + encoding + mimetype + typeof file + file);
+    console.log('Post request received');
+    req.busboy.on('file', function(fieldName, file, filename) {
+      console.log('Uploading: ' + filename);
       var string = '';
       file.on('data', function(buffer) {
+        console.log('Handling data');
         string += buffer.toString('hex');
       });
       file.on('end', function() {
         string = '\\x' + string;
+        console.log('File stream ended');
         var query = 'INSERT INTO Files(filename, filesize, data) VALUES ($1, $2, $3)';
         dbClient.query(query, [filename, 22, string], function(err, writeResult) {
           console.log('err', err, 'pg writeResult', writeResult);
         });
       });
     });
+    console.log('Sending response');
+    console.log('Piping to busboy');
     req.pipe(req.busboy);
     res.json({'status': 'success'});
   });
