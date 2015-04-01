@@ -10,7 +10,7 @@ dbClient.connect(function(err) {
 });
 
 module.exports = function(app) {
-  app.use(busboy({immediate: true}));
+  app.use(busboy());
   app.post('/upload', function(req, res) {
     console.log('Post request received');
     req.busboy.on('file', function(fieldName, file, filename) {
@@ -26,8 +26,8 @@ module.exports = function(app) {
         var query = 'INSERT INTO Files(filename, filesize, data) VALUES ($1, $2, $3)';
         dbClient.query(query, [filename, 22, string], function(err, writeResult) {
           console.log('err', err, 'pg writeResult', writeResult);
-        res.json({'status': 'success'});
         });
+        res.json({'status': 'success'});
       });
     });
     console.log('Sending response');
