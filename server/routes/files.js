@@ -1,7 +1,4 @@
 'use strict';
-var express = require('express');
-var path = require('path');
-var fs = require('fs');
 var pg = require('pg');
 
 var dbClient = new pg.Client(process.env.DATABASE_URL);
