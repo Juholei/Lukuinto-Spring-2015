@@ -23,8 +23,8 @@ module.exports = function(app) {
           console.log('err', err, 'pg writeResult', writeResult);
         });
       });
-      res.json({'status': 'success'});
     });
     req.pipe(req.busboy);
+    res.json({'status': 'success'});
   });
 };
