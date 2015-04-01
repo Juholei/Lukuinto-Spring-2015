@@ -1,5 +1,6 @@
 'use strict';
 var pg = require('pg');
+var busboy = require('connect-busboy');
 
 var dbClient = new pg.Client(process.env.DATABASE_URL);
 dbClient.connect(function(err) {
@@ -9,6 +10,7 @@ dbClient.connect(function(err) {
 });
 
 module.exports = function(app) {
+  app.use(busboy({immediate: true}));
   app.post('/upload', function(req, res) {
     console.log('Post request received');
     req.busboy.on('file', function(fieldName, file, filename) {
