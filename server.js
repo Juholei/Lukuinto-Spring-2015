@@ -25,8 +25,7 @@ require('./server/routes/routes')(app);
 
 //Creates database client and connect it to the database.
 //If our table doesn't exist then it is created.
-var dbClient = new pg.Client(process.env.DATABASE_URL);
-dbClient.connect(function(err, client) {
+pg.connect(process.env.DATABASE_URL, function(err, client) {
   if (err) {
     console.log(err);
   }
