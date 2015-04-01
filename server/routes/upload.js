@@ -26,12 +26,12 @@ module.exports = function(app) {
         var query = 'INSERT INTO Files(filename, filesize, data) VALUES ($1, $2, $3)';
         dbClient.query(query, [filename, 22, string], function(err, writeResult) {
           console.log('err', err, 'pg writeResult', writeResult);
+        res.json({'status': 'success'});
         });
       });
     });
     console.log('Sending response');
     console.log('Piping to busboy');
     req.pipe(req.busboy);
-    res.json({'status': 'success'});
   });
 };
