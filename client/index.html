@@ -15,31 +15,5 @@
   <div id="lukuinto-spring-2015"></div>
   <script src="js/phaser.js"></script>
   <script src="js/game.js"></script>
-
-<form method="post" enctype="multipart/form-data" action="/upload">
-    <input type="file" name="file">
-    <input type="submit" value="Submit">
-</form>
-
-<script type="text/javascript">
-function sendAjaxPost() {
-  var data = document.getElementById('jsontextarea').value;
-  console.log(data);
-  var x = new XMLHttpRequest();
-  x.open('POST', '/savegamejson', function(resp) {
-    console.log('Got response or something?', resp);
-  });
-  x.onreadystatechange = function() {
-    if (x.readyState === 4) {
-      console.log(x.responseText);
-    }
-  };
-  x.setRequestHeader('Content-type', 'application/json');
-  x.send(data);
-}
-</script>
-
-  <textarea name="json" id="jsontextarea" ></textarea>
-  <button onclick="sendAjaxPost()">NAPPI</button>
 </body>
 </html>
