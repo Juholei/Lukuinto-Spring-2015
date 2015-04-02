@@ -1,7 +1,5 @@
 'use strict';
-var fs = require('fs');
 var pg = require('pg');
-var path = require('path');
 var bodyParser = require('body-parser');
 
 module.exports = function(app) {
