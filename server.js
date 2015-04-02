@@ -29,7 +29,8 @@ pg.connect(process.env.DATABASE_URL, function(err, client) {
   if (err) {
     console.log(err);
   }
-  client.query('CREATE TABLE IF NOT EXISTS Files(id SERIAL PRIMARY KEY, filename VARCHAR(64) NOT NULL, filesize INT NOT NULL, data BYTEA NOT NULL, created TIMESTAMP DEFAULT current_timestamp NOT NULL)');
+  client.query('CREATE TABLE IF NOT EXISTS files(id SERIAL PRIMARY KEY, filename VARCHAR(64) NOT NULL, filesize INT NOT NULL, data BYTEA NOT NULL, created TIMESTAMP DEFAULT current_timestamp NOT NULL)');
+  client.query('CREATE TABLE IF NOT EXISTS games(id SERIAL PRIMARY KEY, data JSONB NOT NULL, created TIMESTAMP DEFAULT current_timestamp NOT NULL)');
 });
 
 // catch 404 and forward to error handler
