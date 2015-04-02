@@ -23,6 +23,9 @@ Preload.prototype = {
     this.load.spritesheet('start-end', 'assets/play/lahto_maali.png', 190, 246);
     this.load.spritesheet('avatar_1', 'assets/play/avatar_nainen.png', 41, 71, 2, 0, 10);
     this.load.spritesheet('avatar_2', 'assets/play/avatar_poika.png', 41, 71, 2, 0, 10);
+    this.load.spritesheet('avatar_3', 'assets/play/avatar_astrokoira.png', 45, 71, 2, 0, 1);
+    this.load.spritesheet('avatar_4', 'assets/play/avatar_astronainen.png', 44, 71, 2, 0, 3);
+    this.load.spritesheet('avatar_5', 'assets/play/avatar_astropoika.png', 44, 71, 2, 0, 3);
 
     //Quiz state assets
     this.load.image('taustakuva_kauppatori', 'assets/quiz/taustakuva_kauppatori.png');

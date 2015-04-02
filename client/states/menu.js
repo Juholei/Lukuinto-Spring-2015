@@ -60,6 +60,15 @@ Menu.prototype = {
     var avatarButton2 = this.game.add.button(545, 545, 'avatar_2', this.selectAvatar, this);
     avatarButton2.anchor.setTo(0.5, 0.5);
     this.avatarSelectionButtons.add(avatarButton2);
+    var avatarButton3 = this.game.add.button(609, 545, 'avatar_3', this.selectAvatar, this);
+    avatarButton3.anchor.setTo(0.5, 0.5);
+    this.avatarSelectionButtons.add(avatarButton3);
+    var avatarButton4 = this.game.add.button(673, 545, 'avatar_4', this.selectAvatar, this);
+    avatarButton4.anchor.setTo(0.5, 0.5);
+    this.avatarSelectionButtons.add(avatarButton4);
+    var avatarButton5 = this.game.add.button(738, 545, 'avatar_5', this.selectAvatar, this);
+    avatarButton5.anchor.setTo(0.5, 0.5);
+    this.avatarSelectionButtons.add(avatarButton5);
   },
   selectAvatar: function(item) {
     this.selectedAvatarKey = item.key;
