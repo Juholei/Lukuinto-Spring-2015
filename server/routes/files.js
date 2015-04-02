@@ -1,31 +1,35 @@
 'use strict';
-var express = require('express');
-var path = require('path');
-var fs = require('fs');
 var pg = require('pg');
-
-var dbClient = new pg.Client(process.env.DATABASE_URL);
-dbClient.connect(function(err) {
-  if (err) {
-    console.log(err);
-  }
-});
 
 module.exports = function(app) {
   app.get('/files/:id', function(req, res, next) {
     var id = req.params.id;
 
-    dbClient.query('select data from Files where id = ' + id,
-      function(err, readResult) {
-      console.log('err', err, 'pg readResult', readResult);
-      if (readResult.rows.length > 0) {
-        res.type('png');
-        res.send(readResult.rows[0].data);
-      } else {
-        var error = new Error('Not Found');
-        error.status = 404;
-        next(error);
+    pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+      if (err) {
+        return console.error('error fetching client from pool', err);
       }
+
+      client.query('select data from Files where id = ' + id,
+        function(err, readResult) {
+        //call `done()` to release the client back to the pool
+        done();
+
+        if (err) {
+          return console.error('error running query', err);
+        }
+
+        client.end();
+
+        if (readResult.rows.length > 0) {
+          res.type('png');
+          res.send(readResult.rows[0].data);
+        } else {
+          var error = new Error('Not Found');
+          error.status = 404;
+          next(error);
+        }
+      });
     });
   });
 };

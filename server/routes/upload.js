@@ -2,37 +2,51 @@
 var pg = require('pg');
 var busboy = require('connect-busboy');
 
-var dbClient = new pg.Client(process.env.DATABASE_URL);
-dbClient.connect(function(err) {
-  if (err) {
-    console.log(err);
-  }
-});
-
 module.exports = function(app) {
+  //Add busboy to app for parsing files from requests
   app.use(busboy());
+
   app.post('/upload', function(req, res) {
-    console.log('Post request received');
+    //Set busboy to parse file-inputs
     req.busboy.on('file', function(fieldName, file, filename) {
       console.log('Uploading: ' + filename);
-      var string = '';
+
+      //File data will be added to this string
+      var fileData = '';
+
+      //Add stream handler function for type data.
+      //Function concatenates buffered data to fileData string in hex format.
       file.on('data', function(buffer) {
-        console.log('Handling data');
-        string += buffer.toString('hex');
+        fileData += buffer.toString('hex');
       });
+
+      //Add stream handler for stream end.
+      //Add \x to the beginning of the data to mark that it is hex formatted data.
+      //Data string is then put to database.
       file.on('end', function() {
-        string = '\\x' + string;
+        fileData = '\\x' + fileData;
         console.log('File stream ended');
-        var query = 'INSERT INTO Files(filename, filesize, data) VALUES ($1, $2, $3) RETURNING id';
-        dbClient.query(query, [filename, 22, string], function(err, writeResult) {
-          console.log('err', err, 'pg writeResult', writeResult);
-          console.log(writeResult.rows[0].id);
-          res.json({'status': 'success', 'url':  'https://lukuseikkailu.herokuapp.com/files/' + writeResult.rows[0].id});
+
+        //Get database client from pool and make query adding our data to the database.
+        pg.connect(process.env.DATABASE_URL, function(err, client, done) {
+          if (err) {
+            return console.error('error fetching client from pool', err);
+          }
+
+          var query = 'INSERT INTO Files(filename, filesize, data) VALUES ($1, $2, $3) RETURNING id';
+          client.query(query, [filename, 22, fileData], function(err, writeResult) {
+            //call `done()` to release the client back to the pool
+            done();
+            if (err) {
+              return console.error('error running query', err);
+            }
+
+            client.end();
+            res.json({'status': 'success', 'url':  req.get('host') + '/files/' + writeResult.rows[0].id});
+          });
         });
       });
     });
-    console.log('Sending response');
-    console.log('Piping to busboy');
     req.pipe(req.busboy);
   });
 };

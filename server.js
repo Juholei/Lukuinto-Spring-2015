@@ -25,12 +25,12 @@ require('./server/routes/routes')(app);
 
 //Creates database client and connect it to the database.
 //If our table doesn't exist then it is created.
-var dbClient = new pg.Client(process.env.DATABASE_URL);
-dbClient.connect(function(err, client) {
+pg.connect(process.env.DATABASE_URL, function(err, client) {
   if (err) {
     console.log(err);
   }
-  client.query('CREATE TABLE IF NOT EXISTS Files(id SERIAL PRIMARY KEY, filename VARCHAR(64) NOT NULL, filesize INT NOT NULL, data BYTEA NOT NULL, created TIMESTAMP DEFAULT current_timestamp NOT NULL)');
+  client.query('CREATE TABLE IF NOT EXISTS files(id SERIAL PRIMARY KEY, filename VARCHAR(64) NOT NULL, filesize INT NOT NULL, data BYTEA NOT NULL, created TIMESTAMP DEFAULT current_timestamp NOT NULL)');
+  client.query('CREATE TABLE IF NOT EXISTS games(id SERIAL PRIMARY KEY, data JSONB NOT NULL, created TIMESTAMP DEFAULT current_timestamp NOT NULL)');
 });
 
 // catch 404 and forward to error handler
