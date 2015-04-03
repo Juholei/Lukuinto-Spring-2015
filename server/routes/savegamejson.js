@@ -4,7 +4,7 @@ var bodyParser = require('body-parser');
 
 module.exports = function(app) {
   app.use(bodyParser.json());
-  app.post('/savegamejson', function(req, res, next) {
+  app.post('/savegamejson', function(req, res) {
     console.log('Game data received');
     pg.connect(process.env.DATABASE_URL, function(err, client, done) {
       if (err) {

@@ -39,6 +39,8 @@ GameOver.prototype = {
       congratolutaryStrings = gameStrings.girlCongratulatoryStrings;
     } else if (this.game.data.selectedAvatarKey === 'avatar_2') {
       congratolutaryStrings = gameStrings.boyCongratulatoryStrings;
+    } else {
+      congratolutaryStrings = gameStrings.boyCongratulatoryStrings;
     }
 
     var correctText;
