@@ -37,6 +37,7 @@ pg.connect(process.env.DATABASE_URL, function(err, client) {
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
+  console.log(req.url);
   next(err);
 });
 
