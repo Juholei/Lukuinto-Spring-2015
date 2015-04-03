@@ -41,6 +41,21 @@ module.exports = function(grunt) {
           spawn: false,
           livereload: true
         }
+      },
+      editor: {
+        files: [
+            'editor/css/*',
+            'editor/index.html',
+            'editor/assets/*',
+            'editor/game/**/*.js',
+            'editor/game/*.js',
+            '!editor/game/main.js'
+        ],
+        options: {
+          spawn: false,
+          livereload: LIVERELOAD_PORT
+        },
+        tasks: ['build:editor']
       }
     },
     connect: {
@@ -80,12 +95,27 @@ module.exports = function(grunt) {
           {expand: true, src: ['server/**'], dest: 'dist/'},
           {expand: true, src: ['server.js'], dest: 'dist/'}
         ]
+      },
+      editor: {
+        files: [
+          // includes files within path and its sub-directories
+          {expand: true, src: ['editor/assets/**'], dest: 'dist/'},
+          {expand: true, flatten: true, src: ['editor/game/plugins/*.js'], dest: 'dist/editor/js/plugins/'},
+          {expand: true, flatten: true, src: ['editor/bower_components/**/build/*.js'], dest: 'dist/editor/js/'},
+          {expand: true, flatten: true, src: ['editor/bower_components/**/build/*.map'], dest: 'dist/editor/js/' },
+          {expand: true, src: ['editor/css/**'], dest: 'dist/'},
+          {expand: true, src: ['editor/index.html'], dest: 'dist/'}
+        ]
       }
     },
     browserify: {
       build: {
         src: ['client/main.js'],
         dest: 'dist/client/js/game.js'
+      },
+      buildEditor: {
+        src: ['editor/game/main.js'],
+        dest: 'dist/editor/js/game.js'
       }
     },
     express: {
