@@ -30,6 +30,6 @@
   },
   "scripts": {
     "start": "node dist/server.js",
-    "postinstall": "bower install"
+    "postinstall": "bower install && (cd editor/; bower install)"
   }
 }

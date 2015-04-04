@@ -40,9 +40,14 @@ module.exports = function(app) {
             if (err) {
               return console.error('error running query', err);
             }
-
             client.end();
-            res.json({'status': 'success', 'url':  req.get('host') + '/files/' + writeResult.rows[0].id});
+
+            var responseObject = {
+              status: 'success',
+              id: writeResult.rows[0].id,
+              url: req.get('host') + '/files/' + writeResult.rows[0].id
+            };
+            res.json(responseObject);
           });
         });
       });

@@ -5,9 +5,6 @@ var app = express();
 
 var env = process.env.NODE_ENV || 'development';
 
-//Static files for client
-app.use(express.static('client/'));
-
  // Setup view engine for server side templating
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
@@ -15,10 +12,13 @@ app.set('view engine', 'html');
 // Setup path where all server templates will reside
 app.set('views', 'server/templates');
 
+//Static files for client
 if (env === 'development') {
   app.use(express.static('dist/client/'));
+  app.use('/editor', express.static('dist/editor/'));
 } else {
   app.use(express.static('client/'));
+  app.use('/editor', express.static('editor/'));
 }
 
 require('./server/routes/routes')(app);
@@ -37,6 +37,7 @@ pg.connect(process.env.DATABASE_URL, function(err, client) {
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
+  console.log(req.url);
   next(err);
 });
 
@@ -46,8 +47,10 @@ app.use(function(req, res, next) {
 // will print stacktrace
 if (app.get('env') === 'development') {
   app.use(function(err, req, res) {
+    console.log(req.url);
     res.status(err.status || 500);
     res.render('error', {
+      url: req.url,
       status: err.status,
       message: err.message,
       error: err
