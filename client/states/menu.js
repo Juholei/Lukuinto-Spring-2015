@@ -40,13 +40,13 @@ Menu.prototype = {
   startGame: function() {
     this.game.data = new GameData(this.game.cache.getJSON('gamedata'));
     this.setAvatarSelectionToGameData();
-    this.game.state.start('play');
+    this.game.state.start('preload2');
   },
   continueGame: function() {
     var loadedGameState = window.localStorage.getItem('lukuinto-2015');
     this.game.data = new GameData(JSON.parse(loadedGameState));
     this.setAvatarSelectionToGameData();
-    this.game.state.start('play');
+    this.game.state.start('preload2');
   },
   addAvatarSelection: function() {
     var textStyle = {font: '18pt Arial', fill: 'white', strokeThickness: 5, align: 'center'};

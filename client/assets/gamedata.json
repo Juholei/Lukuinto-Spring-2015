@@ -1,4 +1,5 @@
 {
+  "image": "assets/play/karttatausta.png",
   "startPoint": {
     "x": 246,
     "y": 118
@@ -14,7 +15,7 @@
       "state": "next",
       "tasks": [
         {
-          "image": "etappi_1",
+          "image": "assets/quiz/etappi_1.png",
           "question": "Isäsi tulee herättämään sinua ja kertomaan, että perheenne ruispellolle on ilmestynyt valtavan suuri peltokuvio, jonka laajuutta ei maasta käsin oikein kykene arvioimaan. Unenpöpperössä mietit, että varmasti ufot asialla, onkohan täällä käynyt joku sieppari ruispellossa? Kun heräilet enemmän, naurahdat ajatuksellesi ufoista, ja mietit, että varmasti tälle löytyy joku looginen selitys. Isäsi sanoo ryhtyvänsä heti puimaan viljat muilta pelloilta, ettei niillekin käy kehnosti, ja pyytää sinua selvittelemään peltokuvion arvoitusta. Käytyäsi pellon laidalla ihmettelemässä, päätät, että jollain keinolla pitäisi päästä tutkimaan kuviota yläilmoista. Valitsetko: ",
           "answers": [
             {
@@ -40,7 +41,7 @@
     {
       "x": 271,
       "y": 213,
-      "image": "etappi_2",
+      "image": "assets/quiz/etappi_2.png",
       "state": "unvisited",
       "tasks": [
         {
@@ -132,7 +133,7 @@
     {
       "x": 358,
       "y": 294,
-      "image": "etappi_3",
+      "image": "assets/quiz/etappi_3.png",
       "state": "unvisited",
       "tasks": [
         {
@@ -227,7 +228,7 @@
     {
       "x": 410,
       "y": 580,
-      "image": "etappi_4",
+      "image": "assets/quiz/etappi_4.png",
       "state": "unvisited",
       "tasks": [
         {
@@ -319,10 +320,10 @@
     {
       "x": 356,
       "y": 563,
-      "image": "etappi_5_ilves",
       "state": "unvisited",
       "tasks": [
         {
+          "image": "assets/quiz/etappi_5_ilves.png",
           "question": "Tietomaan ystävällinen työntekijä ohjasi minut tänne Tähtitornin kahvilaan, koska heillä tuli sulkemisaika vastaan, mutta mitä ihmettä minun täältä pitäisi etsiä. Päädyin mietteissäni vilkaisemaan taivaalle ja siellä eteeni avautui upea näky. Tähdet näyttivät muodostavan erilaisia kuvioita. Mikähän kuvio on kyseessä?",
           "answers": [
             {
@@ -344,7 +345,7 @@
           ]
         },
         {
-          "image": "etappi_5_kaksoset",
+          "image": "assets/quiz/etappi_5_kaksoset.png",
           "question": "Tietomaan ystävällinen työntekijä ohjasi minut tänne Tähtitornin kahvilaan, koska heillä tuli sulkemisaika vastaan, mutta mitä ihmettä minun täältä pitäisi etsiä. Päädyin mietteissäni vilkaisemaan taivaalle ja siellä eteeni avautui upea näky. Tähdet näyttivät muodostavan erilaisia kuvioita. Mikähän kuvio on kyseessä?",
           "answers": [
             {
@@ -366,7 +367,7 @@
           ]
         },
         {
-          "image": "etappi_5_leijona",
+          "image": "assets/quiz/etappi_5_leijona.png",
           "question": "Tietomaan ystävällinen työntekijä ohjasi minut tänne Tähtitornin kahvilaan, koska heillä tuli sulkemisaika vastaan, mutta mitä ihmettä minun täältä pitäisi etsiä. Päädyin mietteissäni vilkaisemaan taivaalle ja siellä eteeni avautui upea näky. Tähdet näyttivät muodostavan erilaisia kuvioita. Mikähän kuvio on kyseessä?",
           "answers": [
             {
@@ -388,7 +389,7 @@
           ]
         },
         {
-          "image": "etappi_5_otava",
+          "image": "assets/quiz/etappi_5_otava.png",
           "question": "Tietomaan ystävällinen työntekijä ohjasi minut tänne Tähtitornin kahvilaan, koska heillä tuli sulkemisaika vastaan, mutta mitä ihmettä minun täältä pitäisi etsiä. Päädyin mietteissäni vilkaisemaan taivaalle ja siellä eteeni avautui upea näky. Tähdet näyttivät muodostavan erilaisia kuvioita. Mikähän kuvio on kyseessä?",
           "answers": [
             {
@@ -414,7 +415,7 @@
     {
       "x": 420,
       "y": 432,
-      "image": "etappi_6",
+      "image": "assets/quiz/etappi_6.png",
       "state": "unvisited",
       "tasks": [
         {
@@ -506,7 +507,7 @@
     {
       "x": 470,
       "y": 745,
-      "image": "etappi_7",
+      "image": "assets/quiz/etappi_7.png",
       "state": "unvisited",
       "tasks": [
         {
