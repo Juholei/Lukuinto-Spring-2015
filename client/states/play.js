@@ -7,6 +7,8 @@ function Play() {}
 Play.prototype = {
   create: function() {
     this.backgroundMap = this.game.add.sprite(0, 0, 'map');
+    this.backgroundMap.width = 1024;
+    this.backgroundMap.height = 768;
     this.pointGroup = this.game.add.group();
     this.createBoardFromGameData();
     this.putAvatarToCurrentPoint();

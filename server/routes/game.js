@@ -25,7 +25,7 @@ module.exports = function(app) {
           console.log(req.url);
           next(error);
         } else {
-          var json = JSON.stringify(readResult.rows[0]);
+          var json = JSON.stringify(readResult.rows[0].data);
           res.writeHead(200, {'content-type':'application/json', 'content-length':Buffer.byteLength(json)});
           res.end(json);
         }
