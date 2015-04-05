@@ -5,6 +5,8 @@ function GameData(object) {
   this.startPoint = object.startPoint;
   this.endPoint = object.endPoint;
   this.points = object.points;
+  this.image = object.image;
+  this.name = object.name;
 
   if (object.wrongAnswers !== undefined && object.selectedAvatarKey !== undefined) {
     this.wrongAnswers = object.wrongAnswers;
