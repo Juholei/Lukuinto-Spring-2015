@@ -28,12 +28,12 @@ Quiz.prototype = {
   shutdown: function() {
   },
   addBackgroundImage: function() {
-    var backgroundImageKey;
-    if (this.currentTask.image === undefined) {
+    var backgroundImageKey = this.currentTask.image;
+    if (backgroundImageKey === undefined) {
       backgroundImageKey = this.game.data.getBackgroundForCurrentPoint();
-      if (backgroundImageKey === undefined) {
-        backgroundImageKey = defaultBackgroundKey;
-      }
+    }
+    if (backgroundImageKey === undefined) {
+      backgroundImageKey = defaultBackgroundKey;
     }
 
     var backgroundScenery = this.game.add.sprite(this.game.world.centerX, 0, backgroundImageKey);
