@@ -11,6 +11,8 @@ Menu.prototype = {
   create: function() {
     this.game.add.sprite(0, 0, 'menu-background');
     this.game.add.button(402, 627, 'start-button', this.startGame, this, 1, 0);
+    this.textStyle = {font: '18pt Arial', fill: 'white', strokeThickness: 5, align: 'center'};
+
     this.createGameSelection();
     var loadedGameState = window.localStorage.getItem('lukuinto-2015');
     if (loadedGameState !== null) {
@@ -46,13 +48,13 @@ Menu.prototype = {
     }
     this.selectedGame = this.games[0];
     var callback = function(button) {
-      // (this.visibleTextIndex + 1) % this.splitText.length;
       var index = (this.games.indexOf(this.selectedGame) + 1) % this.games.length;
       this.selectedGame = this.games[index];
       button.buttonText.text = this.selectedGame.name;
     };
-    var selectionButton = new LabeledButton(this.game, 300, 500, this.selectedGame.name, callback, this);
+    var selectionButton = new LabeledButton(this.game, 293, 675, this.selectedGame.name, callback, this);
     this.game.add.existing(selectionButton);
+    this.game.add.text(233, 585, 'Valitse peli', this.textStyle);
   },
   startGame: function() {
     var loader = new Phaser.Loader(this.game);
@@ -71,8 +73,7 @@ Menu.prototype = {
     this.game.state.start('preload2');
   },
   addAvatarSelection: function() {
-    var textStyle = {font: '18pt Arial', fill: 'white', strokeThickness: 5, align: 'center'};
-    var avatarSelectionText = this.game.add.text(this.game.world.centerX, 470, 'Valitse hahmo', textStyle);
+    var avatarSelectionText = this.game.add.text(this.game.world.centerX, 470, 'Valitse hahmo', this.textStyle);
     avatarSelectionText.anchor.setTo(0.5, 0.5);
     this.avatarSelectionButtons = this.game.add.group();
     var avatarButton1 = this.game.add.button(481, 545, 'avatar_1', this.selectAvatar, this);
