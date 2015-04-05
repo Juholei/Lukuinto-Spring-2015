@@ -12,6 +12,5 @@ window.onload = function() {
   game.state.add('preload', require('./states/preload'));
   game.state.add('preload2', require('./states/preload2'));
   game.state.add('quiz', require('./states/quiz'));
-  
   game.state.start('boot');
 };

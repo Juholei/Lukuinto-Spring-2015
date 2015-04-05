@@ -6,6 +6,5 @@ window.onload = function() {
 
   // Game States
   <% _.forEach(gameStates, function(gameState) {  %>game.state.add('<%= gameState.shortName %>', require('./states/<%= gameState.shortName %>'));
-  <% }); %>
-  game.state.start('boot');
+  <% }); %>game.state.start('boot');
 };
