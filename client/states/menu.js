@@ -76,22 +76,13 @@ Menu.prototype = {
     var avatarSelectionText = this.game.add.text(this.game.world.centerX, 470, 'Valitse hahmo', this.textStyle);
     avatarSelectionText.anchor.setTo(0.5, 0.5);
     this.avatarSelectionButtons = this.game.add.group();
-    var avatarButton1 = this.game.add.button(481, 545, 'avatar_1', this.selectAvatar, this);
-    avatarButton1.frame = 1;
-    avatarButton1.anchor.setTo(0.5, 0.5);
-    this.avatarSelectionButtons.add(avatarButton1);
-    var avatarButton2 = this.game.add.button(545, 545, 'avatar_2', this.selectAvatar, this);
-    avatarButton2.anchor.setTo(0.5, 0.5);
-    this.avatarSelectionButtons.add(avatarButton2);
-    var avatarButton3 = this.game.add.button(609, 545, 'avatar_3', this.selectAvatar, this);
-    avatarButton3.anchor.setTo(0.5, 0.5);
-    this.avatarSelectionButtons.add(avatarButton3);
-    var avatarButton4 = this.game.add.button(673, 545, 'avatar_4', this.selectAvatar, this);
-    avatarButton4.anchor.setTo(0.5, 0.5);
-    this.avatarSelectionButtons.add(avatarButton4);
-    var avatarButton5 = this.game.add.button(738, 545, 'avatar_5', this.selectAvatar, this);
-    avatarButton5.anchor.setTo(0.5, 0.5);
-    this.avatarSelectionButtons.add(avatarButton5);
+    for (var i = 0; i < 5; i++) {
+      var avatarKey = 'avatar_' + (i + 1);
+      var avatarButton = this.game.add.button(384 + i * 64, 545, avatarKey, this.selectAvatar, this);
+      avatarButton.anchor.setTo(0.5);
+      this.avatarSelectionButtons.add(avatarButton);
+    }
+    this.avatarSelectionButtons.getChildAt(0).frame = 1;
   },
   selectAvatar: function(item) {
     this.selectedAvatarKey = item.key;
