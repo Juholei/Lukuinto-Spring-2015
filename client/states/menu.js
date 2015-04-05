@@ -11,7 +11,7 @@ Menu.prototype = {
   create: function() {
     this.game.add.sprite(0, 0, 'menu-background');
     this.game.add.button(402, 627, 'start-button', this.startGame, this, 1, 0);
-
+    this.createGameSelection();
     var loadedGameState = window.localStorage.getItem('lukuinto-2015');
     if (loadedGameState !== null) {
       var continueButton = new LabeledButton(this.game, 730, 675 , 'Jatka peliä', this.continueGame, this);
@@ -37,10 +37,25 @@ Menu.prototype = {
       button.frame = 1;
     }
   },
+  createGameSelection: function() {
+    this.games = [];
+    this.games.push({name: 'Lukuseikkailu', data: 'assets/gamedata.json'});
+    var availableGames = this.game.cache.getJSON('games');
+    for (var i = 0; i < availableGames.length; i++) {
+      this.games.push({name: 'Peli ' + (i + 1), data: 'game/' + availableGames[i].id});
+    }
+    this.selectedGame = this.games[0];
+
+  },
   startGame: function() {
-    this.game.data = new GameData(this.game.cache.getJSON('gamedata'));
-    this.setAvatarSelectionToGameData();
-    this.game.state.start('preload2');
+    var loader = new Phaser.Loader(this.game);
+    loader.onFileComplete.add(function() {
+      this.game.data = new GameData(this.game.cache.getJSON('game'));
+      this.setAvatarSelectionToGameData();
+      this.game.state.start('preload2');
+    }, this);
+    loader.json('game', this.selectedGame.data);
+    loader.start();
   },
   continueGame: function() {
     var loadedGameState = window.localStorage.getItem('lukuinto-2015');
