@@ -45,7 +45,14 @@ Menu.prototype = {
       this.games.push({name: 'Peli ' + (i + 1), data: 'game/' + availableGames[i].id});
     }
     this.selectedGame = this.games[0];
-
+    var callback = function(button) {
+      // (this.visibleTextIndex + 1) % this.splitText.length;
+      var index = (this.games.indexOf(this.selectedGame) + 1) % this.games.length;
+      this.selectedGame = this.games[index];
+      button.buttonText.text = this.selectedGame.name;
+    };
+    var selectionButton = new LabeledButton(this.game, 300, 500, this.selectedGame.name, callback, this);
+    this.game.add.existing(selectionButton);
   },
   startGame: function() {
     var loader = new Phaser.Loader(this.game);
