@@ -53,6 +53,7 @@ Menu.prototype = {
       button.buttonText.text = this.selectedGame.name;
     };
     var selectionButton = new LabeledButton(this.game, 293, 675, this.selectedGame.name, callback, this);
+    selectionButton.buttonText.scale.setTo(0.75);
     this.game.add.existing(selectionButton);
     this.game.add.text(233, 585, 'Valitse peli', this.textStyle);
   },
