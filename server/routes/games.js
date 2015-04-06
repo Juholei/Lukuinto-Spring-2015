@@ -8,7 +8,7 @@ module.exports = function(app) {
         return console.error('error fetching client from pool', err);
       }
 
-      client.query('select id from games',
+      client.query('select id, data->>\'name\' AS name from games',
         function(err, readResult) {
         //call `done()` to release the client back to the pool
         done();
