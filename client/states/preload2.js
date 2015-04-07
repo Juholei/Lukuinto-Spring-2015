@@ -1,5 +1,4 @@
 'use strict';
-var GameData = require('../prefabs/gamedata');
 function Preload2() {
   this.asset = null;
   this.ready = false;
@@ -20,7 +19,20 @@ Preload2.prototype = {
     }
 
     this.load.image('map', urlPrefix + gameData.image);
-
+    this.loadGameImages(gameData, urlPrefix);
+  },
+  create: function() {
+    this.asset.cropEnabled = false;
+  },
+  update: function() {
+    if (!!this.ready) {
+      this.game.state.start('play');
+    }
+  },
+  onLoadComplete: function() {
+    this.ready = true;
+  },
+  loadGameImages: function(gameData, urlPrefix) {
     for (var i = 0; i < gameData.points.length; i++) {
       var pointData = gameData.points[i];
       if (pointData.image !== null && pointData.image !== undefined) {
@@ -34,23 +46,6 @@ Preload2.prototype = {
           this.load.image(task.image, urlPrefix + task.image);
         }
       }
-    }
-
-  },
-  create: function() {
-    this.asset.cropEnabled = false;
-  },
-  update: function() {
-    if (!!this.ready) {
-      this.game.state.start('play');
-    }
-  },
-  onLoadComplete: function() {
-    this.ready = true;
-  },
-  setAvatarSelectionToGameData: function(avatar) {
-    if (avatar !== undefined) {
-      this.game.data.selectedAvatarKey = avatar;
     }
   }
 };
