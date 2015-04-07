@@ -44,7 +44,7 @@ Menu.prototype = {
     this.games.push({name: 'Lukuseikkailu', data: 'assets/gamedata.json'});
     var availableGames = this.game.cache.getJSON('games');
     for (var i = 0; i < availableGames.length; i++) {
-      this.games.push({name: 'Peli ' + (i + 1), data: 'game/' + availableGames[i].id});
+      this.games.push({name: availableGames[i].name, data: 'game/' + availableGames[i].id});
     }
     this.selectedGame = this.games[0];
     var callback = function(button) {
@@ -53,6 +53,7 @@ Menu.prototype = {
       button.buttonText.text = this.selectedGame.name;
     };
     var selectionButton = new LabeledButton(this.game, 293, 675, this.selectedGame.name, callback, this);
+    selectionButton.buttonText.scale.setTo(0.75);
     this.game.add.existing(selectionButton);
     this.game.add.text(233, 585, 'Valitse peli', this.textStyle);
   },
