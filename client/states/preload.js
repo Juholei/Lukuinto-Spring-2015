@@ -30,7 +30,7 @@ Preload.prototype = {
     this.load.spritesheet('avatar_5', 'assets/play/avatar_astropoika.png', 44, 71, 2, 0, 3);
 
     //Quiz state assets
-    this.load.image('taustakuva_kauppatori', 'assets/quiz/taustakuva_kauppatori.png');
+    this.load.image('default-quiz', 'assets/quiz/oletus_etappi.png');
     this.load.image('question-background', 'assets/quiz/kuvaus_teksti.png');
     this.load.image('answer-background', 'assets/quiz/valintojen_tausta.png');
     this.load.spritesheet('answer-button', 'assets/quiz/valintapainike.png', 332, 121);

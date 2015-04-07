@@ -4,7 +4,7 @@ var Point = require('../prefabs/point');
 var Announcement = require('../prefabs/announcement');
 var BrowsableTextArea = require('../prefabs/browsabletextarea');
 
-var defaultBackgroundKey = 'taustakuva_kauppatori';
+var defaultBackgroundKey = 'default-quiz';
 
 function Quiz() {}
 Quiz.prototype = {
