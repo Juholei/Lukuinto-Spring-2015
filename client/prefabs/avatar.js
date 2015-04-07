@@ -27,7 +27,7 @@ Avatar.prototype.update = function() {
 
 Avatar.prototype.moveTo = function(point, callback) {
   this.destination = point;
-  this.game.physics.arcade.moveToObject(this, point);
+  this.game.physics.arcade.moveToObject(this, point, 90);
   this.movementFinishedCallback = callback;
 };
 
