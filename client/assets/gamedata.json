@@ -534,5 +534,19 @@
         }
       ]
     }
-  ]
+  ],
+    "girlCongratulatoryStrings": {
+    "poor": "Virheistä oppii! Ehkäpä haluaisit kokeilla pelata uudestaan :)",
+    "rookie": "Mahtavasti ratkaistu, sinähän olet aloitteleva salapoliisi, kuin Neiti Etsivä! :)",
+    "good": "Hienosti suoriuduttu, olet pätevä kuin Naisten etsivätoimiston Mma Ramotswe! :)",
+    "great": "Huikeaa työskentelyä! Selvitit kaiken pätevästi kuin rikoskomisario Maria Kallio itse!",
+    "excellent": "Todella häikäisevää työskentelyä, vastasit kaikkiin oikein! Olet kuin maailman kuuluisin naisetsivä Neiti Marple!"
+  },
+  "boyCongratulatoryStrings": {
+    "poor": "Virheistä oppii! Ehkäpä haluaisit kokeilla pelata uudestaan :)",
+    "rookie": "Mahtavasti ratkaistu, sinähän olet aloitteleva salapoliisi, kuin Kalle Mestarietsivä! :)",
+    "good": "Hienosti toimittu! Ratkaisit arvoituksia taidokkaasti kuin Komisario Palmu konsanaan!",
+    "great": "Huikeaa työskentelyä! Ratkaisit arvoituksia kuin mikäkin Hercule Poirot! :)",
+    "excellent": "Todella häikäisevää työskentelyä, vastasit kaikkiin oikein! Olet kuin maailman kuuluisin salapoliisi Sherlock Holmes!"
+  }
 }

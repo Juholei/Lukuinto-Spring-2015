@@ -18,7 +18,11 @@ Preload2.prototype = {
       urlPrefix = '';
     }
 
-    this.load.image('map', urlPrefix + gameData.image);
+    if (gameData.image !== undefined) {
+      this.load.image('map', urlPrefix + gameData.image);
+    } else {
+      this.load.image('map', 'assets/play/karttatausta.png');
+    }
     this.loadGameImages(gameData, urlPrefix);
   },
   create: function() {

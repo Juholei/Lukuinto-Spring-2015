@@ -7,6 +7,8 @@ function GameData(object) {
   this.points = object.points;
   this.image = object.image;
   this.name = object.name;
+  this.boyCongratulatoryStrings = object.boyCongratulatoryStrings;
+  this.girlCongratulatoryStrings = object.girlCongratulatoryStrings;
 
   if (object.wrongAnswers !== undefined && object.selectedAvatarKey !== undefined) {
     this.wrongAnswers = object.wrongAnswers;
