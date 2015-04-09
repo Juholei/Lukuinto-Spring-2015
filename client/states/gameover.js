@@ -41,6 +41,9 @@ GameOver.prototype = {
       congratulatoryStrings = this.game.data.boyCongratulatoryStrings;
     }
     if (congratulatoryStrings === undefined) {
+      congratulatoryStrings = this.game.data.boyCongratulatoryStrings;
+    }
+    if (congratulatoryStrings === undefined) {
       return '';
     }
     var correctText;
