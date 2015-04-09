@@ -90,6 +90,7 @@ module.exports = function(grunt) {
           {expand: true, src: ['client/assets/**'], dest: 'dist/'},
           {expand: true, flatten: true, src: ['client/plugins/*.js'], dest: 'dist/client/js/plugins/'},
           {expand: true, flatten: true, src: ['bower_components/**/build/*.js'], dest: 'dist/client/js/'},
+          {expand: true, flatten: true, src: ['bower_components/**/build/*.map'], dest: 'dist/client/js/' },
           {expand: true, src: ['client/css/**'], dest: 'dist/'},
           {expand: true, src: ['client/index.html'], dest: 'dist/'},
           {expand: true, src: ['server/**'], dest: 'dist/'},
@@ -138,6 +139,18 @@ module.exports = function(grunt) {
           script: 'path/to/test/server.js'
         }
       }
+    },
+    uglify: {
+      game: {
+         files: {
+          'dist/client/js/game.js': ['dist/client/js/game.js']
+        }
+      },
+      editor: {
+         files: {
+          'dist/editor/js/game.js': ['dist/editor/js/game.js']
+        }
+      }
     }
   });
 
@@ -145,8 +158,8 @@ module.exports = function(grunt) {
   grunt.registerTask('build', ['buildBootstrapper', 'browserify', 'copy']);
   grunt.registerTask('serve', ['build', 'connect:livereload', 'open:client', 'watch:scripts']);
   grunt.registerTask('default', ['serve']);
-  grunt.registerTask('prod', ['build', 'copy']);
-  grunt.registerTask('heroku', ['build']);
+  grunt.registerTask('prod', ['build', 'uglify']);
+  grunt.registerTask('heroku', ['prod']);
   // Used for delaying livereload until after server has restarted
   grunt.registerTask('wait', function() {
     grunt.log.ok('Waiting for server reload...');
