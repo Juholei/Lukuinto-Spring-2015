@@ -6,9 +6,8 @@ var ToggleButton = function(game, x, y, callbackContext, group, label, answer) {
   this.answer = answer;
   this.group.add(this);
   this.toggled = false;
-  this.addLabelText(game, label);
   this.addAnswerText(game);
-  this.scale.setTo(0.64, 0.64);
+  this.scale.setTo(0.8);
 };
 
 ToggleButton.prototype = Object.create(Phaser.Button.prototype);
@@ -38,17 +37,10 @@ ToggleButton.prototype.toggle = function(toggled) {
   }
 };
 
-ToggleButton.prototype.addLabelText = function(game, label) {
-  var labelTextStyle = {font: '32px Arial', fill: 'white', align: 'center'};
-  var labelText = game.add.text(50, this.height / 2, label, labelTextStyle);
-  labelText.anchor.setTo(0.5, 0.5);
-  this.addChild(labelText);
-};
-
 ToggleButton.prototype.addAnswerText = function(game) {
-  var answerTextStyle = {font: '20px Arial', fill: 'white', align: 'left', wordWrap: true, wordWrapWidth: 200};
-  var answerText = game.add.text(117, this.height / 2, this.answer.text, answerTextStyle);
-  answerText.anchor.setTo(0, 0.5);
+  var answerTextStyle = {font: '12pt Arial', fill: 'white', align: 'left', wordWrap: true, wordWrapWidth: 300};
+  var answerText = game.add.text(this.width / 2, this.height / 2, this.answer.text, answerTextStyle);
+  answerText.anchor.setTo(0.5);
   this.addChild(answerText);
 };
 

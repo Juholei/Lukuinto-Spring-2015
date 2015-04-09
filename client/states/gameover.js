@@ -3,7 +3,6 @@ function GameOver() {}
 
 GameOver.prototype = {
   preload: function() {
-    this.load.json('strings', 'assets/strings.json');
   },
   create: function() {
     this.game.add.sprite(0, 0, 'game_over_background');
@@ -20,7 +19,7 @@ GameOver.prototype = {
     }
   },
   addCongratulatoryText: function() {
-    var congratolutaryString = this.getCorrectCongratulatoryString();
+    var congratulatoryString = this.getCorrectCongratulatoryString();
     var textStyle = {
       font: '24pt Arial',
       fill: 'white',
@@ -29,37 +28,41 @@ GameOver.prototype = {
       wordWrap: true,
       wordWrapWidth: 574
     };
-    var congratolutaryText = this.game.add.text(this.game.world.centerX, 100, congratolutaryString, textStyle);
+    var congratolutaryText = this.game.add.text(this.game.world.centerX, 100, congratulatoryString, textStyle);
     congratolutaryText.anchor.setTo(0.5, 0.5);
   },
   getCorrectCongratulatoryString: function() {
-    var gameStrings = this.game.cache.getJSON('strings');
-    var congratolutaryStrings;
+    var congratulatoryStrings;
     if (this.game.data.selectedAvatarKey === 'avatar_1') {
-      congratolutaryStrings = gameStrings.girlCongratulatoryStrings;
+      congratulatoryStrings = this.game.data.girlCongratulatoryStrings;
     } else if (this.game.data.selectedAvatarKey === 'avatar_2') {
-      congratolutaryStrings = gameStrings.boyCongratulatoryStrings;
+      congratulatoryStrings = this.game.data.boyCongratulatoryStrings;
     } else {
-      congratolutaryStrings = gameStrings.boyCongratulatoryStrings;
+      congratulatoryStrings = this.game.data.boyCongratulatoryStrings;
     }
-
+    if (congratulatoryStrings === undefined) {
+      congratulatoryStrings = this.game.data.boyCongratulatoryStrings;
+    }
+    if (congratulatoryStrings === undefined) {
+      return '';
+    }
     var correctText;
     switch (this.game.data.wrongAnswers) {
       case 0:
-        correctText = congratolutaryStrings.excellent;
+        correctText = congratulatoryStrings.excellent;
         break;
       case 1:
-        correctText = congratolutaryStrings.great;
+        correctText = congratulatoryStrings.great;
         break;
       case 2:
-        correctText = congratolutaryStrings.good;
+        correctText = congratulatoryStrings.good;
         break;
       case 3:
       case 4:
-        correctText = congratolutaryStrings.rookie;
+        correctText = congratulatoryStrings.rookie;
         break;
       default:
-        correctText = congratolutaryStrings.poor;
+        correctText = congratulatoryStrings.poor;
     }
     return correctText;
   }

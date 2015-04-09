@@ -4,7 +4,7 @@ var Point = require('../prefabs/point');
 var Announcement = require('../prefabs/announcement');
 var BrowsableTextArea = require('../prefabs/browsabletextarea');
 
-var defaultBackgroundKey = 'taustakuva_kauppatori';
+var defaultBackgroundKey = 'default-quiz';
 
 function Quiz() {}
 Quiz.prototype = {
@@ -56,13 +56,13 @@ Quiz.prototype = {
     var centerY = this.game.world.centerY;
     var answers = this.currentTask.answers;
 
-    var buttonA = new ToggleButton(this, centerX - 215, centerY + 170, this, this.answerButtons, 'A', answers[0]);
-    var buttonB = new ToggleButton(this, centerX + 3, centerY + 170, this, this.answerButtons, 'B', answers[1]);
-    var buttonC = new ToggleButton(this, centerX - 215, centerY + 260, this, this.answerButtons, 'C', answers[2]);
-    var buttonD = new ToggleButton(this, centerX + 3, centerY + 260, this, this.answerButtons, 'D', answers[3]);
+    var buttonA = new ToggleButton(this, centerX - 270, centerY + 125, this, this.answerButtons, 'A', answers[0]);
+    var buttonB = new ToggleButton(this, centerX, centerY + 125, this, this.answerButtons, 'B', answers[1]);
+    var buttonC = new ToggleButton(this, centerX - 270, centerY + 225, this, this.answerButtons, 'C', answers[2]);
+    var buttonD = new ToggleButton(this, centerX, centerY + 225, this, this.answerButtons, 'D', answers[3]);
 
-    var confirmButton = this.game.add.button(centerX + 250, this.game.world.height, 'quiz-confirm', this.confirmOnClick, this);
-    confirmButton.scale.setTo(0.35, 0.35);
+    var confirmButton = this.game.add.button(centerX + 255, this.game.world.height, 'quiz-confirm', this.confirmOnClick, this);
+    confirmButton.scale.setTo(0.3);
     confirmButton.anchor.setTo(0.5, 1);
   },
   confirmOnClick: function(button) {

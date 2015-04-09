@@ -20,11 +20,11 @@
           "question": "Isäsi tulee herättämään sinua ja kertomaan, että perheenne ruispellolle on ilmestynyt valtavan suuri peltokuvio, jonka laajuutta ei maasta käsin oikein kykene arvioimaan. Unenpöpperössä mietit, että varmasti ufot asialla, onkohan täällä käynyt joku sieppari ruispellossa? Kun heräilet enemmän, naurahdat ajatuksellesi ufoista, ja mietit, että varmasti tälle löytyy joku looginen selitys. Isäsi sanoo ryhtyvänsä heti puimaan viljat muilta pelloilta, ettei niillekin käy kehnosti, ja pyytää sinua selvittelemään peltokuvion arvoitusta. Käytyäsi pellon laidalla ihmettelemässä, päätät, että jollain keinolla pitäisi päästä tutkimaan kuviota yläilmoista. Valitsetko: ",
           "answers": [
             {
-              "text": "vuokraan helikopterin kuljettajalla hintaan 2000 euroa",
+              "text": "vuokraan helikopterin kuljettajalla hintaan 2000 euroa vuokraan helikopterin kuljettajalla hintaan 2000 euroa",
               "isCorrect": true
             },
             {
-              "text": "vuokraan kuuma-\nilmapallon tunniksi hintaan 1000 euroa",
+              "text": "vuokraan kuumailmapallon tunniksi hintaan 1000 euroa vuokraan kuuma ilmapallon tunniksi hintaan 1000 euroa",
               "isCorrect": true
             },
             {
@@ -70,7 +70,7 @@
           "question": "Pääsin tutkailemaan ruispeltoa ilmasta käsin. Tämähän on hauskaa! Tuo kuvio näyttää jotenkin tutulta, mutta mikäköhän logo se on?",
           "answers": [
             {
-              "text": "Suomen avaruus-\ntutkimusseuran",
+              "text": "Suomen avaruustutkimusseuran",
               "isCorrect": false
             },
             {
@@ -189,7 +189,7 @@
               "isCorrect": false
             },
             {
-              "text": "Planetaaristen ren-\nkaiden ja galaksien dynamiikkaa",
+              "text": "Planetaaristen renkaiden ja galaksien dynamiikkaa",
               "isCorrect": true
             },
             {
@@ -211,7 +211,7 @@
               "isCorrect": false
             },
             {
-              "text": "Tutkimus kasvihuo-\nneilmiön vaikutuk-\nsista avaruudessa",
+              "text": "Tutkimus kasvihuoneilmiön vaikutuksista avaruudessa",
               "isCorrect": false
             },
             {
@@ -477,7 +477,7 @@
               "isCorrect": false
             },
             {
-              "text": "kuu, jonka univer-\nsumin tomu kasvat-\ntaa supersuureksi",
+              "text": "kuu, jonka universumin tomu kasvattaa supersuureksi",
               "isCorrect": false
             }
           ]
@@ -534,5 +534,19 @@
         }
       ]
     }
-  ]
+  ],
+    "girlCongratulatoryStrings": {
+    "poor": "Virheistä oppii! Ehkäpä haluaisit kokeilla pelata uudestaan :)",
+    "rookie": "Mahtavasti ratkaistu, sinähän olet aloitteleva salapoliisi, kuin Neiti Etsivä! :)",
+    "good": "Hienosti suoriuduttu, olet pätevä kuin Naisten etsivätoimiston Mma Ramotswe! :)",
+    "great": "Huikeaa työskentelyä! Selvitit kaiken pätevästi kuin rikoskomisario Maria Kallio itse!",
+    "excellent": "Todella häikäisevää työskentelyä, vastasit kaikkiin oikein! Olet kuin maailman kuuluisin naisetsivä Neiti Marple!"
+  },
+  "boyCongratulatoryStrings": {
+    "poor": "Virheistä oppii! Ehkäpä haluaisit kokeilla pelata uudestaan :)",
+    "rookie": "Mahtavasti ratkaistu, sinähän olet aloitteleva salapoliisi, kuin Kalle Mestarietsivä! :)",
+    "good": "Hienosti toimittu! Ratkaisit arvoituksia taidokkaasti kuin Komisario Palmu konsanaan!",
+    "great": "Huikeaa työskentelyä! Ratkaisit arvoituksia kuin mikäkin Hercule Poirot! :)",
+    "excellent": "Todella häikäisevää työskentelyä, vastasit kaikkiin oikein! Olet kuin maailman kuuluisin salapoliisi Sherlock Holmes!"
+  }
 }
