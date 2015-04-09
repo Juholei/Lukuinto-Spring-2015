@@ -47,8 +47,8 @@ ToggleButton.prototype.addLabelText = function(label) {
 
 ToggleButton.prototype.addAnswerText = function(game) {
   var answerTextStyle = {font: '12pt Arial', fill: 'white', align: 'left', wordWrap: true, wordWrapWidth: 300};
-  var answerText = game.add.text(20, this.height / 2, this.answer.text, answerTextStyle);
-  answerText.anchor.setTo(0, 0.5);
+  var answerText = game.add.text(this.width / 2, this.height / 2, this.answer.text, answerTextStyle);
+  answerText.anchor.setTo(0.5);
   this.addChild(answerText);
 };
 
