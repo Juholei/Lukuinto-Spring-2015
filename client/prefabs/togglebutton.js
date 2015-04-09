@@ -6,7 +6,6 @@ var ToggleButton = function(game, x, y, callbackContext, group, label, answer) {
   this.answer = answer;
   this.group.add(this);
   this.toggled = false;
-  this.addLabelText(game, label);
   this.addAnswerText(game);
   this.scale.setTo(0.8);
 };
@@ -36,13 +35,6 @@ ToggleButton.prototype.toggle = function(toggled) {
     this.setFrames(1, 0);
     this.frame = 0;
   }
-};
-
-ToggleButton.prototype.addLabelText = function(label) {
-  // var labelTextStyle = {font: '32px Arial', fill: 'white', align: 'center'};
-  // var labelText = this.game.add.text(50, this.height / 2, label, labelTextStyle);
-  // labelText.anchor.setTo(0.5, 0.5);
-  // this.addChild(labelText);
 };
 
 ToggleButton.prototype.addAnswerText = function(game) {
