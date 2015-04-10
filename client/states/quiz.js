@@ -38,6 +38,7 @@ Quiz.prototype = {
 
     var backgroundScenery = this.game.add.sprite(this.game.world.centerX, 0, backgroundImageKey);
     backgroundScenery.width = 576;
+    backgroundScenery.height = 360;
     backgroundScenery.anchor.setTo(0.5, 0);
   },
   addQuestionTextArea: function() {
