@@ -5,6 +5,11 @@ var app = express();
 
 var env = process.env.NODE_ENV || 'development';
 
+console.log(env);
+if (env === 'development') {
+  app.use(require('connect-livereload')());
+}
+
  // Setup view engine for server side templating
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
@@ -13,17 +18,9 @@ app.set('view engine', 'html');
 app.set('views', 'server/templates');
 
 //Static files for client
-if (env === 'development') {
-  app.use(express.static('dist/client/'));
-  console.log(process.env.LUKUSEIKKAILU_EDITOR_DISABLED);
-  if (process.env.LUKUSEIKKAILU_EDITOR_DISABLED !== 'true') {
-    app.use('/editor', express.static('dist/editor/'));
-  }
-} else {
-  app.use(express.static('client/'));
-  if (process.env.LUKUSEIKKAILU_EDITOR_DISABLED !== 'true') {
-    app.use('/editor', express.static('editor/'));
-  }
+app.use(express.static('dist/client/'));
+if (process.env.LUKUSEIKKAILU_EDITOR_DISABLED !== 'true') {
+  app.use('/editor', express.static('dist/editor/'));
 }
 
 require('./server/routes/routes')(app);
@@ -51,11 +48,10 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(function(err, req, res) {
+  app.use(function(err, req, res, next) {
     console.log(req.url);
     res.status(err.status || 500);
     res.render('error', {
-      url: req.url,
       status: err.status,
       message: err.message,
       error: err
@@ -65,7 +61,7 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function(err, req, res) {
+app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,
