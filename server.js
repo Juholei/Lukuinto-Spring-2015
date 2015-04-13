@@ -15,7 +15,6 @@ app.set('views', 'server/templates');
 //Static files for client
 if (env === 'development') {
   app.use(express.static('dist/client/'));
-  console.log(process.env.LUKUSEIKKAILU_EDITOR_DISABLED);
   if (process.env.LUKUSEIKKAILU_EDITOR_DISABLED !== 'true') {
     app.use('/editor', express.static('dist/editor/'));
   }
@@ -55,7 +54,6 @@ if (app.get('env') === 'development') {
     console.log(req.url);
     res.status(err.status || 500);
     res.render('error', {
-      url: req.url,
       status: err.status,
       message: err.message,
       error: err

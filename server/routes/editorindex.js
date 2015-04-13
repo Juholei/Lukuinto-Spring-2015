@@ -3,7 +3,6 @@ var path = require('path');
 
 module.exports = function(app) {
   app.get('/editor', function(req, res, next) {
-    console.log(process.env.LUKUSEIKKAILU_EDITOR_DISABLED);
     if (process.env.LUKUSEIKKAILU_EDITOR_DISABLED === 'true') {
       var err = new Error('Not Found');
       err.status = 404;
