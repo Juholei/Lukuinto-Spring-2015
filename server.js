@@ -22,7 +22,7 @@ app.set('view engine', 'html');
 app.set('views', 'server/templates');
 
 //Static files for client
-app.use(express.static('dist/client/'));
+app.use(express.static('dist/game/'));
 if (process.env.LUKUSEIKKAILU_EDITOR_DISABLED !== 'true') {
   app.use(express.static('dist/editor/'));
 }
