@@ -13,16 +13,9 @@ app.set('view engine', 'html');
 app.set('views', 'server/templates');
 
 //Static files for client
-if (env === 'development') {
-  app.use(express.static('dist/client/'));
-  if (process.env.LUKUSEIKKAILU_EDITOR_DISABLED !== 'true') {
-    app.use('/editor', express.static('dist/editor/'));
-  }
-} else {
-  app.use(express.static('client/'));
-  if (process.env.LUKUSEIKKAILU_EDITOR_DISABLED !== 'true') {
-    app.use('/editor', express.static('editor/'));
-  }
+app.use(express.static('dist/client/'));
+if (process.env.LUKUSEIKKAILU_EDITOR_DISABLED !== 'true') {
+  app.use('/editor', express.static('dist/editor/'));
 }
 
 require('./server/routes/routes')(app);
