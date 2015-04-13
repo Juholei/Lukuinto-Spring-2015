@@ -21,12 +21,12 @@ module.exports = function(grunt) {
     watch: {
       scripts: {
         files: [
-            'client/css/*',
-            'client/index.html',
-            'client/assets/*',
-            'client/**/*.js',
-            'client/*.js',
-            '!client/main.js'
+            'game/css/*',
+            'game/index.html',
+            'game/assets/*',
+            'game/**/*.js',
+            'game/*.js',
+            '!game/main.js'
         ],
         options: {
           spawn: false,
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
           middleware: function(connect) {
             return [
               lrSnippet,
-              mountFolder(connect, 'dist/client/')
+              mountFolder(connect, 'dist/game/')
             ];
           }
         }
@@ -87,12 +87,12 @@ module.exports = function(grunt) {
       dist: {
         files: [
           // includes files within path and its sub-directories
-          {expand: true, src: ['client/assets/**'], dest: 'dist/'},
-          {expand: true, flatten: true, src: ['client/plugins/*.js'], dest: 'dist/client/js/plugins/'},
-          {expand: true, flatten: true, src: ['bower_components/**/build/*.js'], dest: 'dist/client/js/'},
-          {expand: true, flatten: true, src: ['bower_components/**/build/*.map'], dest: 'dist/client/js/' },
-          {expand: true, src: ['client/css/**'], dest: 'dist/'},
-          {expand: true, src: ['client/index.html'], dest: 'dist/'},
+          {expand: true, src: ['game/assets/**'], dest: 'dist/'},
+          {expand: true, flatten: true, src: ['game/plugins/*.js'], dest: 'dist/game/js/plugins/'},
+          {expand: true, flatten: true, src: ['bower_components/**/build/*.js'], dest: 'dist/game/js/'},
+          {expand: true, flatten: true, src: ['bower_components/**/build/*.map'], dest: 'dist/game/js/' },
+          {expand: true, src: ['game/css/**'], dest: 'dist/'},
+          {expand: true, src: ['game/index.html'], dest: 'dist/'},
           {expand: true, src: ['server/**'], dest: 'dist/'},
           {expand: true, src: ['server.js'], dest: 'dist/'}
         ]
@@ -109,12 +109,12 @@ module.exports = function(grunt) {
     },
     browserify: {
       build: {
-        src: ['client/main.js'],
-        dest: 'dist/client/js/game.js'
+        src: ['game/main.js'],
+        dest: 'dist/game/js/game.js'
       },
       buildEditor: {
-        src: ['editor/game/main.js'],
-        dest: 'dist/editor/js/game.js'
+        src: ['editor/editor/main.js'],
+        dest: 'dist/editor/js/editor.js'
       }
     },
     express: {
@@ -141,12 +141,12 @@ module.exports = function(grunt) {
     uglify: {
       game: {
          files: {
-          'dist/client/js/game.js': ['dist/client/js/game.js']
+          'dist/game/js/game.js': ['dist/game/js/game.js']
         }
       },
       editor: {
          files: {
-          'dist/editor/js/game.js': ['dist/editor/js/game.js']
+          'dist/editor/js/editor.js': ['dist/editor/js/editor.js']
         }
       }
     }
@@ -171,7 +171,7 @@ module.exports = function(grunt) {
   });
 
   grunt.registerTask('buildBootstrapper', 'builds the bootstrapper file correctly', function() {
-    var stateFiles = grunt.file.expand('client/states/*.js');
+    var stateFiles = grunt.file.expand('game/states/*.js');
     var gameStates = [];
     var statePattern = new RegExp(/(\w+).js$/);
     stateFiles.forEach(function(file) {
@@ -185,6 +185,6 @@ module.exports = function(grunt) {
     console.log(config);
     var bootstrapper = grunt.file.read('templates/_main.js.tpl');
     bootstrapper = grunt.template.process(bootstrapper, {data: config});
-    grunt.file.write('client/main.js', bootstrapper);
+    grunt.file.write('game/main.js', bootstrapper);
   });
 };
