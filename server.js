@@ -5,6 +5,11 @@ var app = express();
 
 var env = process.env.NODE_ENV || 'development';
 
+console.log(env);
+if (env === 'development') {
+  app.use(require('connect-livereload')());
+}
+
  // Setup view engine for server side templating
 app.engine('.html', require('ejs').__express);
 app.set('view engine', 'html');
