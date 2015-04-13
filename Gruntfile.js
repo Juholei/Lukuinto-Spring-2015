@@ -123,12 +123,12 @@ module.exports = function(grunt) {
       },
       dev: {
         options: {
-          script: 'server.js'
+          script: 'dist/server.js'
         }
       },
       prod: {
         options: {
-          script: 'server.js',
+          script: 'dist/server.js',
           node_env: 'production'
         }
       },
