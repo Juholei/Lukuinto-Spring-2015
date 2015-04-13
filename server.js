@@ -2,9 +2,14 @@
 var express = require('express');
 var pg = require('pg');
 var app = express();
-
+var slashes = require('connect-slashes');
 var env = process.env.NODE_ENV || 'development';
 
+//Routes with our without slashes take to same place after adding slashes. False means
+//slashes are removed if they are in the given url.
+app.use(slashes(false));
+
+//Enabling livereload in development
 if (env === 'development') {
   app.use(require('connect-livereload')());
 }
@@ -22,6 +27,7 @@ if (process.env.LUKUSEIKKAILU_EDITOR_DISABLED !== 'true') {
   app.use(express.static('dist/editor/'));
 }
 
+//Setting routes declared in routes directory
 require('./server/routes/routes')(app);
 
 //Creates database client and connect it to the database.
