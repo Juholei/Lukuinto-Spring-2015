@@ -13,7 +13,6 @@ Preload2.prototype = {
     var gameData = this.game.data;
 
     var urlPrefix = 'files/';
-    console.log(gameData);
     if (gameData.name === 'lukuseikkailu-2015') {
       urlPrefix = '';
     }
