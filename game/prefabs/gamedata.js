@@ -45,8 +45,9 @@ GameData.prototype = {
   },
   isEndReachable: function() {
     for (var i = 0; i < this.points.length; i++) {
-      var unvisitedPointsExist = this.points[i].state === Point.STATES.UNVISITED || this.points[i].state === Point.STATES.NEXT;
-      if (unvisitedPointsExist) {
+      var unvisitedPointsExist = this.points[i].state === Point.STATES.UNVISITED;
+      var nextPointExists = this.points[i].state === Point.STATES.NEXT;
+      if (unvisitedPointsExist || nextPointExists) {
         return false;
       }
     }
