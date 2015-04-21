@@ -1,10 +1,8 @@
 'use strict';
 
-var ToggleButton = function(game, x, y, callbackContext, group, label, answer) {
-  Phaser.Button.call(this, game, x, y, 'answer-button', this.clickListener, callbackContext, 1, 0);
-  this.group = group;
+var ToggleButton = function(game, x, y, callback, callbackContext, answer) {
+  Phaser.Button.call(this, game, x, y, 'answer-button', callback, callbackContext, 1, 0);
   this.answer = answer;
-  this.group.add(this);
   this.toggled = false;
   this.addAnswerText(game);
   this.scale.setTo(0.8);
@@ -14,17 +12,6 @@ ToggleButton.prototype = Object.create(Phaser.Button.prototype);
 ToggleButton.prototype.constructor = ToggleButton;
 
 ToggleButton.prototype.update = function() {
-};
-
-ToggleButton.prototype.clickListener = function(button) {
-  var previousState = button.toggled;
-  button.group.forEach(function(item) {
-    item.toggle(false);
-  }, this);
-
-  if (previousState === false) {
-    button.toggle(true);
-  }
 };
 
 ToggleButton.prototype.toggle = function(toggled) {

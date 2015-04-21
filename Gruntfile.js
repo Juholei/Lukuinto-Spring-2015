@@ -1,4 +1,5 @@
-// Generated on 2014-03-28 using generator-phaser-official 0.0.8-rc-2
+// Originally generated on 2014-03-28 using generator-phaser-official 0.0.8-rc-2.
+// Building editor project and addition of Express server added later alongside other changes.
 'use strict';
 var config = require('./config.json');
 var _ = require('underscore');
@@ -88,9 +89,10 @@ module.exports = function(grunt) {
         files: [
           // includes files within path and its sub-directories
           {expand: true, src: ['game/assets/**'], dest: 'dist/'},
+          {expand: true, src: ['game/favicons/**'], dest: 'dist/'},
           {expand: true, flatten: true, src: ['game/plugins/*.js'], dest: 'dist/game/js/plugins/'},
           {expand: true, flatten: true, src: ['bower_components/**/build/*.js'], dest: 'dist/game/js/'},
-          {expand: true, flatten: true, src: ['bower_components/**/build/*.map'], dest: 'dist/game/js/' },
+          {expand: true, flatten: true, src: ['bower_components/**/build/*.map'], dest: 'dist/game/js/'},
           {expand: true, src: ['game/css/**'], dest: 'dist/'},
           {expand: true, src: ['game/index.html'], dest: 'dist/'},
           {expand: true, src: ['server/**'], dest: 'dist/'},
@@ -123,18 +125,13 @@ module.exports = function(grunt) {
       },
       dev: {
         options: {
-          script: 'server.js'
+          script: 'dist/server.js'
         }
       },
       prod: {
         options: {
-          script: 'server.js',
+          script: 'dist/server.js',
           node_env: 'production'
-        }
-      },
-      test: {
-        options: {
-          script: 'path/to/test/server.js'
         }
       }
     },
@@ -152,9 +149,8 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('server', ['build', 'express:dev', 'open:server', 'watch']);
+  grunt.registerTask('serve', ['build', 'express:dev', 'open:server', 'watch']);
   grunt.registerTask('build', ['buildBootstrapper', 'browserify', 'copy']);
-  grunt.registerTask('serve', ['build', 'connect:livereload', 'open:client', 'watch:scripts']);
   grunt.registerTask('default', ['serve']);
   grunt.registerTask('prod', ['build', 'uglify']);
   grunt.registerTask('heroku', ['prod']);

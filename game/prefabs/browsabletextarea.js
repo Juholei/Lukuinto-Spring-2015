@@ -1,5 +1,8 @@
 'use strict';
 
+var textStyle = {font: '14px Arial', fill: 'white', align: 'left', wordWrap: true, wordWrapWidth: 574};
+var pageNumberTextStyle = {font: 'bold 14pt Arial', fill: 'red', align: 'right'};
+
 var BrowsableTextArea = function(game, text) {
   Phaser.Sprite.call(this, game, game.world.centerX - 288, 360, 'question-background');
   this.inputEnabled = true;
@@ -9,13 +12,10 @@ var BrowsableTextArea = function(game, text) {
   this.splitTextToPages(this.textString);
   this.visibleTextIndex = 0;
 
-  var textStyle = {font: '14px Arial', fill: 'white', align: 'left', wordWrap: true, wordWrapWidth: 574};
   this.currentVisibleText = game.add.text(3, 5, this.splitText[this.visibleTextIndex],  textStyle);
   this.addChild(this.currentVisibleText);
 
-  var pageNumberTextStyle = {font: 'bold 14pt Arial', fill: 'red', align: 'right'};
-  var pageNumberString = 'jatkuu... ' + (this.visibleTextIndex + 1) + '/' + this.splitText.length;
-  this.pageNumberText = game.add.text(576, 154, pageNumberString, pageNumberTextStyle);
+  this.pageNumberText = game.add.text(576, 154, this.createPageNumberText(), pageNumberTextStyle);
   this.pageNumberText.anchor.setTo(1, 1);
   if (this.splitText.length === 1) {
     this.pageNumberText.visible = false;
@@ -32,19 +32,15 @@ BrowsableTextArea.prototype.update = function() {
 BrowsableTextArea.prototype.browseText = function() {
   this.visibleTextIndex = (this.visibleTextIndex + 1) % this.splitText.length;
   this.currentVisibleText.text = this.splitText[this.visibleTextIndex];
-
-  if (this.visibleTextIndex + 1 < this.splitText.length) {
-    this.pageNumberText.text = 'jatkuu... ' + (this.visibleTextIndex + 1) + '/' + this.splitText.length;
-  } else {
-    this.pageNumberText.text = (this.visibleTextIndex + 1) + '/' + this.splitText.length;
-  }
+  this.pageNumberText.text = this.createPageNumberText();
 };
 
 BrowsableTextArea.prototype.splitTextToPages = function(text) {
-  if (text.length < 537) {
+  var pageLength = 537;
+  if (text.length < pageLength) {
     this.splitText.push(text);
   } else {
-    var i = 537;
+    var i = pageLength;
     while (text[i] !== ' ') {
       i--;
     }
@@ -52,6 +48,13 @@ BrowsableTextArea.prototype.splitTextToPages = function(text) {
     this.splitText.push(pageOfText);
     this.splitTextToPages(text.slice(i));
   }
+};
+
+BrowsableTextArea.prototype.createPageNumberText = function() {
+  if (this.visibleTextIndex + 1 === this.splitText.length) {
+    return (this.visibleTextIndex + 1) + '/' + this.splitText.length;
+  }
+  return 'jatkuu... ' + (this.visibleTextIndex + 1) + '/' + this.splitText.length;
 };
 
 module.exports = BrowsableTextArea;
