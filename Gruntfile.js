@@ -1,4 +1,5 @@
-// Generated on 2014-03-28 using generator-phaser-official 0.0.8-rc-2
+// Originally generated on 2014-03-28 using generator-phaser-official 0.0.8-rc-2.
+// Building editor project and addition of Express server added later alongside other changes.
 'use strict';
 var config = require('./config.json');
 var _ = require('underscore');
