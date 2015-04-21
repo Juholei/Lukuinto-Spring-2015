@@ -6,6 +6,7 @@ function Preload2() {
 
 Preload2.prototype = {
   preload: function() {
+    this.load.enableParallel = false;
     this.asset = this.add.sprite(512, 384, 'preloader');
     this.asset.anchor.setTo(0.5, 0.5);
     this.load.onLoadComplete.addOnce(this.onLoadComplete, this);
