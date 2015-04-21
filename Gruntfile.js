@@ -132,11 +132,6 @@ module.exports = function(grunt) {
           script: 'dist/server.js',
           node_env: 'production'
         }
-      },
-      test: {
-        options: {
-          script: 'path/to/test/server.js'
-        }
       }
     },
     uglify: {
@@ -153,9 +148,8 @@ module.exports = function(grunt) {
     }
   });
 
-  grunt.registerTask('server', ['build', 'express:dev', 'open:server', 'watch']);
+  grunt.registerTask('serve', ['build', 'express:dev', 'open:server', 'watch']);
   grunt.registerTask('build', ['buildBootstrapper', 'browserify', 'copy']);
-  grunt.registerTask('serve', ['build', 'connect:livereload', 'open:client', 'watch:scripts']);
   grunt.registerTask('default', ['serve']);
   grunt.registerTask('prod', ['build', 'uglify']);
   grunt.registerTask('heroku', ['prod']);
