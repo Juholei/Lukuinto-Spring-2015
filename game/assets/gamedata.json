@@ -20,11 +20,11 @@
           "question": "Isäsi tulee herättämään sinua ja kertomaan, että perheenne ruispellolle on ilmestynyt valtavan suuri peltokuvio, jonka laajuutta ei maasta käsin oikein kykene arvioimaan. Unenpöpperössä mietit, että varmasti ufot asialla, onkohan täällä käynyt joku sieppari ruispellossa? Kun heräilet enemmän, naurahdat ajatuksellesi ufoista, ja mietit, että varmasti tälle löytyy joku looginen selitys. Isäsi sanoo ryhtyvänsä heti puimaan viljat muilta pelloilta, ettei niillekin käy kehnosti, ja pyytää sinua selvittelemään peltokuvion arvoitusta. Käytyäsi pellon laidalla ihmettelemässä, päätät, että jollain keinolla pitäisi päästä tutkimaan kuviota yläilmoista. Valitsetko: ",
           "answers": [
             {
-              "text": "vuokraan helikopterin kuljettajalla hintaan 2000 euroa vuokraan helikopterin kuljettajalla hintaan 2000 euroa",
+              "text": "vuokraan helikopterin kuljettajalla hintaan 2000 euroa",
               "isCorrect": true
             },
             {
-              "text": "vuokraan kuumailmapallon tunniksi hintaan 1000 euroa vuokraan kuuma ilmapallon tunniksi hintaan 1000 euroa",
+              "text": "vuokraan kuumailmapallon tunniksi hintaan 1000 euroa",
               "isCorrect": true
             },
             {
