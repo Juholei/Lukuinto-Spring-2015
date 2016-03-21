@@ -15,8 +15,6 @@ After npm has installed all the requirements for building the project, use Bower
 After installing all the dependencies, command 'grunt serve' builds the frontend (game and editor) javascript, starts the server (server.js) and opens the game in browser. Command 'grunt build' builds the project into directory 'dist'.  Command 'grunt prod' builds the project and minifies frontend javascript for production. This can then be deployed to webserver and opened in browser. The same Grunt task is also executed with 'grunt heroku', which is used when deploying to Heroku with [a custom buildpack](https://github.com/mbuchetics/heroku-buildpack-nodejs-grunt).
 
 ## Screenshots
-
-## Screenshots
 ![Screenshot 1](screenshots/screenshot_1.png "Screenshot 1")
 ![Screenshot 2](screenshots/screenshot_2.png "Screenshot 2")
 ![Screenshot 3](screenshots/screenshot_3.png "Screenshot 3")
